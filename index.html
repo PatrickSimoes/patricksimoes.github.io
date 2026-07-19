@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadu Vendas — o caderninho de vendas no celular</title>
+    <meta
+      name="description"
+      content="Cadu Vendas: registre vendas em 2 toques, cobre no Pix com QR Code, controle o fiado e veja seu lucro — tudo offline, no seu celular."
+    />
+    <style>
+      :root {
+        --paper: #faf6ec;
+        --surface: #fffdf7;
+        --ink: #33312b;
+        --ink-soft: #5c594f;
+        --ink-mute: #9a968a;
+        --green: #3f6b4e;
+        --green-dark: #345a41;
+        --ocre: #c77423;
+        --border: #e7e1d2;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .logo {
+        font-size: 56px;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      h1 {
+        font-size: 32px;
+        margin: 8px 0 4px;
+      }
+      .tagline {
+        color: var(--ink-soft);
+        font-size: 18px;
+        margin: 0 auto;
+        max-width: 460px;
+      }
+      .cta {
+        display: inline-block;
+        margin-top: 24px;
+        background: var(--green);
+        color: #fdfaf2;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 14px 32px;
+        border-radius: 999px;
+      }
+      .cta:hover {
+        background: var(--green-dark);
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px;
+        margin-top: 24px;
+      }
+      h2 {
+        font-size: 20px;
+        margin: 0 0 12px;
+      }
+      ul.features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+      ul.features li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      ul.features .emoji {
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        margin-top: 32px;
+      }
+      .links a {
+        color: var(--green);
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        padding: 10px 18px;
+        border-radius: 999px;
+      }
+      .links a:hover {
+        border-color: var(--green);
+      }
+      footer {
+        text-align: center;
+        color: var(--ink-mute);
+        font-size: 13px;
+        margin-top: 48px;
+      }
+      footer a {
+        color: var(--ink-soft);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="logo">📓</div>
+        <h1>Cadu Vendas</h1>
+        <p class="tagline">
+          O caderninho de anotações de venda, só que no celular — pra quem vende marmita, doce,
+          salgado, artesanato, na feira ou no fim de semana.
+        </p>
+        <a class="cta" href="https://play.google.com/store/apps/details?id=com.cadernodevendas">
+          Baixar na Google Play
+        </a>
+      </header>
+
+      <div class="card">
+        <h2>O que dá pra fazer</h2>
+        <ul class="features">
+          <li><span class="emoji">🧾</span> Registrar uma venda em 2 toques</li>
+          <li><span class="emoji">📱</span> Cobrar no Pix com QR Code automático</li>
+          <li><span class="emoji">📝</span> Anotar o fiado e cobrar pelo WhatsApp</li>
+          <li><span class="emoji">📊</span> Ver quanto você realmente lucra</li>
+          <li><span class="emoji">☁️</span> Backup na nuvem pra não perder nada ao trocar de celular</li>
+          <li><span class="emoji">🔒</span> Funciona offline — seus dados ficam no seu aparelho</li>
+        </ul>
+      </div>
+
+      <div class="links">
+        <a href="./privacy.html">Política de Privacidade</a>
+        <a href="./terms.html">Termos de Uso</a>
+      </div>
+
+      <footer>
+        Cadu Vendas · Contato:
+        <a href="mailto:patricksimoes25@gmail.com">patricksimoes25@gmail.com</a>
+      </footer>
+    </div>
+  </body>
+</html>
