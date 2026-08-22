@@ -1,35 +1,51 @@
 # Site do desenvolvedor — patricksimoes.github.io
 
-Site estático do Cadu Vendas (landing + política + termos + app-ads.txt).
+Site estático do Cadu Vendas (landing + política + termos + exclusão de conta + app-ads.txt).
 **Esta pasta não faz parte do app** — é só o conteúdo do site do GitHub Pages.
+
+## Páginas
+
+| Arquivo               | URL                                                    | Para que serve                                  |
+| --------------------- | ------------------------------------------------------ | ----------------------------------------------- |
+| `index.html`          | https://patricksimoes.github.io/                        | Landing / site de contato na Play               |
+| `privacy.html`        | https://patricksimoes.github.io/privacy.html            | Política de Privacidade (campo na Play Console) |
+| `delete-account.html` | https://patricksimoes.github.io/delete-account.html     | URL de exclusão de conta (exigida pela Play)    |
+| `terms.html`          | https://patricksimoes.github.io/terms.html              | Termos de Uso                                   |
+| `app-ads.txt`         | https://patricksimoes.github.io/app-ads.txt             | Verificação do AdMob                            |
 
 ## Como publicar
 
-1. No GitHub, crie um repositório **Público** com o nome **exatamente**:
-   `patricksimoes.github.io`
-2. Suba **o conteúdo desta pasta** (os arquivos, não a pasta) para a **raiz** desse repo:
-   `app-ads.txt`, `index.html`, `privacy.html`, `terms.html`.
-3. Settings → **Pages** → Source: `Deploy from a branch`, branch `main`, pasta `/ (root)` → Save.
-4. Aguarde ~1-2 min e confira se abrem:
-   - https://patricksimoes.github.io/
-   - https://patricksimoes.github.io/app-ads.txt  (texto puro, 1 linha)
-   - https://patricksimoes.github.io/privacy.html
-   - https://patricksimoes.github.io/terms.html
+Commit + push na branch `main` do repo `patricksimoes.github.io`. Settings → **Pages** →
+Source: `Deploy from a branch`, branch `main`, pasta `/ (root)`. O deploy leva ~1-2 min.
+
+Depois confira que todas as URLs da tabela acima abrem em aba anônima (sem login, sem redirect).
 
 ## Configurar na Google Play Console
 
-- **Aumentar número de usuários → Presença na loja → Configurações da loja →
-  Detalhes de contato → Site:** `https://patricksimoes.github.io`
 - **Política → Conteúdo do app → Política de privacidade:**
   `https://patricksimoes.github.io/privacy.html`
-  (opcional trocar; a URL antiga em `public-terms-play-store` também funciona
-  enquanto existir. Manter uma só é mais organizado.)
+- **Política → Conteúdo do app → Exclusão de dados / conta:**
+  URL web `https://patricksimoes.github.io/delete-account.html`
+  (e marcar que o app também oferece exclusão in-app: Perfil → Conta → Excluir conta e dados)
+- **Aumentar número de usuários → Presença na loja → Configurações da loja →
+  Detalhes de contato → Site:** `https://patricksimoes.github.io`
+
+> ⚠️ **Não aponte a Play Console para o repo antigo `public-terms-play-store`.**
+> Aquela política é genérica (nem cita o Cadu Vendas), fala de Supabase/Google Sign-In/Expo
+> push — serviços que o app não usa mais — e diz que a exclusão de conta "não está disponível
+> no app". Qualquer um desses pontos derruba a revisão com "Política de Privacidade inválida".
+> O ideal é substituir o conteúdo daquele repo por um `<meta http-equiv="refresh">` apontando
+> para `https://patricksimoes.github.io/privacy.html`, ou despublicar o GitHub Pages dele.
+
+## Manutenção
+
+Quando uma feature nova mexer em dados, atualize **os três lugares**:
+
+1. `privacy.html` (aqui) — e a data de "Última atualização" no topo;
+2. a tela in-app `src/app/termos.tsx` no repo do app;
+3. o formulário **Segurança dos dados** na Play Console (ele precisa bater com a política).
 
 ## AdMob
 
-Depois do site no ar + campo Site salvo na Play → no AdMob, abra o app e clique
-em **Verificar/Rastrear** o app-ads.txt. A verificação leva de horas a ~1 dia.
-
-> Lembrete: no repo antigo `public-terms-play-store`, apague o `index.html` que
-> foi adicionado por engano (ele redireciona pra si mesmo = loop). A política
-> antiga em si pode ficar; a nova (aqui) é a versão consolidada.
+Com o site no ar + campo Site salvo na Play → no AdMob, abra o app e clique em
+**Verificar/Rastrear** o app-ads.txt. A verificação leva de horas a ~1 dia.

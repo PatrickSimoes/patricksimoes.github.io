@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Política de Privacidade — Cadu Vendas</title>
+    <title>Política de Privacidade — Cadu Vendas (com.cadernodevendas)</title>
+    <meta
+      name="description"
+      content="Política de Privacidade do aplicativo Cadu Vendas (com.cadernodevendas), publicado na Google Play por Patrick Simões."
+    />
     <style>
       :root {
         --paper: #faf6ec;
@@ -22,14 +26,28 @@
         color: var(--ink);
         line-height: 1.65;
       }
-      .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+      .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 64px; }
       a.back { color: var(--green); text-decoration: none; font-weight: 600; font-size: 14px; }
       h1 { font-size: 28px; margin: 20px 0 4px; }
-      .updated { color: var(--ink-mute); font-size: 14px; margin: 0 0 28px; }
+      .updated { color: var(--ink-mute); font-size: 14px; margin: 0 0 8px; }
       h2 { font-size: 19px; margin: 32px 0 8px; }
-      p, li { color: var(--ink-soft); }
+      h3 { font-size: 16px; margin: 20px 0 6px; }
+      p, li, td, th { color: var(--ink-soft); }
       strong { color: var(--ink); }
       ul { padding-left: 20px; }
+      a { color: var(--green); }
+      .ident {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin: 20px 0 8px;
+      }
+      .ident p { margin: 4px 0; font-size: 15px; }
+      .tablewrap { overflow-x: auto; margin: 12px 0; }
+      table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+      th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+      th { background: var(--surface); color: var(--ink); }
       footer { margin-top: 48px; color: var(--ink-mute); font-size: 13px; }
       footer a { color: var(--ink-soft); }
     </style>
@@ -38,101 +56,332 @@
     <div class="wrap">
       <a class="back" href="./index.html">← Cadu Vendas</a>
       <h1>Política de Privacidade</h1>
-      <p class="updated">Atualizada em julho de 2026</p>
+      <p class="updated">Última atualização: 22 de agosto de 2026 · Vigente desde: 22 de agosto de 2026</p>
 
       <p>
-        O <strong>Cadu Vendas</strong> ("app", "a gente") é um caderno de vendas para o celular.
-        Esta política explica, em linguagem simples, quais dados o app usa e o que sai (ou não) do
-        seu aparelho. O app é <strong>offline por padrão</strong>: seus dados de vendas ficam
-        guardados no próprio celular.
+        Esta Política de Privacidade se aplica exclusivamente ao aplicativo móvel
+        <strong>Cadu Vendas</strong> (nome do pacote/ID na Google Play:
+        <strong>com.cadernodevendas</strong>), um caderno de vendas para celular. Ela explica quais
+        dados o aplicativo acessa, coleta, usa, armazena, compartilha e por quanto tempo os retém,
+        além de como você pode excluí-los.
       </p>
-
-      <h2>Seus dados ficam no seu celular</h2>
       <p>
-        Vendas, produtos, clientes, fiado e configurações são armazenados localmente no aparelho.
-        Sem criar conta, esses dados <strong>não vão para nenhum servidor nosso</strong>. Detalhe do
-        Android: o backup automático do sistema pode guardar uma cópia dos dados do app no
-        <strong>seu próprio Google Drive</strong> (da sua conta, não da nossa). Isso é um recurso
-        padrão do celular e você pode desativá-lo nas configurações do Android.
+        O aplicativo é <strong>offline por padrão</strong>: seus registros de vendas ficam
+        armazenados no próprio aparelho. Criar conta e usar o backup na nuvem é opcional.
       </p>
 
-      <h2>O que sai do aparelho (e por quê)</h2>
+      <h2>1. Quem é o responsável (controlador dos dados)</h2>
+      <div class="ident">
+        <p><strong>Desenvolvedor / controlador:</strong> Patrick Simões (desenvolvedor individual)</p>
+        <p><strong>Aplicativo:</strong> Cadu Vendas — com.cadernodevendas</p>
+        <p>
+          <strong>Contato de privacidade:</strong>
+          <a href="mailto:patricksimoes25@gmail.com">patricksimoes25@gmail.com</a>
+        </p>
+        <p>
+          <strong>Exclusão de conta e dados:</strong>
+          <a href="./delete-account.html">patricksimoes.github.io/delete-account.html</a>
+        </p>
+      </div>
+      <p>
+        Todo pedido relacionado a privacidade (acesso, correção, exclusão, portabilidade, revogação
+        de consentimento) pode ser enviado para o e-mail acima. Respondemos em até 15 dias.
+      </p>
+
+      <h2>2. Dados que ficam somente no seu aparelho</h2>
+      <p>
+        Vendas, produtos, clientes, fiado, metas, chave Pix e configurações são gravados em um banco
+        de dados local no seu celular. Sem conta e sem backup na nuvem, esses dados
+        <strong>não são enviados para nenhum servidor nosso</strong> e não são acessíveis por nós.
+      </p>
+      <p>
+        Observação sobre o Android: o backup automático do sistema operacional pode guardar uma
+        cópia dos dados do app no <strong>seu próprio Google Drive</strong> (da sua conta Google, não
+        da nossa). Esse é um recurso padrão do Android, controlado por você nas configurações do
+        aparelho, e pode ser desativado a qualquer momento.
+      </p>
+
+      <h2>3. Dados pessoais que coletamos e por quê</h2>
+      <p>
+        A tabela abaixo lista, de forma completa, todos os tipos de dados pessoais que o aplicativo
+        coleta, acessa ou compartilha, a finalidade de cada um e se o envio é obrigatório ou
+        opcional.
+      </p>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dado</th>
+              <th>Quando é coletado</th>
+              <th>Finalidade</th>
+              <th>Obrigatório?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Endereço de e-mail e senha</td>
+              <td>Somente se você criar uma conta no app</td>
+              <td>Autenticar o acesso à sua conta e ao backup na nuvem</td>
+              <td>Opcional — o app funciona sem conta</td>
+            </tr>
+            <tr>
+              <td>Nome de exibição (se preenchido)</td>
+              <td>Somente com conta criada</td>
+              <td>Personalizar a interface e identificar você no suporte</td>
+              <td>Opcional</td>
+            </tr>
+            <tr>
+              <td>
+                Cópia do seu caderno (vendas, produtos, clientes, fiado, nomes de clientes e chave
+                Pix)
+              </td>
+              <td>Somente se você ativar e usar o backup na nuvem</td>
+              <td>Restaurar seus dados ao trocar de aparelho ou reinstalar o app</td>
+              <td>Opcional</td>
+            </tr>
+            <tr>
+              <td>Identificador de publicidade do aparelho (Advertising ID) e dados técnicos do dispositivo</td>
+              <td>Na versão gratuita, ao exibir anúncios</td>
+              <td>Exibir anúncios, medir desempenho e prevenir fraude (Google AdMob)</td>
+              <td>Obrigatório na versão gratuita; eliminado ao comprar "Sem anúncios" ou o Premium</td>
+            </tr>
+            <tr>
+              <td>Identificador anônimo do app e histórico de compra da loja</td>
+              <td>Ao assinar o Premium ou comprar "Sem anúncios"</td>
+              <td>Validar e manter a assinatura/compra ativa (RevenueCat)</td>
+              <td>Obrigatório apenas para quem compra</td>
+            </tr>
+            <tr>
+              <td>
+                Texto da sugestão, versão do app, sistema operacional e — se você estiver logado —
+                seu e-mail, nome e identificador de conta
+              </td>
+              <td>Somente ao enviar uma sugestão pela tela "Sobre o app"</td>
+              <td>Ler, responder e priorizar melhorias do aplicativo</td>
+              <td>Opcional</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Permissões do aparelho e o que fazemos com elas</h3>
       <ul>
         <li>
-          <strong>Anúncios:</strong> na versão grátis, o Google AdMob usa o identificador de
-          publicidade do aparelho para exibir anúncios.
+          <strong>Salvar imagens na galeria:</strong> usada apenas para gravar, na sua galeria, a
+          imagem do resumo do dia quando <em>você</em> pede para salvar ou compartilhar. O aplicativo
+          <strong>não lê</strong> nem envia suas fotos.
         </li>
         <li>
-          <strong>Compras:</strong> a validação da assinatura/compra é feita pela RevenueCat, com um
-          identificador do app (sem seu nome) e o histórico de compra da loja.
+          <strong>Escolher um arquivo:</strong> usada apenas quando você seleciona manualmente um
+          arquivo de backup para restaurar. O arquivo é lido no próprio aparelho.
         </li>
         <li>
-          <strong>Conta e backup na nuvem (opcional):</strong> só se você criar uma conta e usar o
-          backup. Aí seu e-mail e uma cópia do seu caderno ficam guardados com segurança no
-          servidor (Google Firebase). Veja a seção abaixo.
+          <strong>Notificações:</strong> os lembretes são agendados e disparados localmente no
+          aparelho. Não enviamos notificações push a partir de servidores e
+          <strong>não coletamos token de notificação</strong>.
         </li>
       </ul>
-      <p>Fora isso, suas vendas, produtos e clientes ficam apenas com você.</p>
 
-      <h2>Conta e backup na nuvem</h2>
-      <p>
-        Criar conta é <strong>opcional</strong> — tudo funciona sem. Se você criar (com e-mail e
-        senha) e usar o backup na nuvem, uma cópia do seu caderno é enviada por conexão
-        criptografada para o servidor (Google Firebase/Firestore) e fica acessível
-        <strong>somente pela sua conta</strong>. Essa cópia inclui o que você cadastrou — incluindo
-        sua chave Pix e os nomes dos clientes do fiado — para que a restauração traga tudo de volta.
-        Guardamos os backups mais recentes (últimos 10). Os dados de autenticação são tratados pelo
-        Firebase Authentication.
-      </p>
-
-      <h2>Como excluir seus dados</h2>
-      <p>
-        Você pode <strong>excluir sua conta e todos os dados da nuvem a qualquer momento</strong>
-        dentro do app, em <strong>Perfil → Conta → Excluir conta e dados</strong>. A exclusão remove
-        sua conta de autenticação e todos os backups do servidor, de forma permanente. Os dados
-        salvos localmente no aparelho são removidos ao desinstalar o app ou limpar os dados dele nas
-        configurações do Android.
-      </p>
-
-      <h2>O que a gente não faz</h2>
+      <h3>O que o aplicativo não faz</h3>
       <ul>
-        <li>Não vendemos seus dados, nunca.</li>
-        <li>Não enviamos suas vendas para a Receita Federal nem para terceiros.</li>
-        <li>Não movimentamos seu Pix nem cobramos por você — a chave serve só para gerar o QR.</li>
-        <li>Não usamos sua câmera, microfone, contatos ou localização.</li>
+        <li>Não vendemos seus dados pessoais, em nenhuma hipótese.</li>
+        <li>Não acessamos câmera, microfone, contatos, agenda, mensagens nem localização precisa (GPS).</li>
+        <li>Não enviamos suas vendas para a Receita Federal nem para qualquer terceiro.</li>
+        <li>Não movimentamos seu Pix e não cobramos por você — a chave serve apenas para gerar o QR Code no seu aparelho.</li>
+        <li>Não usamos seus dados para treinar modelos de inteligência artificial nem para análise de crédito.</li>
+        <li>Não coletamos conscientemente dados de crianças menores de 13 anos.</li>
       </ul>
 
-      <h2>Anúncios</h2>
+      <h2>4. Conta e backup na nuvem</h2>
       <p>
-        O Cadu Vendas é grátis com anúncios (Google AdMob), exibidos em telas secundárias — nunca
-        durante uma venda. Você pode removê-los com a compra única "Sem anúncios" ou assinando o
-        Premium. O tratamento de dados de publicidade segue a
-        <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>.
+        Criar conta é <strong>opcional</strong> — todas as funções principais do app operam sem ela.
+        Se você criar uma conta (e-mail e senha) e usar o backup na nuvem, uma cópia do seu caderno é
+        transmitida por conexão criptografada (HTTPS/TLS) para o <strong>Google Firebase</strong>
+        (Firebase Authentication e Cloud Firestore) e fica acessível
+        <strong>somente pela sua conta</strong>. Essa cópia inclui o que você cadastrou — inclusive a
+        chave Pix e os nomes dos clientes do fiado — para que a restauração devolva tudo.
+        Mantemos apenas os <strong>10 backups mais recentes</strong>; os anteriores são descartados
+        automaticamente.
       </p>
 
-      <h2>Pagamentos</h2>
+      <h2>5. Com quem compartilhamos dados</h2>
       <p>
-        A assinatura Premium e a compra "Sem anúncios" são cobradas pela Google Play, não pela
-        gente. Você gerencia (cancela, troca de plano) nas configurações da loja. Reembolso segue a
-        política da plataforma.
+        Compartilhamos apenas o estritamente necessário com os provedores abaixo, que atuam como
+        operadores/subprocessadores. Não há outros destinatários.
+      </p>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Terceiro</th>
+              <th>Finalidade</th>
+              <th>Dados compartilhados</th>
+              <th>Política</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Firebase (Authentication e Cloud Firestore)</td>
+              <td>Conta de acesso e armazenamento do backup na nuvem</td>
+              <td>E-mail, senha (em formato hash), nome de exibição, identificador de conta, cópia do caderno</td>
+              <td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td>
+            </tr>
+            <tr>
+              <td>Google AdMob</td>
+              <td>Exibição e medição de anúncios na versão gratuita</td>
+              <td>Identificador de publicidade e dados técnicos do dispositivo</td>
+              <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>RevenueCat</td>
+              <td>Validação da assinatura Premium e da compra "Sem anúncios"</td>
+              <td>Identificador anônimo do app e recibo/histórico de compra da loja</td>
+              <td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
+            </tr>
+            <tr>
+              <td>Google Play (faturamento)</td>
+              <td>Processamento da compra e da assinatura</td>
+              <td>Dados de pagamento tratados diretamente pela loja — não temos acesso a eles</td>
+              <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Esses provedores podem processar e armazenar dados em servidores localizados fora do Brasil.
+        As transferências internacionais seguem as salvaguardas contratuais dos respectivos
+        provedores.
       </p>
 
-      <h2>Crianças</h2>
-      <p>O app não é direcionado a menores de 13 anos.</p>
-
-      <h2>Mudanças nesta política</h2>
+      <h2>6. Anúncios e consentimento</h2>
       <p>
-        Quando algo importante mudar (por exemplo, uma nova forma de tratamento de dados), esta
-        página é atualizada e, quando fizer sentido, você é avisado no app.
+        O Cadu Vendas é gratuito com anúncios do <strong>Google AdMob</strong>, exibidos em telas
+        secundárias — nunca durante o registro de uma venda. Onde a legislação exige (por exemplo,
+        Espaço Econômico Europeu e Reino Unido), o app apresenta o formulário de consentimento do
+        Google (UMP) na primeira execução, permitindo escolher entre anúncios personalizados e não
+        personalizados. Você pode <strong>rever essa escolha a qualquer momento</strong> em
+        <strong>Perfil → Privacidade dos anúncios</strong>. Os anúncios podem ser removidos de vez
+        com a compra única "Sem anúncios" ou com a assinatura Premium.
       </p>
 
-      <h2>Contato</h2>
+      <h2>7. Segurança — como protegemos seus dados</h2>
+      <p>
+        Adotamos medidas técnicas e organizacionais apropriadas ao risco para proteger dados
+        pessoais contra acesso não autorizado, perda, alteração ou divulgação indevida:
+      </p>
+      <ul>
+        <li>Toda comunicação com os servidores acontece por conexão criptografada (HTTPS/TLS).</li>
+        <li>
+          Senhas nunca trafegam nem são armazenadas em texto puro: a autenticação é delegada ao
+          Firebase Authentication, que guarda apenas o hash da senha.
+        </li>
+        <li>
+          O backup na nuvem é isolado por conta através de regras de segurança do Cloud Firestore:
+          cada usuário só consegue ler e gravar na própria área
+          (<code>users/{seu-identificador}</code>). Nenhum outro usuário tem acesso.
+        </li>
+        <li>
+          Credenciais e chaves sensíveis no aparelho ficam no armazenamento seguro do sistema
+          operacional (Android Keystore / iOS Keychain), não em arquivos comuns do app.
+        </li>
+        <li>O acesso administrativo aos consoles dos provedores é restrito ao desenvolvedor e protegido por verificação em duas etapas.</li>
+      </ul>
+      <p>
+        Nenhum sistema é totalmente imune a falhas. Recomendamos o uso de senha forte e exclusiva.
+        Em caso de incidente de segurança que possa gerar risco relevante aos seus direitos, os
+        titulares afetados e a autoridade competente serão comunicados nos prazos legais.
+      </p>
+
+      <h2>8. Por quanto tempo guardamos (retenção)</h2>
+      <ul>
+        <li>
+          <strong>Dados no aparelho:</strong> permanecem enquanto o app estiver instalado. São
+          apagados ao desinstalar o app ou limpar os dados dele nas configurações do Android.
+        </li>
+        <li>
+          <strong>Conta e backup na nuvem:</strong> mantidos enquanto a conta estiver ativa. Apenas
+          os 10 backups mais recentes são preservados. Ao excluir a conta, a conta de autenticação e
+          todos os backups são removidos imediatamente, e eventuais cópias residuais em rotinas de
+          backup do provedor são eliminadas em até <strong>30 dias</strong>.
+        </li>
+        <li>
+          <strong>Contas inativas:</strong> contas sem qualquer acesso por 24 meses podem ser
+          excluídas junto com seus backups, após aviso por e-mail.
+        </li>
+        <li>
+          <strong>Sugestões enviadas pelo app:</strong> guardadas por até 24 meses e depois
+          apagadas.
+        </li>
+        <li>
+          <strong>Dados de anúncios e de compra:</strong> retidos pelo Google e pela RevenueCat
+          conforme as políticas de cada um, indicadas na seção 5.
+        </li>
+      </ul>
+
+      <h2>9. Como excluir seus dados</h2>
+      <p>
+        Você pode <strong>excluir sua conta e todos os dados da nuvem a qualquer momento, dentro do
+        próprio aplicativo</strong>, em <strong>Perfil → Conta → Excluir conta e dados</strong>. A
+        exclusão remove, de forma permanente, sua conta de autenticação e todos os backups
+        armazenados no servidor.
+      </p>
+      <p>
+        Se você já desinstalou o app ou não consegue acessar a conta, é possível solicitar a
+        exclusão por e-mail — as instruções completas estão na página
+        <a href="./delete-account.html">Excluir conta e dados</a>. Os dados gravados apenas no
+        aparelho são removidos ao desinstalar o app ou limpar os dados dele nas configurações do
+        Android.
+      </p>
+
+      <h2>10. Seus direitos (LGPD e GDPR)</h2>
+      <p>
+        Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018) e, quando aplicável, do
+        GDPR, você pode a qualquer momento: confirmar a existência de tratamento; acessar seus
+        dados; corrigir dados incompletos ou desatualizados; solicitar anonimização, bloqueio ou
+        exclusão; obter a portabilidade dos dados (o app permite exportar seu caderno em
+        <strong>Perfil → Exportar dados</strong>); revogar consentimento; opor-se a determinados
+        tratamentos; e apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD) ou à
+        autoridade de proteção de dados do seu país.
+      </p>
+      <p>
+        Bases legais utilizadas: <strong>execução de contrato</strong> (conta, backup e assinatura),
+        <strong>consentimento</strong> (anúncios personalizados, quando exigido) e
+        <strong>legítimo interesse</strong> (segurança, prevenção a fraudes e melhoria do app).
+      </p>
+
+      <h2>11. Crianças</h2>
+      <p>
+        O aplicativo não é direcionado a menores de 13 anos e não coletamos dados de crianças de
+        forma consciente. Se identificarmos a coleta de dados de um menor sem o consentimento dos
+        responsáveis, esses dados serão excluídos. Responsáveis podem solicitar a exclusão pelo
+        e-mail de contato.
+      </p>
+
+      <h2>12. Pagamentos</h2>
+      <p>
+        A assinatura Premium e a compra "Sem anúncios" são cobradas pela Google Play, não por nós.
+        Você gerencia (cancela ou troca de plano) nas configurações da loja, e o reembolso segue a
+        política da plataforma. Não recebemos nem armazenamos dados de cartão.
+      </p>
+
+      <h2>13. Mudanças nesta política</h2>
+      <p>
+        Esta página é atualizada sempre que houver mudança relevante no tratamento de dados, com a
+        data de atualização revista no topo. Quando a mudança for significativa, você também é
+        avisado dentro do aplicativo antes de ela passar a valer.
+      </p>
+
+      <h2>14. Contato</h2>
       <p>
         Dúvidas, pedidos de exclusão ou qualquer questão sobre privacidade:
         <a href="mailto:patricksimoes25@gmail.com">patricksimoes25@gmail.com</a>.
       </p>
 
-      <footer>Cadu Vendas · <a href="./terms.html">Termos de Uso</a></footer>
+      <footer>
+        Cadu Vendas (com.cadernodevendas) · Patrick Simões ·
+        <a href="./terms.html">Termos de Uso</a> ·
+        <a href="./delete-account.html">Excluir conta e dados</a>
+      </footer>
     </div>
   </body>
 </html>
