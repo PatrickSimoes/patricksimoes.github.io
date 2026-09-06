@@ -56,7 +56,7 @@
     <div class="wrap">
       <a class="back" href="./index.html">← Cadu Vendas</a>
       <h1>Política de Privacidade</h1>
-      <p class="updated">Última atualização: 28 de agosto de 2026 · Vigente desde: 22 de agosto de 2026</p>
+      <p class="updated">Última atualização: 6 de setembro de 2026 · Vigente desde: 22 de agosto de 2026</p>
 
       <p>
         Esta Política de Privacidade se aplica exclusivamente ao aplicativo móvel
@@ -195,20 +195,34 @@
       <h2>4. Conta, backup e sincronização na nuvem</h2>
       <p>
         Criar conta é <strong>opcional</strong> — todas as funções principais do app operam sem ela.
-        Se você criar uma conta (e-mail e senha) e usar o backup na nuvem, uma cópia do seu caderno é
-        transmitida por conexão criptografada (HTTPS/TLS) para o <strong>Google Firebase</strong>
-        (Firebase Authentication e Cloud Firestore) e fica acessível
-        <strong>somente pela sua conta</strong>. Essa cópia inclui o que você cadastrou — inclusive a
-        chave Pix e os nomes dos clientes do fiado — para que a restauração devolva tudo.
-        Mantemos apenas a <strong>cópia mais recente</strong>: cada envio substitui o anterior.
+        Se você criar uma conta (e-mail e senha) e usar a nuvem, seus registros são transmitidos por
+        conexão criptografada (HTTPS/TLS) para o <strong>Google Firebase</strong>
+        (Firebase Authentication e Cloud Firestore) e ficam acessíveis
+        <strong>somente pela sua conta</strong>. Cada registro é armazenado
+        <strong>individualmente</strong> (cada venda, produto, pedido, cliente, meta e assinatura,
+        além de cada uso e pagamento registrado nas assinaturas), e não como uma cópia única de
+        todo o caderno — o que permite ao app transmitir apenas o que foi alterado. O conteúdo inclui o que você cadastrou — inclusive a chave Pix e os nomes dos
+        clientes do fiado — para que seus dados voltem ao trocar de aparelho.
       </p>
       <p>
         Com a <strong>sincronização automática</strong> ligada (recurso opcional do plano Premium), o
-        app envia essa mesma cópia automaticamente quando algo muda e aplica no aparelho as mudanças
-        feitas por outros aparelhos conectados à mesma conta. Os dados transmitidos e o local de
-        armazenamento são os mesmos do backup na nuvem descritos acima; nenhuma informação adicional
-        é coletada. A sincronização pode ser desligada a qualquer momento em Perfil → Backup na
-        nuvem.
+        app envia cada alteração automaticamente e aplica no aparelho as mudanças feitas por outros
+        aparelhos conectados à mesma conta. Junto de cada registro são gravados a
+        <strong>data/hora da alteração</strong> e um <strong>identificador aleatório do aparelho</strong>
+        que a realizou — gerado pelo app, sem relação com hardware, conta ou pessoa, e usado
+        exclusivamente para determinar qual versão de um registro é a mais recente e evitar
+        duplicação. Registros que pertencem a outro (o uso ou o pagamento de uma assinatura, por
+        exemplo) guardam também o identificador da sua conta e o do registro a que pertencem,
+        usados apenas para organizar os dados e garantir que ninguém mais os alcance. Nenhuma outra
+        informação adicional é coletada. A sincronização pode ser desligada
+        a qualquer momento em Perfil → Backup na nuvem.
+      </p>
+      <p>
+        <strong>Exclusão de registros:</strong> ao excluir um registro no app, o conteúdo é removido
+        da nuvem e permanece apenas uma marcação técnica de que aquele registro existiu (identificador
+        e data da exclusão), sem qualquer dado pessoal. Essa marcação é necessária para impedir que o
+        registro excluído seja restabelecido por um aparelho que estava sem conexão no momento da
+        exclusão. Ao excluir a conta, todos os dados e essas marcações são removidos definitivamente.
       </p>
 
       <h2>5. Com quem compartilhamos dados</h2>
