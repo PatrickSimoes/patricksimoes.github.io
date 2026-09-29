@@ -1,408 +1,540 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Política de Privacidade — Cadu Vendas (com.cadernodevendas)</title>
-    <meta
-      name="description"
-      content="Política de Privacidade do aplicativo Cadu Vendas (com.cadernodevendas), publicado na Google Play por Patrick Simões."
-    />
-    <style>
-      :root {
-        --paper: #faf6ec;
-        --surface: #fffdf7;
-        --ink: #33312b;
-        --ink-soft: #5c594f;
-        --ink-mute: #9a968a;
-        --green: #3f6b4e;
-        --border: #e7e1d2;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade — Cadu Vendas (com.cadernodevendas)</title>
+  <meta name="description" content="Política de Privacidade do aplicativo Cadu Vendas (com.cadernodevendas), publicado na Google Play por Patrick Simões.">
+  <link rel="canonical" href="https://caduvendas.com.br/privacy.html">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1f4029">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cadu Vendas">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://caduvendas.com.br/privacy.html">
+  <meta property="og:title" content="Política de Privacidade — Cadu Vendas">
+  <meta property="og:description" content="Quais dados o Cadu Vendas acessa, coleta, usa, compartilha e por quanto tempo, e como excluí-los.">
+  <meta property="og:image" content="https://caduvendas.com.br/assets/img/og/cadu-vendas.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=2">
+  <script src="assets/js/site.js?v=1" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://caduvendas.com.br/privacy.html#pagina",
+        "url": "https://caduvendas.com.br/privacy.html",
+        "name": "Política de Privacidade — Cadu Vendas (com.cadernodevendas)",
+        "inLanguage": "pt-BR",
+        "dateModified": "2026-09-28",
+        "isPartOf": { "@type": "WebSite", "@id": "https://caduvendas.com.br/#site", "name": "Cadu Vendas", "url": "https://caduvendas.com.br/" },
+        "breadcrumb": { "@id": "https://caduvendas.com.br/privacy.html#trilha" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://caduvendas.com.br/privacy.html#trilha",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://caduvendas.com.br/" },
+          { "@type": "ListItem", "position": 2, "name": "Política de Privacidade", "item": "https://caduvendas.com.br/privacy.html" }
+        ]
       }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        background: var(--paper);
-        color: var(--ink);
-        line-height: 1.65;
-      }
-      .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 64px; }
-      a.back { color: var(--green); text-decoration: none; font-weight: 600; font-size: 14px; }
-      h1 { font-size: 28px; margin: 20px 0 4px; }
-      .updated { color: var(--ink-mute); font-size: 14px; margin: 0 0 8px; }
-      h2 { font-size: 19px; margin: 32px 0 8px; }
-      h3 { font-size: 16px; margin: 20px 0 6px; }
-      p, li, td, th { color: var(--ink-soft); }
-      strong { color: var(--ink); }
-      ul { padding-left: 20px; }
-      a { color: var(--green); }
-      .ident {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 16px 20px;
-        margin: 20px 0 8px;
-      }
-      .ident p { margin: 4px 0; font-size: 15px; }
-      .tablewrap { overflow-x: auto; margin: 12px 0; }
-      table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
-      th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
-      th { background: var(--surface); color: var(--ink); }
-      footer { margin-top: 48px; color: var(--ink-mute); font-size: 13px; }
-      footer a { color: var(--ink-soft); }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <a class="back" href="./index.html">← Cadu Vendas</a>
-      <h1>Política de Privacidade</h1>
-      <p class="updated">Última atualização: 6 de setembro de 2026 · Vigente desde: 22 de agosto de 2026</p>
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ícones do site e dos mockups — o mesmo bloco em todas as páginas -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ic-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V20h13V9.5" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5.5h4V20" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-orders" viewBox="0 0 24 24"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5z" fill="none" stroke-width="1.9" stroke-linejoin="round"/><path d="M4 7.5 12 12l8-4.5M12 12v9" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-catalog" viewBox="0 0 24 24"><path d="M3.5 12.5 11 20a2 2 0 0 0 2.8 0l6.2-6.2a2 2 0 0 0 0-2.8L12.5 3.5H6a2.5 2.5 0 0 0-2.5 2.5z" fill="none" stroke-width="1.9" stroke-linejoin="round"/><circle cx="8.3" cy="8.3" r="1.4" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-reports" viewBox="0 0 24 24"><path d="M4 20h16" stroke-width="1.9" stroke-linecap="round"/><path d="M7 20v-6M12 20V9M17 20V4.5" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="ic-profile" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6" fill="none" stroke-width="1.9"/><path d="M5 20c1.2-3.4 3.9-5 7-5s5.8 1.6 7 5" fill="none" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="ic-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z" fill="none" stroke-width="1.8"/><circle cx="12" cy="12" r="2.8" fill="none" stroke-width="1.8"/></symbol>
+    <symbol id="ic-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12.5h-11z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10.5V6.5a3 3 0 0 1 6 0v4" fill="none" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2" fill="none" stroke-width="1.8"/><circle cx="12" cy="12" r="2.8" fill="none" stroke-width="1.8"/><path d="M6 12h.01M18 12h.01" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-pix" viewBox="0 0 24 24"><path d="M12 2.8 21.2 12 12 21.2 2.8 12z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12 12 8.5l3.5 3.5L12 15.5z" fill="none" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-card" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2.2" fill="none" stroke-width="1.8"/><path d="M2.5 9.8h19" stroke-width="1.8"/><path d="M6 15h4" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-fiado" viewBox="0 0 24 24"><path d="M12 6.5v-3M8 5l1.2 1.8M16 5l-1.2 1.8" stroke-width="1.7" stroke-linecap="round"/><path d="M4 13.5c2.5-2 4.5-2 6.5-.5h3a1.4 1.4 0 0 1 0 2.8h-3.4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 17.5h4.2c1.9-1 2.8-2.4 3.3-3.8" fill="none" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="M4.5 12.5 10 18 19.5 6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-fwd" viewBox="0 0 24 24"><path d="M9 5.5 15.5 12 9 18.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-back" viewBox="0 0 24 24"><path d="M15 5.5 8.5 12 15 18.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.6" fill="none" stroke-width="1.8"/><circle cx="17.5" cy="5.5" r="2.6" fill="none" stroke-width="1.8"/><circle cx="17.5" cy="18.5" r="2.6" fill="none" stroke-width="1.8"/><path d="m8.4 10.8 6.8-4M8.4 13.2l6.8 4" stroke-width="1.8"/></symbol>
+    <symbol id="ic-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 5.5H4.5v1A3.5 3.5 0 0 0 8 10M16 5.5h3.5v1A3.5 3.5 0 0 1 16 10" fill="none" stroke-width="1.8"/><path d="M12 13v3.5M8.5 20h7M12 16.5c-1.4 0-2 1.2-2.4 3.5h4.8c-.4-2.3-1-3.5-2.4-3.5z" fill="none" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-whats" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.8c-.4 2.5 3.7 6.6 6.2 6.2l.4-1.7-2-.9-.9.7c-1-.5-1.6-1.1-2-2l.7-.9-.9-2z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-arrowup" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11.5h10.6L21 7.5H6" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="16.5" cy="19.5" r="1.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke-width="2.1" stroke-linecap="round"/></symbol>
+    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.2" fill="none" stroke-width="1.9"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" fill="none" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="sb" viewBox="0 0 42 15"><path d="M1 8.5h2v3H1zM4.5 6.5h2v5h-2zM8 4.5h2v7H8zM11.5 2.5h2v9h-2z" fill="currentColor" stroke="none"/><path d="M20.5 5.2a7.4 7.4 0 0 0-9 0l1.2 1.5a5.5 5.5 0 0 1 6.6 0zM19 7.6a4.4 4.4 0 0 0-6 0l1.2 1.5a2.5 2.5 0 0 1 3.6 0zM16 10.4l1-1.2a1.6 1.6 0 0 0-2 0z" fill="currentColor" stroke="none"/><rect x="24" y="3.5" width="16" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="25.5" y="5" width="10" height="5" rx="1.2" fill="currentColor" stroke="none"/><path d="M41 6v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="star4" viewBox="0 0 40 40"><path d="M20 0l4.5 15.5L40 20l-15.5 4.5L20 40l-4.5-15.5L0 20l15.5-4.5z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.2 19.5 12 7 19.8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14.5M13.5 6.5 19 12l-5.5 5.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h16"/><path d="M5.5 20.5v-7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v7"/><path d="M5.5 15.5c1.1.9 2.2.9 3.3 0s2.2-.9 3.2 0 2.2.9 3.2 0 2.2-.9 3.3 0"/><path d="M12 11.5V8"/><path d="M12 5.8c.9-.8 1.1-1.6 0-2.8-1.1 1.2-.9 2 0 2.8z"/></g></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.8"/><circle cx="6" cy="17.5" r="2.8"/><path d="M20 4.5 8.2 15.8M14.3 13.7 20 19.5M8.2 8.2 11.5 11.5"/></g></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.8 6.2a4.4 4.4 0 0 0-5.9 5.5L3.8 16.8a2 2 0 0 0 2.8 2.8l5.1-5.1a4.4 4.4 0 0 0 5.5-5.9l-2.7 2.7-2.4-.4-.4-2.4z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M8.8 16.3a4.6 4.6 0 0 1 6.4 0"/><path d="M5.3 12.8a9.5 9.5 0 0 1 4.3-2.4"/><path d="M18.7 12.8a9.5 9.5 0 0 0-1.9-1.4"/><path d="M2 9.2a14.4 14.4 0 0 1 3.8-2.5"/><path d="M22 9.2A14.4 14.4 0 0 0 10.8 5.5"/></g><circle cx="12" cy="19.6" r="1.3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H7.8a5.3 5.3 0 1 1 1.5-10.4A6.3 6.3 0 0 1 21 11.3 3.9 3.9 0 0 1 17.5 19z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.8-4.7-7.8-10.3A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.8 2.5C19.8 15.3 12 20 12 20z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="m20.5 16-4.5-4.5L6 19.5"/></g></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h12v17l-2.4-1.5-2 1.5-1.6-1.5-1.6 1.5-2-1.5L6 20.5z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 21h4"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.5 20.5 6 17 9.5"/><path d="M3.5 11.5V10a4 4 0 0 1 4-4h13"/><path d="M7 21.5 3.5 18 7 14.5"/><path d="M20.5 12.5V14a4 4 0 0 1-4 4h-13"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.9-3.3 3.4-5 6.5-5s5.6 1.7 6.5 5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 15.3c1.4.8 2.4 2.4 3 4.7"/></g></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3.5V8h4.5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 20.5V16h-4.5"/></g></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M8.5 6.5h7v3h-7z"/></g><path d="M8.7 13.2h.01M12 13.2h.01M15.3 13.2h.01M8.7 16.8h.01M12 16.8h.01M15.3 16.8h.01" fill="none" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="6" height="6" rx="1"/><rect x="14.5" y="3.5" width="6" height="6" rx="1"/><rect x="3.5" y="14.5" width="6" height="6" rx="1"/><path d="M14.5 14.5h2.5v2.5M20.5 14.5v.01M14.5 20.5h.01M17.5 17.5h3v3h-3z"/></g></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11.5M7 10l5 5 5-5"/><path d="M4.5 20h15"/></g></symbol>
+    <symbol id="i-box-edit" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h4L19 9.5a2.8 2.8 0 0 0-4-4L4 16.5z"/><path d="M13.5 7 17 10.5"/></g></symbol>
+    <symbol id="i-tap" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V5a1.8 1.8 0 0 1 3.6 0v5.5"/><path d="M12.6 10V8.8a1.8 1.8 0 0 1 3.6 0v2"/><path d="M16.2 10.8a1.8 1.8 0 0 1 3.3 1V15a6.5 6.5 0 0 1-6.5 6.5h-.6a6.5 6.5 0 0 1-5.2-2.6L4 14.6a1.8 1.8 0 0 1 2.7-2.3L9 14.5"/></g></symbol>
+  </svg>
 
-      <p>
-        Esta Política de Privacidade se aplica exclusivamente ao aplicativo móvel
-        <strong>Cadu Vendas</strong> (nome do pacote/ID na Google Play:
-        <strong>com.cadernodevendas</strong>), um caderno de vendas para celular. Ela explica quais
-        dados o aplicativo acessa, coleta, usa, armazena, compartilha e por quanto tempo os retém,
-        além de como você pode excluí-los.
-      </p>
-      <p>
-        O aplicativo é <strong>offline por padrão</strong>: seus registros de vendas ficam
-        armazenados no próprio aparelho. Criar conta e usar o backup na nuvem é opcional.
-      </p>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-      <h2>1. Quem é o responsável (controlador dos dados)</h2>
-      <div class="ident">
-        <p><strong>Desenvolvedor / controlador:</strong> Patrick Simões (desenvolvedor individual)</p>
-        <p><strong>Aplicativo:</strong> Cadu Vendas — com.cadernodevendas</p>
-        <p>
-          <strong>Contato de privacidade:</strong>
-          <a href="mailto:patricksimoes25@gmail.com">patricksimoes25@gmail.com</a>
-        </p>
-        <p>
-          <strong>Exclusão de conta e dados:</strong>
-          <a href="./delete-account.html">patricksimoes.github.io/delete-account.html</a>
-        </p>
-      </div>
-      <p>
-        Todo pedido relacionado a privacidade (acesso, correção, exclusão, portabilidade, revogação
-        de consentimento) pode ser enviado para o e-mail acima. Respondemos em até 15 dias.
-      </p>
-
-      <h2>2. Dados que ficam somente no seu aparelho</h2>
-      <p>
-        Vendas, produtos, clientes, fiado, metas, chave Pix e configurações são gravados em um banco
-        de dados local no seu celular. Sem conta e sem backup na nuvem, esses dados
-        <strong>não são enviados para nenhum servidor nosso</strong> e não são acessíveis por nós.
-      </p>
-      <p>
-        Observação sobre o Android: o backup automático do sistema operacional pode guardar uma
-        cópia dos dados do app no <strong>seu próprio Google Drive</strong> (da sua conta Google, não
-        da nossa). Esse é um recurso padrão do Android, controlado por você nas configurações do
-        aparelho, e pode ser desativado a qualquer momento.
-      </p>
-
-      <h2>3. Dados pessoais que coletamos e por quê</h2>
-      <p>
-        A tabela abaixo lista, de forma completa, todos os tipos de dados pessoais que o aplicativo
-        coleta, acessa ou compartilha, a finalidade de cada um e se o envio é obrigatório ou
-        opcional.
-      </p>
-      <div class="tablewrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Dado</th>
-              <th>Quando é coletado</th>
-              <th>Finalidade</th>
-              <th>Obrigatório?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Endereço de e-mail e senha</td>
-              <td>Somente se você criar uma conta no app</td>
-              <td>Autenticar o acesso à sua conta e ao backup na nuvem</td>
-              <td>Opcional — o app funciona sem conta</td>
-            </tr>
-            <tr>
-              <td>Nome de exibição (se preenchido)</td>
-              <td>Somente com conta criada</td>
-              <td>Personalizar a interface e identificar você no suporte</td>
-              <td>Opcional</td>
-            </tr>
-            <tr>
-              <td>
-                Cópia do seu caderno (vendas, produtos, clientes, fiado, nomes de clientes e chave
-                Pix)
-              </td>
-              <td>Somente se você ativar e usar o backup na nuvem ou a sincronização automática</td>
-              <td>Restaurar seus dados ao trocar de aparelho ou reinstalar o app; manter aparelhos da mesma conta sincronizados</td>
-              <td>Opcional</td>
-            </tr>
-            <tr>
-              <td>Identificador de publicidade do aparelho (Advertising ID) e dados técnicos do dispositivo</td>
-              <td>Na versão gratuita, ao exibir anúncios</td>
-              <td>Exibir anúncios, medir desempenho e prevenir fraude (Google AdMob)</td>
-              <td>Obrigatório na versão gratuita; eliminado ao comprar "Sem anúncios" ou o Premium</td>
-            </tr>
-            <tr>
-              <td>Identificador anônimo do app e histórico de compra da loja</td>
-              <td>Ao assinar o Premium ou comprar "Sem anúncios"</td>
-              <td>Validar e manter a assinatura/compra ativa (RevenueCat)</td>
-              <td>Obrigatório apenas para quem compra</td>
-            </tr>
-            <tr>
-              <td>
-                Texto da sugestão, versão do app, sistema operacional e — se você estiver logado —
-                seu e-mail, nome e identificador de conta
-              </td>
-              <td>Somente ao enviar uma sugestão pela tela "Sobre o app"</td>
-              <td>Ler, responder e priorizar melhorias do aplicativo</td>
-              <td>Opcional</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3>Permissões do aparelho e o que fazemos com elas</h3>
-      <ul>
-        <li>
-          <strong>Salvar imagens na galeria:</strong> usada apenas para gravar, na sua galeria, a
-          imagem do resumo do dia quando <em>você</em> pede para salvar ou compartilhar. O aplicativo
-          <strong>não lê</strong> nem envia suas fotos.
-        </li>
-        <li>
-          <strong>Escolher um arquivo:</strong> usada apenas quando você seleciona manualmente um
-          arquivo de backup para restaurar. O arquivo é lido no próprio aparelho.
-        </li>
-        <li>
-          <strong>Notificações:</strong> os lembretes são agendados e disparados localmente no
-          aparelho. Não enviamos notificações push a partir de servidores e
-          <strong>não coletamos token de notificação</strong>.
-        </li>
-      </ul>
-
-      <h3>O que o aplicativo não faz</h3>
-      <ul>
-        <li>Não vendemos seus dados pessoais, em nenhuma hipótese.</li>
-        <li>Não acessamos câmera, microfone, contatos, agenda, mensagens nem localização precisa (GPS).</li>
-        <li>Não enviamos suas vendas para a Receita Federal nem para qualquer terceiro.</li>
-        <li>Não movimentamos seu Pix e não cobramos por você — a chave serve apenas para gerar o QR Code no seu aparelho.</li>
-        <li>Não usamos seus dados para treinar modelos de inteligência artificial nem para análise de crédito.</li>
-        <li>Não coletamos conscientemente dados de crianças menores de 13 anos.</li>
-      </ul>
-
-      <h2>4. Conta, backup e sincronização na nuvem</h2>
-      <p>
-        Criar conta é <strong>opcional</strong> — todas as funções principais do app operam sem ela.
-        Se você criar uma conta (e-mail e senha) e usar a nuvem, seus registros são transmitidos por
-        conexão criptografada (HTTPS/TLS) para o <strong>Google Firebase</strong>
-        (Firebase Authentication e Cloud Firestore) e ficam acessíveis
-        <strong>somente pela sua conta</strong>. Cada registro é armazenado
-        <strong>individualmente</strong> (cada venda, produto, pedido, cliente, meta e assinatura,
-        além de cada uso e pagamento registrado nas assinaturas), e não como uma cópia única de
-        todo o caderno — o que permite ao app transmitir apenas o que foi alterado. O conteúdo inclui o que você cadastrou — inclusive a chave Pix e os nomes dos
-        clientes do fiado — para que seus dados voltem ao trocar de aparelho.
-      </p>
-      <p>
-        Com a <strong>sincronização automática</strong> ligada (recurso opcional do plano Premium), o
-        app envia cada alteração automaticamente e aplica no aparelho as mudanças feitas por outros
-        aparelhos conectados à mesma conta. Junto de cada registro são gravados a
-        <strong>data/hora da alteração</strong> e um <strong>identificador aleatório do aparelho</strong>
-        que a realizou — gerado pelo app, sem relação com hardware, conta ou pessoa, e usado
-        exclusivamente para determinar qual versão de um registro é a mais recente e evitar
-        duplicação. Registros que pertencem a outro (o uso ou o pagamento de uma assinatura, por
-        exemplo) guardam também o identificador da sua conta e o do registro a que pertencem,
-        usados apenas para organizar os dados e garantir que ninguém mais os alcance. Nenhuma outra
-        informação adicional é coletada. A sincronização pode ser desligada
-        a qualquer momento em Perfil → Backup na nuvem.
-      </p>
-      <p>
-        <strong>Exclusão de registros:</strong> ao excluir um registro no app, o conteúdo é removido
-        da nuvem e permanece apenas uma marcação técnica de que aquele registro existiu (identificador
-        e data da exclusão), sem qualquer dado pessoal. Essa marcação é necessária para impedir que o
-        registro excluído seja restabelecido por um aparelho que estava sem conexão no momento da
-        exclusão. Ao excluir a conta, todos os dados e essas marcações são removidos definitivamente.
-      </p>
-
-      <h2>5. Com quem compartilhamos dados</h2>
-      <p>
-        Compartilhamos apenas o estritamente necessário com os provedores abaixo, que atuam como
-        operadores/subprocessadores. Não há outros destinatários.
-      </p>
-      <div class="tablewrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Terceiro</th>
-              <th>Finalidade</th>
-              <th>Dados compartilhados</th>
-              <th>Política</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Google Firebase (Authentication e Cloud Firestore)</td>
-              <td>Conta de acesso, armazenamento do backup na nuvem e sincronização entre aparelhos</td>
-              <td>E-mail, senha (em formato hash), nome de exibição, identificador de conta, cópia do caderno</td>
-              <td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td>
-            </tr>
-            <tr>
-              <td>Google AdMob</td>
-              <td>Exibição e medição de anúncios na versão gratuita</td>
-              <td>Identificador de publicidade e dados técnicos do dispositivo</td>
-              <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
-            </tr>
-            <tr>
-              <td>RevenueCat</td>
-              <td>Validação da assinatura Premium e da compra "Sem anúncios"</td>
-              <td>Identificador anônimo do app e recibo/histórico de compra da loja</td>
-              <td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
-            </tr>
-            <tr>
-              <td>Google Play (faturamento)</td>
-              <td>Processamento da compra e da assinatura</td>
-              <td>Dados de pagamento tratados diretamente pela loja — não temos acesso a eles</td>
-              <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p>
-        Esses provedores podem processar e armazenar dados em servidores localizados fora do Brasil.
-        As transferências internacionais seguem as salvaguardas contratuais dos respectivos
-        provedores.
-      </p>
-
-      <h2>6. Anúncios e consentimento</h2>
-      <p>
-        O Cadu Vendas é gratuito com anúncios do <strong>Google AdMob</strong>, exibidos em telas
-        secundárias — nunca durante o registro de uma venda. Onde a legislação exige (por exemplo,
-        Espaço Econômico Europeu e Reino Unido), o app apresenta o formulário de consentimento do
-        Google (UMP) na primeira execução, permitindo escolher entre anúncios personalizados e não
-        personalizados. Você pode <strong>rever essa escolha a qualquer momento</strong> em
-        <strong>Perfil → Privacidade dos anúncios</strong>. Os anúncios podem ser removidos de vez
-        com a compra única "Sem anúncios" ou com a assinatura Premium.
-      </p>
-
-      <h2>7. Segurança — como protegemos seus dados</h2>
-      <p>
-        Adotamos medidas técnicas e organizacionais apropriadas ao risco para proteger dados
-        pessoais contra acesso não autorizado, perda, alteração ou divulgação indevida:
-      </p>
-      <ul>
-        <li>Toda comunicação com os servidores acontece por conexão criptografada (HTTPS/TLS).</li>
-        <li>
-          Senhas nunca trafegam nem são armazenadas em texto puro: a autenticação é delegada ao
-          Firebase Authentication, que guarda apenas o hash da senha.
-        </li>
-        <li>
-          O backup na nuvem é isolado por conta através de regras de segurança do Cloud Firestore:
-          cada usuário só consegue ler e gravar na própria área
-          (<code>users/{seu-identificador}</code>). Nenhum outro usuário tem acesso.
-        </li>
-        <li>
-          Credenciais e chaves sensíveis no aparelho ficam no armazenamento seguro do sistema
-          operacional (Android Keystore / iOS Keychain), não em arquivos comuns do app.
-        </li>
-        <li>O acesso administrativo aos consoles dos provedores é restrito ao desenvolvedor e protegido por verificação em duas etapas.</li>
-      </ul>
-      <p>
-        Nenhum sistema é totalmente imune a falhas. Recomendamos o uso de senha forte e exclusiva.
-        Em caso de incidente de segurança que possa gerar risco relevante aos seus direitos, os
-        titulares afetados e a autoridade competente serão comunicados nos prazos legais.
-      </p>
-
-      <h2>8. Por quanto tempo guardamos (retenção)</h2>
-      <ul>
-        <li>
-          <strong>Dados no aparelho:</strong> permanecem enquanto o app estiver instalado. São
-          apagados ao desinstalar o app ou limpar os dados dele nas configurações do Android.
-        </li>
-        <li>
-          <strong>Conta e backup na nuvem:</strong> mantidos enquanto a conta estiver ativa. Apenas
-          os 10 backups mais recentes são preservados. Ao excluir a conta, a conta de autenticação e
-          todos os backups são removidos imediatamente, e eventuais cópias residuais em rotinas de
-          backup do provedor são eliminadas em até <strong>30 dias</strong>.
-        </li>
-        <li>
-          <strong>Contas inativas:</strong> contas sem qualquer acesso por 24 meses podem ser
-          excluídas junto com seus backups, após aviso por e-mail.
-        </li>
-        <li>
-          <strong>Sugestões enviadas pelo app:</strong> guardadas por até 24 meses e depois
-          apagadas.
-        </li>
-        <li>
-          <strong>Dados de anúncios e de compra:</strong> retidos pelo Google e pela RevenueCat
-          conforme as políticas de cada um, indicadas na seção 5.
-        </li>
-      </ul>
-
-      <h2>9. Como excluir seus dados</h2>
-      <p>
-        Você pode <strong>excluir sua conta e todos os dados da nuvem a qualquer momento, dentro do
-        próprio aplicativo</strong>, em <strong>Perfil → Conta → Excluir conta e dados</strong>. A
-        exclusão remove, de forma permanente, sua conta de autenticação e todos os backups
-        armazenados no servidor.
-      </p>
-      <p>
-        Se você já desinstalou o app ou não consegue acessar a conta, é possível solicitar a
-        exclusão por e-mail — as instruções completas estão na página
-        <a href="./delete-account.html">Excluir conta e dados</a>. Os dados gravados apenas no
-        aparelho são removidos ao desinstalar o app ou limpar os dados dele nas configurações do
-        Android.
-      </p>
-
-      <h2>10. Seus direitos (LGPD e GDPR)</h2>
-      <p>
-        Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018) e, quando aplicável, do
-        GDPR, você pode a qualquer momento: confirmar a existência de tratamento; acessar seus
-        dados; corrigir dados incompletos ou desatualizados; solicitar anonimização, bloqueio ou
-        exclusão; obter a portabilidade dos dados (o app permite exportar seu caderno em
-        <strong>Perfil → Exportar dados</strong>); revogar consentimento; opor-se a determinados
-        tratamentos; e apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD) ou à
-        autoridade de proteção de dados do seu país.
-      </p>
-      <p>
-        Bases legais utilizadas: <strong>execução de contrato</strong> (conta, backup e assinatura),
-        <strong>consentimento</strong> (anúncios personalizados, quando exigido) e
-        <strong>legítimo interesse</strong> (segurança, prevenção a fraudes e melhoria do app).
-      </p>
-
-      <h2>11. Crianças</h2>
-      <p>
-        O aplicativo não é direcionado a menores de 13 anos e não coletamos dados de crianças de
-        forma consciente. Se identificarmos a coleta de dados de um menor sem o consentimento dos
-        responsáveis, esses dados serão excluídos. Responsáveis podem solicitar a exclusão pelo
-        e-mail de contato.
-      </p>
-
-      <h2>12. Pagamentos</h2>
-      <p>
-        A assinatura Premium e a compra "Sem anúncios" são cobradas pela Google Play, não por nós.
-        Você gerencia (cancela ou troca de plano) nas configurações da loja, e o reembolso segue a
-        política da plataforma. Não recebemos nem armazenamos dados de cartão.
-      </p>
-
-      <h2>13. Mudanças nesta política</h2>
-      <p>
-        Esta página é atualizada sempre que houver mudança relevante no tratamento de dados, com a
-        data de atualização revista no topo. Quando a mudança for significativa, você também é
-        avisado dentro do aplicativo antes de ela passar a valer.
-      </p>
-
-      <h2>14. Contato</h2>
-      <p>
-        Dúvidas, pedidos de exclusão ou qualquer questão sobre privacidade:
-        <a href="mailto:patricksimoes25@gmail.com">patricksimoes25@gmail.com</a>.
-      </p>
-
-      <footer>
-        Cadu Vendas (com.cadernodevendas) · Patrick Simões ·
-        <a href="./terms.html">Termos de Uso</a> ·
-        <a href="./delete-account.html">Excluir conta e dados</a>
-      </footer>
+  <header class="site-header">
+    <div class="wrap site-header__in">
+      <a class="brand" href="./" aria-label="Cadu Vendas — página inicial">
+        <img src="favicon.svg" alt="" width="36" height="36">
+        <span>Cadu Vendas</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <svg class="i i-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="i i-close" aria-hidden="true"><use href="#ic-close"/></svg>
+      </button>
+      <nav class="nav" id="menu" aria-label="Principal" data-open="false">
+        <a href="./#recursos">Recursos</a>
+        <a href="./#pra-quem-e">Pra quem é</a>
+        <a href="./#planos">Planos</a>
+        <a href="./#duvidas">Dúvidas</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dprivacidade" target="_blank" rel="noopener">Baixar grátis<span class="sr-only"> (abre em nova aba)</span></a>
+      </nav>
     </div>
-  </body>
+  </header>
+
+  <main id="conteudo">
+    <section class="legal-hero bg-green" aria-labelledby="titulo">
+      <div class="wrap prose">
+        <nav aria-label="Trilha de navegação">
+          <ol class="breadcrumb"><li><a href="./">Início</a></li><li><span aria-current="page">Política de Privacidade</span></li></ol>
+        </nav>
+        <h1 id="titulo" class="h1">Política de Privacidade</h1>
+        <p class="updated">Última atualização: 28 de setembro de 2026 · Vigente desde: 22 de agosto de 2026</p>
+      </div>
+    </section>
+
+    <article class="legal">
+      <div class="wrap prose">
+        <p>
+          Esta Política de Privacidade se aplica exclusivamente ao aplicativo móvel
+          <strong>Cadu Vendas</strong> (nome do pacote/ID na Google Play:
+          <strong>com.cadernodevendas</strong>), um caderno de vendas para celular. Ela explica quais
+          dados o aplicativo acessa, coleta, usa, armazena, compartilha e por quanto tempo os retém,
+          além de como você pode excluí-los.
+        </p>
+        <p>
+          O aplicativo é <strong>offline por padrão</strong>: seus registros de vendas ficam
+          armazenados no próprio aparelho. Criar conta e usar o backup na nuvem é opcional.
+        </p>
+
+        <h2>1. Quem é o responsável (controlador dos dados)</h2>
+        <div class="ident">
+          <p><strong>Desenvolvedor / controlador:</strong> Patrick Simões (desenvolvedor individual)</p>
+          <p><strong>Aplicativo:</strong> Cadu Vendas — com.cadernodevendas</p>
+          <p>
+            <strong>Contato de privacidade:</strong>
+            <a href="mailto:contato@caduvendas.com.br">contato@caduvendas.com.br</a>
+          </p>
+          <p>
+            <strong>Exclusão de conta e dados:</strong>
+            <a href="delete-account.html">caduvendas.com.br/delete-account.html</a>
+          </p>
+        </div>
+        <p>
+          Todo pedido relacionado a privacidade (acesso, correção, exclusão, portabilidade, revogação
+          de consentimento) pode ser enviado para o e-mail acima. Respondemos em até 15 dias.
+        </p>
+
+        <h2>2. Dados que ficam somente no seu aparelho</h2>
+        <p>
+          Vendas, produtos, clientes, fiado, metas, chave Pix e configurações são gravados em um banco
+          de dados local no seu celular. Sem conta e sem backup na nuvem, esses dados
+          <strong>não são enviados para nenhum servidor nosso</strong> e não são acessíveis por nós.
+        </p>
+        <p>
+          Observação sobre o Android: o backup automático do sistema operacional pode guardar uma
+          cópia dos dados do app no <strong>seu próprio Google Drive</strong> (da sua conta Google, não
+          da nossa). Esse é um recurso padrão do Android, controlado por você nas configurações do
+          aparelho, e pode ser desativado a qualquer momento.
+        </p>
+
+        <h2>3. Dados pessoais que coletamos e por quê</h2>
+        <p>
+          A tabela abaixo lista, de forma completa, todos os tipos de dados pessoais que o aplicativo
+          coleta, acessa ou compartilha, a finalidade de cada um e se o envio é obrigatório ou
+          opcional.
+        </p>
+        <div class="table-wrap table-wrap--wide">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Dado</th>
+                <th scope="col">Quando é coletado</th>
+                <th scope="col">Finalidade</th>
+                <th scope="col">Obrigatório?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Endereço de e-mail e senha</td>
+                <td>Somente se você criar uma conta no app</td>
+                <td>Autenticar o acesso à sua conta e ao backup na nuvem</td>
+                <td>Opcional — o app funciona sem conta</td>
+              </tr>
+              <tr>
+                <td>Nome de exibição (se preenchido)</td>
+                <td>Somente com conta criada</td>
+                <td>Personalizar a interface e identificar você no suporte</td>
+                <td>Opcional</td>
+              </tr>
+              <tr>
+                <td>
+                  Cópia do seu caderno (vendas, produtos, clientes, fiado, nomes de clientes e chave
+                  Pix)
+                </td>
+                <td>Somente se você ativar e usar o backup na nuvem ou a sincronização automática</td>
+                <td>Restaurar seus dados ao trocar de aparelho ou reinstalar o app; manter aparelhos da mesma conta sincronizados</td>
+                <td>Opcional</td>
+              </tr>
+              <tr>
+                <td>Identificador de publicidade do aparelho (Advertising ID) e dados técnicos do dispositivo</td>
+                <td>Na versão gratuita, ao exibir anúncios</td>
+                <td>Exibir anúncios, medir desempenho e prevenir fraude (Google AdMob)</td>
+                <td>Obrigatório na versão gratuita; eliminado ao comprar "Sem anúncios" ou o Premium</td>
+              </tr>
+              <tr>
+                <td>Identificador anônimo do app e histórico de compra da loja</td>
+                <td>Ao assinar o Premium ou comprar "Sem anúncios"</td>
+                <td>Validar e manter a assinatura/compra ativa (RevenueCat)</td>
+                <td>Obrigatório apenas para quem compra</td>
+              </tr>
+              <tr>
+                <td>
+                  Texto da sugestão, versão do app, sistema operacional e — se você estiver logado —
+                  seu e-mail, nome e identificador de conta
+                </td>
+                <td>Somente ao enviar uma sugestão pela tela "Sobre o app"</td>
+                <td>Ler, responder e priorizar melhorias do aplicativo</td>
+                <td>Opcional</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Permissões do aparelho e o que fazemos com elas</h3>
+        <ul>
+          <li>
+            <strong>Salvar imagens na galeria:</strong> usada apenas para gravar, na sua galeria, a
+            imagem do resumo do dia quando <em>você</em> pede para salvar ou compartilhar. O aplicativo
+            <strong>não lê</strong> nem envia suas fotos.
+          </li>
+          <li>
+            <strong>Escolher um arquivo:</strong> usada apenas quando você seleciona manualmente um
+            arquivo de backup para restaurar. O arquivo é lido no próprio aparelho.
+          </li>
+          <li>
+            <strong>Notificações:</strong> os lembretes são agendados e disparados localmente no
+            aparelho. Não enviamos notificações push a partir de servidores e
+            <strong>não coletamos token de notificação</strong>.
+          </li>
+        </ul>
+
+        <h3>O que o aplicativo não faz</h3>
+        <ul>
+          <li>Não vendemos seus dados pessoais, em nenhuma hipótese.</li>
+          <li>Não acessamos câmera, microfone, contatos, agenda, mensagens nem localização precisa (GPS).</li>
+          <li>Não enviamos suas vendas para a Receita Federal nem para qualquer terceiro.</li>
+          <li>Não movimentamos seu Pix e não cobramos por você — a chave serve apenas para gerar o QR Code no seu aparelho.</li>
+          <li>Não usamos seus dados para treinar modelos de inteligência artificial nem para análise de crédito.</li>
+          <li>Não coletamos conscientemente dados de crianças menores de 13 anos.</li>
+        </ul>
+
+        <h2>4. Conta, backup e sincronização na nuvem</h2>
+        <p>
+          Criar conta é <strong>opcional</strong> — todas as funções principais do app operam sem ela.
+          Se você criar uma conta (e-mail e senha) e usar a nuvem, seus registros são transmitidos por
+          conexão criptografada (HTTPS/TLS) para o <strong>Google Firebase</strong>
+          (Firebase Authentication e Cloud Firestore) e ficam acessíveis
+          <strong>somente pela sua conta</strong>. Cada registro é armazenado
+          <strong>individualmente</strong> (cada venda, produto, pedido, cliente, meta e assinatura,
+          além de cada uso e pagamento registrado nas assinaturas), e não como uma cópia única de
+          todo o caderno — o que permite ao app transmitir apenas o que foi alterado. O conteúdo inclui o que você cadastrou — inclusive a chave Pix e os nomes dos
+          clientes do fiado — para que seus dados voltem ao trocar de aparelho.
+        </p>
+        <p>
+          Com a <strong>sincronização automática</strong> ligada (recurso opcional do plano Premium), o
+          app envia cada alteração automaticamente e aplica no aparelho as mudanças feitas por outros
+          aparelhos conectados à mesma conta. Junto de cada registro são gravados a
+          <strong>data/hora da alteração</strong> e um <strong>identificador aleatório do aparelho</strong>
+          que a realizou — gerado pelo app, sem relação com hardware, conta ou pessoa, e usado
+          exclusivamente para determinar qual versão de um registro é a mais recente e evitar
+          duplicação. Registros que pertencem a outro (o uso ou o pagamento de uma assinatura, por
+          exemplo) guardam também o identificador da sua conta e o do registro a que pertencem,
+          usados apenas para organizar os dados e garantir que ninguém mais os alcance. Nenhuma outra
+          informação adicional é coletada. A sincronização pode ser desligada
+          a qualquer momento em Perfil → Backup na nuvem.
+        </p>
+        <p>
+          <strong>Exclusão de registros:</strong> ao excluir um registro no app, o conteúdo é removido
+          da nuvem e permanece apenas uma marcação técnica de que aquele registro existiu (identificador
+          e data da exclusão), sem qualquer dado pessoal. Essa marcação é necessária para impedir que o
+          registro excluído seja restabelecido por um aparelho que estava sem conexão no momento da
+          exclusão. Ao excluir a conta, todos os dados e essas marcações são removidos definitivamente.
+        </p>
+
+        <h2>5. Com quem compartilhamos dados</h2>
+        <p>
+          Compartilhamos apenas o estritamente necessário com os provedores abaixo, que atuam como
+          operadores/subprocessadores. Não há outros destinatários.
+        </p>
+        <div class="table-wrap table-wrap--wide">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Terceiro</th>
+                <th scope="col">Finalidade</th>
+                <th scope="col">Dados compartilhados</th>
+                <th scope="col">Política</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google Firebase (Authentication e Cloud Firestore)</td>
+                <td>Conta de acesso, armazenamento do backup na nuvem e sincronização entre aparelhos</td>
+                <td>E-mail, senha (em formato hash), nome de exibição, identificador de conta, cópia do caderno</td>
+                <td><a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></td>
+              </tr>
+              <tr>
+                <td>Google AdMob</td>
+                <td>Exibição e medição de anúncios na versão gratuita</td>
+                <td>Identificador de publicidade e dados técnicos do dispositivo</td>
+                <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+              </tr>
+              <tr>
+                <td>RevenueCat</td>
+                <td>Validação da assinatura Premium e da compra "Sem anúncios"</td>
+                <td>Identificador anônimo do app e recibo/histórico de compra da loja</td>
+                <td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td>
+              </tr>
+              <tr>
+                <td>Google Play (faturamento)</td>
+                <td>Processamento da compra e da assinatura</td>
+                <td>Dados de pagamento tratados diretamente pela loja — não temos acesso a eles</td>
+                <td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Esses provedores podem processar e armazenar dados em servidores localizados fora do Brasil.
+          As transferências internacionais seguem as salvaguardas contratuais dos respectivos
+          provedores.
+        </p>
+
+        <h2>6. Anúncios e consentimento</h2>
+        <p>
+          O Cadu Vendas é gratuito com anúncios do <strong>Google AdMob</strong>, exibidos em telas
+          secundárias — nunca durante o registro de uma venda. Onde a legislação exige (por exemplo,
+          Espaço Econômico Europeu e Reino Unido), o app apresenta o formulário de consentimento do
+          Google (UMP) na primeira execução, permitindo escolher entre anúncios personalizados e não
+          personalizados. Você pode <strong>rever essa escolha a qualquer momento</strong> em
+          <strong>Perfil → Privacidade dos anúncios</strong>. Os anúncios podem ser removidos de vez
+          com a compra única "Sem anúncios" ou com a assinatura Premium.
+        </p>
+
+        <h2>7. Segurança — como protegemos seus dados</h2>
+        <p>
+          Adotamos medidas técnicas e organizacionais apropriadas ao risco para proteger dados
+          pessoais contra acesso não autorizado, perda, alteração ou divulgação indevida:
+        </p>
+        <ul>
+          <li>Toda comunicação com os servidores acontece por conexão criptografada (HTTPS/TLS).</li>
+          <li>
+            Senhas nunca trafegam nem são armazenadas em texto puro: a autenticação é delegada ao
+            Firebase Authentication, que guarda apenas o hash da senha.
+          </li>
+          <li>
+            O backup na nuvem é isolado por conta através de regras de segurança do Cloud Firestore:
+            cada usuário só consegue ler e gravar na própria área
+            (<code>users/{seu-identificador}</code>). Nenhum outro usuário tem acesso.
+          </li>
+          <li>
+            Credenciais e chaves sensíveis no aparelho ficam no armazenamento seguro do sistema
+            operacional (Android Keystore / iOS Keychain), não em arquivos comuns do app.
+          </li>
+          <li>O acesso administrativo aos consoles dos provedores é restrito ao desenvolvedor e protegido por verificação em duas etapas.</li>
+        </ul>
+        <p>
+          Nenhum sistema é totalmente imune a falhas. Recomendamos o uso de senha forte e exclusiva.
+          Em caso de incidente de segurança que possa gerar risco relevante aos seus direitos, os
+          titulares afetados e a autoridade competente serão comunicados nos prazos legais.
+        </p>
+
+        <h2>8. Por quanto tempo guardamos (retenção)</h2>
+        <ul>
+          <li>
+            <strong>Dados no aparelho:</strong> permanecem enquanto o app estiver instalado. São
+            apagados ao desinstalar o app ou limpar os dados dele nas configurações do Android.
+          </li>
+          <li>
+            <strong>Conta e backup na nuvem:</strong> mantidos enquanto a conta estiver ativa. Apenas
+            os 10 backups mais recentes são preservados. Ao excluir a conta, a conta de autenticação e
+            todos os backups são removidos imediatamente, e eventuais cópias residuais em rotinas de
+            backup do provedor são eliminadas em até <strong>30 dias</strong>.
+          </li>
+          <li>
+            <strong>Contas inativas:</strong> contas sem qualquer acesso por 24 meses podem ser
+            excluídas junto com seus backups, após aviso por e-mail.
+          </li>
+          <li>
+            <strong>Sugestões enviadas pelo app:</strong> guardadas por até 24 meses e depois
+            apagadas.
+          </li>
+          <li>
+            <strong>Dados de anúncios e de compra:</strong> retidos pelo Google e pela RevenueCat
+            conforme as políticas de cada um, indicadas na seção 5.
+          </li>
+        </ul>
+
+        <h2>9. Como excluir seus dados</h2>
+        <p>
+          Você pode <strong>excluir sua conta e todos os dados da nuvem a qualquer momento, dentro do
+          próprio aplicativo</strong>, em <strong>Perfil → Conta → Excluir conta e dados</strong>. A
+          exclusão remove, de forma permanente, sua conta de autenticação e todos os backups
+          armazenados no servidor.
+        </p>
+        <p>
+          Se você já desinstalou o app ou não consegue acessar a conta, é possível solicitar a
+          exclusão por e-mail — as instruções completas estão na página
+          <a href="delete-account.html">Excluir conta e dados</a>. Os dados gravados apenas no
+          aparelho são removidos ao desinstalar o app ou limpar os dados dele nas configurações do
+          Android.
+        </p>
+
+        <h2>10. Seus direitos (LGPD e GDPR)</h2>
+        <p>
+          Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018) e, quando aplicável, do
+          GDPR, você pode a qualquer momento: confirmar a existência de tratamento; acessar seus
+          dados; corrigir dados incompletos ou desatualizados; solicitar anonimização, bloqueio ou
+          exclusão; obter a portabilidade dos dados (o app permite exportar seu caderno em
+          <strong>Perfil → Exportar dados</strong>); revogar consentimento; opor-se a determinados
+          tratamentos; e apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD) ou à
+          autoridade de proteção de dados do seu país.
+        </p>
+        <p>
+          Bases legais utilizadas: <strong>execução de contrato</strong> (conta, backup e assinatura),
+          <strong>consentimento</strong> (anúncios personalizados, quando exigido) e
+          <strong>legítimo interesse</strong> (segurança, prevenção a fraudes e melhoria do app).
+        </p>
+
+        <h2>11. Crianças</h2>
+        <p>
+          O aplicativo não é direcionado a menores de 13 anos e não coletamos dados de crianças de
+          forma consciente. Se identificarmos a coleta de dados de um menor sem o consentimento dos
+          responsáveis, esses dados serão excluídos. Responsáveis podem solicitar a exclusão pelo
+          e-mail de contato.
+        </p>
+
+        <h2>12. Pagamentos</h2>
+        <p>
+          A assinatura Premium e a compra "Sem anúncios" são cobradas pela Google Play, não por nós.
+          Você gerencia (cancela ou troca de plano) nas configurações da loja, e o reembolso segue a
+          política da plataforma. Não recebemos nem armazenamos dados de cartão.
+        </p>
+
+        <h2>13. Mudanças nesta política</h2>
+        <p>
+          Esta página é atualizada sempre que houver mudança relevante no tratamento de dados, com a
+          data de atualização revista no topo. Quando a mudança for significativa, você também é
+          avisado dentro do aplicativo antes de ela passar a valer.
+        </p>
+
+        <h2>14. Contato</h2>
+        <p>
+          Dúvidas, pedidos de exclusão ou qualquer questão sobre privacidade:
+          <a href="mailto:contato@caduvendas.com.br">contato@caduvendas.com.br</a>.
+        </p>
+
+        <p class="legal-links">
+          <a href="terms.html">Termos de Uso</a>
+          <a href="delete-account.html">Excluir conta e dados</a>
+          <a href="./">Voltar para o início</a>
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand" href="./"><img src="favicon.svg" alt="" width="36" height="36"><span>Cadu Vendas</span></a>
+          <p class="site-footer__tag">Seu caderninho de vendas digital</p>
+          <p class="site-footer__about">Cadu Vendas (com.cadernodevendas) · Patrick Simões</p>
+        </div>
+        <nav aria-labelledby="f-recursos">
+          <h2 id="f-recursos">Recursos</h2>
+          <ul>
+            <li><a href="./#venda-rapida">Venda rápida</a></li>
+            <li><a href="pix/">QR Code Pix</a></li>
+            <li><a href="fiado/">Controle de fiado</a></li>
+            <li><a href="pedidos/">Pedidos e encomendas</a></li>
+            <li><a href="precificacao/">Calculadora de preço</a></li>
+            <li><a href="relatorios/">Relatórios e lucro</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-cadu">
+          <h2 id="f-cadu">O Cadu</h2>
+          <ul>
+            <li><a href="./#pra-quem-e">Pra quem é</a></li>
+            <li><a href="./#planos">Planos</a></li>
+            <li><a href="./#duvidas">Dúvidas frequentes</a></li>
+            <li><a href="mailto:contato@caduvendas.com.br">Fale com a gente</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-legal">
+          <h2 id="f-legal">Legal</h2>
+          <ul>
+            <li><a href="privacy.html" aria-current="page">Política de Privacidade</a></li>
+            <li><a href="terms.html">Termos de Uso</a></li>
+            <li><a href="delete-account.html">Excluir conta e dados</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Cadu Vendas · Feito no Brasil por Patrick Simões</p>
+        <p>Google Play é uma marca da Google LLC.</p>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
