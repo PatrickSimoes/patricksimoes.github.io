@@ -59,10 +59,9 @@ Aberto direto do disco (`file://`), o Chrome não carrega as fontes e mostra a l
 
 ## Onde o site roda
 
-1. **caduvendas.com.br** — servidor próprio (Oracle Cloud, Ubuntu 24.04, nginx 1.24), com a
-   **Cloudflare na frente** (proxy laranja: ela entrega HTTPS, HTTP/2-3 e compressão ao visitante).
-   O nginx serve um clone deste repositório em `/var/www/caduvendas/frontend` e manda `/api/` pro
-   backend `meu-back` (PM2, porta 3000).
+1. **caduvendas.com.br** — servidor próprio, com a **Cloudflare na frente** (ela entrega HTTPS,
+   HTTP/2-3 e compressão ao visitante). O servidor guarda um clone deste repositório; a config do
+   nginx fica só lá, fora do repositório.
 2. **Repositório:** `PatrickSimoes/patricksimoes.github.io` (vai ser renomeado para `site-cadu`).
 
 > **Antes de renomear o repositório:** esse nome é o que publica o GitHub Pages na raiz de
@@ -71,31 +70,25 @@ Aberto direto do disco (`file://`), o Chrome não carrega as fontes e mostra a l
 > abaixo). O app publicado ainda abre os links antigos até a próxima versão. O git não é afetado: o
 > GitHub redireciona o endereço antigo do repositório pro novo, pro servidor e pro submódulo.
 
-### Como o servidor está montado (desde 29/09/2026)
+### Deploy automático
 
-- `/var/www/caduvendas/frontend` é um **clone deste repositório** (dono `ubuntu`, `origin` =
-  `https://github.com/PatrickSimoes/patricksimoes.github.io.git`). Publicar é só:
+A cada push na `main`, o workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+entra no servidor por SSH e atualiza o site (`git pull`). A chave usada só consegue fazer isso: no
+servidor ela fica presa a esse comando (`command=` no `authorized_keys`), então não abre terminal
+nem roda mais nada — nem se vazar.
 
-  ```bash
-  git -C /var/www/caduvendas/frontend pull --ff-only
-  ```
+Segredos do repositório (Settings → Secrets and variables → Actions):
 
-  É esse comando que o auto-deploy precisa rodar (como `ubuntu`, sem sudo). O repositório é
-  público, então o servidor puxa sem senha; se ele virar privado, vai precisar de uma deploy key.
-- **nginx:** `/etc/nginx/sites-available/caduvendas` é a cópia de `deploy/nginx/caduvendas.com.br.conf`.
-  Mudou esse arquivo no repositório? Depois do pull:
+| Segredo              | O que é                                                      |
+| -------------------- | ------------------------------------------------------------ |
+| `DEPLOY_HOST`        | IP do servidor (o SSH não passa pela Cloudflare)             |
+| `DEPLOY_KNOWN_HOSTS` | chave pública do servidor: `ssh-keyscan -t ed25519 <IP>`     |
+| `DEPLOY_KEY`         | chave privada de deploy (o arquivo inteiro, com BEGIN/END)   |
 
-  ```bash
-  sudo cp /var/www/caduvendas/frontend/deploy/nginx/caduvendas.com.br.conf /etc/nginx/sites-available/caduvendas
-  sudo nginx -t && sudo systemctl reload nginx
-  ```
-- A página provisória antiga ficou em `/var/www/caduvendas/frontend.antigo-20260929-021145`.
-- O nginx esconde `.git/`, `deploy/` e `README.md` (404).
+Pra publicar de novo sem commit: aba **Actions → Deploy → Run workflow**. Mudanças na config do
+nginx não passam por aqui — são feitas direto no servidor.
 
-Cloudflare: SSL/TLS em **Full (strict)** (a origem tem certificado válido, com o www). HTML não fica
-em cache na Cloudflare; CSS/JS ficam — por isso o `?v=N` nos links. O certificado da origem vence
-em 27/12/2026; confira uma vez se a renovação passa com a Cloudflare na frente:
-`sudo certbot renew --dry-run`.
+Cloudflare: HTML não fica em cache; CSS/JS ficam — por isso o `?v=N` nos links.
 
 ### Conferir depois de publicar
 

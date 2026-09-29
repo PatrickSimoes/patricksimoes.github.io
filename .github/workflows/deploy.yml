@@ -1,0 +1,40 @@
+# Publica o site no servidor a cada push na main.
+#
+# O GitHub entra por SSH com uma chave que, no servidor, só consegue rodar o
+# `git pull` do site (fica presa a esse comando no authorized_keys) — não abre
+# terminal nem roda mais nada.
+#
+# Segredos (Settings → Secrets and variables → Actions):
+#   DEPLOY_HOST         IP do servidor (SSH não passa pela Cloudflare)
+#   DEPLOY_KNOWN_HOSTS  chave pública do servidor: ssh-keyscan -t ed25519 <IP>
+#   DEPLOY_KEY          chave privada de deploy (arquivo inteiro, com BEGIN/END)
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Atualiza o site no servidor
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy
+          chmod 600 ~/.ssh/deploy
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          ssh -T -i ~/.ssh/deploy -o IdentitiesOnly=yes -o ConnectTimeout=20 "ubuntu@$DEPLOY_HOST"
