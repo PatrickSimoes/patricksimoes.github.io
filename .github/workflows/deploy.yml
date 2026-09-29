@@ -33,8 +33,19 @@ jobs:
           DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         run: |
+          # Limpa o que costuma vir junto ao colar um segredo: espaço, quebra de
+          # linha, crases, aspas e um "ubuntu@" na frente do IP.
+          host=$(printf '%s' "$DEPLOY_HOST" | tr -d '[:space:]`"'"'")
+          host=${host#*@}
+          [ -n "$host" ] || { echo "::error::O segredo DEPLOY_HOST está vazio."; exit 1; }
+          [ -n "$DEPLOY_KEY" ] || { echo "::error::O segredo DEPLOY_KEY está vazio."; exit 1; }
+          [ -n "$DEPLOY_KNOWN_HOSTS" ] || { echo "::error::O segredo DEPLOY_KNOWN_HOSTS está vazio."; exit 1; }
+          # Repositório público = log público: o IP do servidor (o que a Cloudflare
+          # esconde) nunca pode aparecer no log.
+          echo "::add-mask::$host"
+
           install -m 700 -d ~/.ssh
-          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy
+          printf '%s\n' "$DEPLOY_KEY" | tr -d '\r' > ~/.ssh/deploy
           chmod 600 ~/.ssh/deploy
-          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
-          ssh -T -i ~/.ssh/deploy -o IdentitiesOnly=yes -o ConnectTimeout=20 "ubuntu@$DEPLOY_HOST"
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" | tr -d '\r`' > ~/.ssh/known_hosts
+          ssh -T -i ~/.ssh/deploy -o IdentitiesOnly=yes -o ConnectTimeout=20 "ubuntu@$host"
