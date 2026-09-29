@@ -37,11 +37,21 @@ jobs:
           # linha, crases, aspas e um "ubuntu@" na frente do IP.
           host=$(printf '%s' "$DEPLOY_HOST" | tr -d '[:space:]`"'"'")
           host=${host#*@}
-          [ -n "$host" ] || { echo "::error::O segredo DEPLOY_HOST está vazio."; exit 1; }
-          [ -n "$DEPLOY_KEY" ] || { echo "::error::O segredo DEPLOY_KEY está vazio."; exit 1; }
-          [ -n "$DEPLOY_KNOWN_HOSTS" ] || { echo "::error::O segredo DEPLOY_KNOWN_HOSTS está vazio."; exit 1; }
-          # Repositório público = log público: o IP do servidor (o que a Cloudflare
-          # esconde) nunca pode aparecer no log.
+
+          # Confere o formato de cada segredo SEM escrever o valor: repositório
+          # público = log público, e o IP do servidor (o que a Cloudflare esconde)
+          # nunca pode aparecer nele.
+          case "$host" in
+            ''|*[!0-9.]*) echo "::error::DEPLOY_HOST tem que ser só o IP do servidor (ex.: 203.0.113.10), sem mais nada."; exit 1 ;;
+          esac
+          case "$DEPLOY_KNOWN_HOSTS" in
+            *ssh-ed25519*) ;;
+            *) echo "::error::DEPLOY_KNOWN_HOSTS tem que ser a linha '<IP> ssh-ed25519 AAAA…' (saída do ssh-keyscan)."; exit 1 ;;
+          esac
+          case "$DEPLOY_KEY" in
+            *"BEGIN OPENSSH PRIVATE KEY"*) ;;
+            *) echo "::error::DEPLOY_KEY tem que ser a chave privada inteira, com as linhas BEGIN e END."; exit 1 ;;
+          esac
           echo "::add-mask::$host"
 
           install -m 700 -d ~/.ssh
