@@ -63,45 +63,39 @@ Aberto direto do disco (`file://`), o Chrome não carrega as fontes e mostra a l
    **Cloudflare na frente** (proxy laranja: ela entrega HTTPS, HTTP/2-3 e compressão ao visitante).
    O nginx serve um clone deste repositório em `/var/www/caduvendas/frontend` e manda `/api/` pro
    backend `meu-back` (PM2, porta 3000).
-2. **patricksimoes.github.io** — GitHub Pages deste mesmo repositório (push na `main`). Continua no
-   ar como espelho: é a URL que a Play Console e o app ainda usam hoje. Todas as páginas têm
-   `<link rel="canonical">` pra caduvendas.com.br, então o Google trata o domínio próprio como o
-   principal.
+2. **Repositório:** `PatrickSimoes/patricksimoes.github.io` (vai ser renomeado para `site-cadu`).
 
-> Não adicione um arquivo `CNAME` aqui: ele faria o GitHub Pages redirecionar pro domínio próprio,
-> que é servido pelo nginx, não pelo GitHub.
+> **Antes de renomear o repositório:** esse nome é o que publica o GitHub Pages na raiz de
+> patricksimoes.github.io. Renomeado, `patricksimoes.github.io/privacy.html`, `/delete-account.html`
+> e `/app-ads.txt` saem do ar — então troque antes as URLs na Play Console (seção "Trocar as URLs"
+> abaixo). O app publicado ainda abre os links antigos até a próxima versão. O git não é afetado: o
+> GitHub redireciona o endereço antigo do repositório pro novo, pro servidor e pro submódulo.
 
-### Primeira publicação no servidor (uma vez só)
+### Como o servidor está montado (desde 29/09/2026)
 
-Pré-requisito: a `main` deste repositório já no GitHub (o servidor clona de lá).
+- `/var/www/caduvendas/frontend` é um **clone deste repositório** (dono `ubuntu`, `origin` =
+  `https://github.com/PatrickSimoes/patricksimoes.github.io.git`). Publicar é só:
 
-```bash
-# 1. guarda a página provisória e põe o clone do site no lugar dela
-sudo mv /var/www/caduvendas/frontend /var/www/caduvendas/frontend.antigo
-sudo git clone https://github.com/PatrickSimoes/patricksimoes.github.io.git /var/www/caduvendas/frontend
+  ```bash
+  git -C /var/www/caduvendas/frontend pull --ff-only
+  ```
 
-# 2. nginx: backup da config atual e a versão nova (mantém /api/ e as linhas do certbot)
-sudo cp /etc/nginx/sites-available/caduvendas /etc/nginx/sites-available/caduvendas.bak
-sudo cp /var/www/caduvendas/frontend/deploy/nginx/caduvendas.com.br.conf /etc/nginx/sites-available/caduvendas
-sudo nginx -t && sudo systemctl reload nginx
+  É esse comando que o auto-deploy precisa rodar (como `ubuntu`, sem sudo). O repositório é
+  público, então o servidor puxa sem senha; se ele virar privado, vai precisar de uma deploy key.
+- **nginx:** `/etc/nginx/sites-available/caduvendas` é a cópia de `deploy/nginx/caduvendas.com.br.conf`.
+  Mudou esse arquivo no repositório? Depois do pull:
 
-# 3. publicação automática: o servidor puxa a main a cada 5 minutos
-echo '*/5 * * * * root git -C /var/www/caduvendas/frontend pull --ff-only -q' | sudo tee /etc/cron.d/caduvendas-site
-
-# 4. a renovação do certificado da origem funciona com a Cloudflare na frente?
-sudo certbot renew --dry-run
-```
-
-Deu errado no passo 2? `sudo cp /etc/nginx/sites-available/caduvendas.bak /etc/nginx/sites-available/caduvendas && sudo systemctl reload nginx`.
-
-Depois disso, **publicar = commit + push na `main`**. Em até 5 minutos o servidor puxa, e o GitHub
-Pages atualiza o espelho em 1–2 minutos. O nginx bloqueia `.git/`, `deploy/` e `README.md`.
+  ```bash
+  sudo cp /var/www/caduvendas/frontend/deploy/nginx/caduvendas.com.br.conf /etc/nginx/sites-available/caduvendas
+  sudo nginx -t && sudo systemctl reload nginx
+  ```
+- A página provisória antiga ficou em `/var/www/caduvendas/frontend.antigo-20260929-021145`.
+- O nginx esconde `.git/`, `deploy/` e `README.md` (404).
 
 Cloudflare: SSL/TLS em **Full (strict)** (a origem tem certificado válido, com o www). HTML não fica
 em cache na Cloudflare; CSS/JS ficam — por isso o `?v=N` nos links. O certificado da origem vence
-em 27/12/2026 e renova sozinho pelo certbot, se o `--dry-run` do passo 4 passar.
-
-Se o repositório virar privado, o `git pull` do servidor passa a precisar de uma deploy key.
+em 27/12/2026; confira uma vez se a renovação passa com a Cloudflare na frente:
+`sudo certbot renew --dry-run`.
 
 ### Conferir depois de publicar
 
@@ -112,9 +106,7 @@ curl -s  https://caduvendas.com.br/app-ads.txt             # a linha do AdMob
 curl -sI https://caduvendas.com.br/nao-existe | head -1    # 404 (com a página 404.html)
 ```
 
-## Quando o domínio estiver no ar — trocar as URLs
-
-Só depois de confirmar que https://caduvendas.com.br abre este site:
+## Trocar as URLs na Play e no AdMob (o domínio já está no ar)
 
 - **Play Console → Política → Conteúdo do app → Política de privacidade:**
   `https://caduvendas.com.br/privacy.html`
@@ -125,8 +117,10 @@ Só depois de confirmar que https://caduvendas.com.br abre este site:
 - **AdMob:** com o site novo salvo na Play, clique em **Verificar** o app-ads.txt de novo. O AdMob lê
   o `app-ads.txt` do domínio do campo "Site" da Play — e não segue redirecionamento pra outro
   domínio, por isso o arquivo precisa estar em caduvendas.com.br.
-- **App (`src/app/termos.tsx`):** trocar os links de `patricksimoes.github.io` por
-  `caduvendas.com.br` na próxima versão.
+- **Play Console → Detalhes de contato → E-mail:** `contato@caduvendas.com.br`.
+- **App (`src/app/termos.tsx`):** os links já apontam pra `caduvendas.com.br` — chegam aos usuários
+  na próxima versão. Até lá, as versões publicadas abrem `patricksimoes.github.io` — que só
+  continua no ar enquanto o repositório não for renomeado.
 
 ## SEO — o que já está feito
 
