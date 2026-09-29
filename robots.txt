@@ -1,6 +1,5 @@
 # caduvendas.com.br
 User-agent: *
 Allow: /
-Disallow: /deploy/
 
 Sitemap: https://caduvendas.com.br/sitemap.xml
