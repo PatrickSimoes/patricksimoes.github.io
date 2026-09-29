@@ -1,166 +1,1287 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cadu Vendas — o caderninho de vendas no celular</title>
-    <meta
-      name="description"
-      content="Cadu Vendas: registre vendas em 2 toques, cobre no Pix com QR Code, controle o fiado e veja seu lucro — tudo offline, no seu celular."
-    />
-    <style>
-      :root {
-        --paper: #faf6ec;
-        --surface: #fffdf7;
-        --ink: #33312b;
-        --ink-soft: #5c594f;
-        --ink-mute: #9a968a;
-        --green: #3f6b4e;
-        --green-dark: #345a41;
-        --ocre: #c77423;
-        --border: #e7e1d2;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        background: var(--paper);
-        color: var(--ink);
-        line-height: 1.6;
-      }
-      .wrap {
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 48px 20px 64px;
-      }
-      header {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-      .logo {
-        font-size: 56px;
-        line-height: 1;
-        margin-bottom: 8px;
-      }
-      h1 {
-        font-size: 32px;
-        margin: 8px 0 4px;
-      }
-      .tagline {
-        color: var(--ink-soft);
-        font-size: 18px;
-        margin: 0 auto;
-        max-width: 460px;
-      }
-      .cta {
-        display: inline-block;
-        margin-top: 24px;
-        background: var(--green);
-        color: #fdfaf2;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 16px;
-        padding: 14px 32px;
-        border-radius: 999px;
-      }
-      .cta:hover {
-        background: var(--green-dark);
-      }
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 24px;
-        margin-top: 24px;
-      }
-      h2 {
-        font-size: 20px;
-        margin: 0 0 12px;
-      }
-      ul.features {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        gap: 12px;
-      }
-      ul.features li {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-      }
-      ul.features .emoji {
-        font-size: 20px;
-        line-height: 1.4;
-      }
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-        margin-top: 32px;
-      }
-      .links a {
-        color: var(--green);
-        text-decoration: none;
-        font-weight: 600;
-        border: 1px solid var(--border);
-        background: var(--surface);
-        padding: 10px 18px;
-        border-radius: 999px;
-      }
-      .links a:hover {
-        border-color: var(--green);
-      }
-      footer {
-        text-align: center;
-        color: var(--ink-mute);
-        font-size: 13px;
-        margin-top: 48px;
-      }
-      footer a {
-        color: var(--ink-soft);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <header>
-        <div class="logo">📓</div>
-        <h1>Cadu Vendas</h1>
-        <p class="tagline">
-          O caderninho de anotações de venda, só que no celular — pra quem vende marmita, doce,
-          salgado, artesanato, na feira ou no fim de semana.
-        </p>
-        <a class="cta" href="https://play.google.com/store/apps/details?id=com.cadernodevendas">
-          Baixar na Google Play
-        </a>
-      </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadu Vendas: app de controle de vendas, fiado e Pix</title>
+  <meta name="description" content="Anote vendas em dois toques, cobre no Pix com QR Code, controle fiado e encomendas e veja seu lucro de verdade. Grátis para Android e funciona sem internet.">
+  <link rel="canonical" href="https://caduvendas.com.br/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#1f4029">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
 
-      <div class="card">
-        <h2>O que dá pra fazer</h2>
-        <ul class="features">
-          <li><span class="emoji">🧾</span> Registrar uma venda em 2 toques</li>
-          <li><span class="emoji">📱</span> Cobrar no Pix com QR Code automático</li>
-          <li><span class="emoji">📝</span> Anotar o fiado e cobrar pelo WhatsApp</li>
-          <li><span class="emoji">📊</span> Ver quanto você realmente lucra</li>
-          <li><span class="emoji">☁️</span> Backup na nuvem pra não perder nada ao trocar de celular</li>
-          <li><span class="emoji">🔒</span> Funciona offline — seus dados ficam no seu aparelho</li>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cadu Vendas">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://caduvendas.com.br/">
+  <meta property="og:title" content="Cadu Vendas — o caderninho de vendas digital">
+  <meta property="og:description" content="Vendas em dois toques, Pix com QR Code, fiado com cobrança pelo WhatsApp, pedidos e lucro de verdade. Grátis para Android.">
+  <meta property="og:image" content="https://caduvendas.com.br/assets/img/og/cadu-vendas.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Cadu Vendas: vendas em dois toques, pedidos sob controle, fiado com cobrança pelo WhatsApp e relatórios de lucro, disponível na Google Play">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cadu Vendas — o caderninho de vendas digital">
+  <meta name="twitter:description" content="Vendas em dois toques, Pix com QR Code, fiado com cobrança pelo WhatsApp, pedidos e lucro de verdade. Grátis para Android.">
+  <meta name="twitter:image" content="https://caduvendas.com.br/assets/img/og/cadu-vendas.png">
+  <meta name="twitter:image:alt" content="Cadu Vendas: vendas em dois toques, pedidos, fiado e relatórios de lucro">
+
+  <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=2">
+  <script src="assets/js/site.js?v=1" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://caduvendas.com.br/#organizacao",
+        "name": "Cadu Vendas",
+        "url": "https://caduvendas.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://caduvendas.com.br/assets/img/cadu-vendas-icone.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "email": "contato@caduvendas.com.br",
+        "founder": { "@type": "Person", "name": "Patrick Simões" },
+        "sameAs": ["https://play.google.com/store/apps/details?id=com.cadernodevendas"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://caduvendas.com.br/#site",
+        "url": "https://caduvendas.com.br/",
+        "name": "Cadu Vendas",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://caduvendas.com.br/#organizacao" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://caduvendas.com.br/#pagina",
+        "url": "https://caduvendas.com.br/",
+        "name": "Cadu Vendas: app de controle de vendas, fiado e Pix",
+        "description": "Anote vendas em dois toques, cobre no Pix com QR Code, controle fiado e encomendas e veja seu lucro de verdade. Grátis para Android e funciona sem internet.",
+        "inLanguage": "pt-BR",
+        "isPartOf": { "@id": "https://caduvendas.com.br/#site" },
+        "about": { "@id": "https://caduvendas.com.br/#app" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://caduvendas.com.br/assets/img/og/cadu-vendas.png" }
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://caduvendas.com.br/#app",
+        "name": "Cadu Vendas",
+        "alternateName": "Caderno de Vendas",
+        "description": "O caderninho de vendas digital de quem vende por conta própria: registre vendas em dois toques, gere QR Code Pix, controle fiado e encomendas, calcule o preço de venda e acompanhe o lucro. Funciona sem internet.",
+        "url": "https://caduvendas.com.br/",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.cadernodevendas",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.cadernodevendas",
+        "image": "https://caduvendas.com.br/assets/img/cadu-vendas-icone.png",
+        "screenshot": "https://caduvendas.com.br/assets/img/og/cadu-vendas.png",
+        "operatingSystem": "Android",
+        "applicationCategory": "BusinessApplication",
+        "inLanguage": "pt-BR",
+        "isAccessibleForFree": true,
+        "featureList": [
+          "Registro de vendas em dois toques",
+          "QR Code Pix no valor da venda",
+          "Controle de fiado com cobrança pelo WhatsApp",
+          "Pedidos e encomendas com data de entrega",
+          "Catálogo de produtos e cardápio para compartilhar",
+          "Calculadora de preço de venda por margem, lucro ou markup",
+          "Relatórios de faturamento, lucro e margem",
+          "Funciona sem internet"
+        ],
+        "offers": [
+          { "@type": "Offer", "name": "Grátis", "price": "0", "priceCurrency": "BRL" },
+          { "@type": "Offer", "name": "Sem anúncios (compra única)", "price": "9.99", "priceCurrency": "BRL" },
+          {
+            "@type": "Offer",
+            "name": "Premium mensal",
+            "price": "19.99",
+            "priceCurrency": "BRL",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "19.99", "priceCurrency": "BRL", "unitCode": "MON", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" } }
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium anual",
+            "price": "199.99",
+            "priceCurrency": "BRL",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "199.99", "priceCurrency": "BRL", "unitCode": "ANN", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "ANN" } }
+          }
+        ],
+        "author": { "@type": "Person", "name": "Patrick Simões" },
+        "publisher": { "@id": "https://caduvendas.com.br/#organizacao" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://caduvendas.com.br/#duvidas",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "O Cadu Vendas é grátis?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sim. Baixar e usar é grátis, com anúncios em telas secundárias — nunca durante uma venda. Se preferir, dá pra remover os anúncios com uma compra única ou assinar o Premium, que também libera recursos extras." }
+          },
+          {
+            "@type": "Question",
+            "name": "Precisa de internet pra usar?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. O Cadu funciona sem internet: suas vendas, produtos e clientes ficam gravados no próprio celular. A internet só entra em recursos opcionais, como o backup e a sincronização na nuvem." }
+          },
+          {
+            "@type": "Question",
+            "name": "O dinheiro do Pix passa pelo Cadu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. O Cadu só monta o QR Code com a sua chave Pix e o valor da venda. O cliente paga direto pra conta dona da chave — o app não intermedeia o pagamento, não cobra taxa e não tem acesso ao seu dinheiro." }
+          },
+          {
+            "@type": "Question",
+            "name": "Serve pra quem vende serviço, e não produto?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Serve. Você escolhe o seu ramo — comida e bebida, prestação de serviço, assistência técnica ou revenda — e o Cadu ajusta as palavras: fala em serviço em vez de produto e em agendado e concluído em vez de em preparo e entregue." }
+          },
+          {
+            "@type": "Question",
+            "name": "Troquei de celular. Perco minhas vendas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não precisa perder nada. Você pode exportar um arquivo de backup e importar no celular novo ou, no Premium, guardar o caderno na nuvem e trazer tudo de volta entrando na sua conta." }
+          },
+          {
+            "@type": "Question",
+            "name": "Funciona no iPhone?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No momento, o Cadu Vendas está disponível para celulares Android, pela Google Play." }
+          },
+          {
+            "@type": "Question",
+            "name": "O Cadu emite nota fiscal?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. O Cadu é um caderno de vendas: organiza vendas, pedidos e fiado, mas não emite nota fiscal nem substitui o contador." }
+          },
+          {
+            "@type": "Question",
+            "name": "Alguém consegue ver as minhas vendas?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. Sem conta, suas vendas ficam só no seu aparelho e não vão pra nenhum servidor nosso. Se você usar o backup na nuvem, a cópia fica guardada no Google Firebase e é acessível somente pela sua conta. A gente não vende seus dados, nunca." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como cancelo o Premium?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A assinatura é cobrada e gerenciada pela Google Play. Pra cancelar ou trocar de plano, abra a Google Play, toque na sua foto e vá em Pagamentos e assinaturas, depois em Assinaturas." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como excluo minha conta e meus dados?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dentro do app, em Perfil, Conta, Excluir conta e dados. Se você já desinstalou o app, dá pra pedir por e-mail — o passo a passo está na página Excluir conta e dados, em caduvendas.com.br/delete-account.html." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ícones do site e dos mockups — o mesmo bloco em todas as páginas -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ic-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V20h13V9.5" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5.5h4V20" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-orders" viewBox="0 0 24 24"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5z" fill="none" stroke-width="1.9" stroke-linejoin="round"/><path d="M4 7.5 12 12l8-4.5M12 12v9" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-catalog" viewBox="0 0 24 24"><path d="M3.5 12.5 11 20a2 2 0 0 0 2.8 0l6.2-6.2a2 2 0 0 0 0-2.8L12.5 3.5H6a2.5 2.5 0 0 0-2.5 2.5z" fill="none" stroke-width="1.9" stroke-linejoin="round"/><circle cx="8.3" cy="8.3" r="1.4" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-reports" viewBox="0 0 24 24"><path d="M4 20h16" stroke-width="1.9" stroke-linecap="round"/><path d="M7 20v-6M12 20V9M17 20V4.5" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="ic-profile" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6" fill="none" stroke-width="1.9"/><path d="M5 20c1.2-3.4 3.9-5 7-5s5.8 1.6 7 5" fill="none" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="ic-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z" fill="none" stroke-width="1.8"/><circle cx="12" cy="12" r="2.8" fill="none" stroke-width="1.8"/></symbol>
+    <symbol id="ic-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12.5h-11z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10.5V6.5a3 3 0 0 1 6 0v4" fill="none" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2" fill="none" stroke-width="1.8"/><circle cx="12" cy="12" r="2.8" fill="none" stroke-width="1.8"/><path d="M6 12h.01M18 12h.01" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-pix" viewBox="0 0 24 24"><path d="M12 2.8 21.2 12 12 21.2 2.8 12z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12 12 8.5l3.5 3.5L12 15.5z" fill="none" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-card" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2.2" fill="none" stroke-width="1.8"/><path d="M2.5 9.8h19" stroke-width="1.8"/><path d="M6 15h4" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-fiado" viewBox="0 0 24 24"><path d="M12 6.5v-3M8 5l1.2 1.8M16 5l-1.2 1.8" stroke-width="1.7" stroke-linecap="round"/><path d="M4 13.5c2.5-2 4.5-2 6.5-.5h3a1.4 1.4 0 0 1 0 2.8h-3.4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 17.5h4.2c1.9-1 2.8-2.4 3.3-3.8" fill="none" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="M4.5 12.5 10 18 19.5 6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-fwd" viewBox="0 0 24 24"><path d="M9 5.5 15.5 12 9 18.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-back" viewBox="0 0 24 24"><path d="M15 5.5 8.5 12 15 18.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.6" fill="none" stroke-width="1.8"/><circle cx="17.5" cy="5.5" r="2.6" fill="none" stroke-width="1.8"/><circle cx="17.5" cy="18.5" r="2.6" fill="none" stroke-width="1.8"/><path d="m8.4 10.8 6.8-4M8.4 13.2l6.8 4" stroke-width="1.8"/></symbol>
+    <symbol id="ic-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 5.5H4.5v1A3.5 3.5 0 0 0 8 10M16 5.5h3.5v1A3.5 3.5 0 0 1 16 10" fill="none" stroke-width="1.8"/><path d="M12 13v3.5M8.5 20h7M12 16.5c-1.4 0-2 1.2-2.4 3.5h4.8c-.4-2.3-1-3.5-2.4-3.5z" fill="none" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-whats" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.8c-.4 2.5 3.7 6.6 6.2 6.2l.4-1.7-2-.9-.9.7c-1-.5-1.6-1.1-2-2l.7-.9-.9-2z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-arrowup" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11.5h10.6L21 7.5H6" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="16.5" cy="19.5" r="1.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke-width="2.1" stroke-linecap="round"/></symbol>
+    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.2" fill="none" stroke-width="1.9"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" fill="none" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="sb" viewBox="0 0 42 15"><path d="M1 8.5h2v3H1zM4.5 6.5h2v5h-2zM8 4.5h2v7H8zM11.5 2.5h2v9h-2z" fill="currentColor" stroke="none"/><path d="M20.5 5.2a7.4 7.4 0 0 0-9 0l1.2 1.5a5.5 5.5 0 0 1 6.6 0zM19 7.6a4.4 4.4 0 0 0-6 0l1.2 1.5a2.5 2.5 0 0 1 3.6 0zM16 10.4l1-1.2a1.6 1.6 0 0 0-2 0z" fill="currentColor" stroke="none"/><rect x="24" y="3.5" width="16" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="25.5" y="5" width="10" height="5" rx="1.2" fill="currentColor" stroke="none"/><path d="M41 6v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="star4" viewBox="0 0 40 40"><path d="M20 0l4.5 15.5L40 20l-15.5 4.5L20 40l-4.5-15.5L0 20l15.5-4.5z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.2 19.5 12 7 19.8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14.5M13.5 6.5 19 12l-5.5 5.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h16"/><path d="M5.5 20.5v-7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v7"/><path d="M5.5 15.5c1.1.9 2.2.9 3.3 0s2.2-.9 3.2 0 2.2.9 3.2 0 2.2-.9 3.3 0"/><path d="M12 11.5V8"/><path d="M12 5.8c.9-.8 1.1-1.6 0-2.8-1.1 1.2-.9 2 0 2.8z"/></g></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.8"/><circle cx="6" cy="17.5" r="2.8"/><path d="M20 4.5 8.2 15.8M14.3 13.7 20 19.5M8.2 8.2 11.5 11.5"/></g></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.8 6.2a4.4 4.4 0 0 0-5.9 5.5L3.8 16.8a2 2 0 0 0 2.8 2.8l5.1-5.1a4.4 4.4 0 0 0 5.5-5.9l-2.7 2.7-2.4-.4-.4-2.4z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M8.8 16.3a4.6 4.6 0 0 1 6.4 0"/><path d="M5.3 12.8a9.5 9.5 0 0 1 4.3-2.4"/><path d="M18.7 12.8a9.5 9.5 0 0 0-1.9-1.4"/><path d="M2 9.2a14.4 14.4 0 0 1 3.8-2.5"/><path d="M22 9.2A14.4 14.4 0 0 0 10.8 5.5"/></g><circle cx="12" cy="19.6" r="1.3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H7.8a5.3 5.3 0 1 1 1.5-10.4A6.3 6.3 0 0 1 21 11.3 3.9 3.9 0 0 1 17.5 19z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.8-4.7-7.8-10.3A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.8 2.5C19.8 15.3 12 20 12 20z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="m20.5 16-4.5-4.5L6 19.5"/></g></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h12v17l-2.4-1.5-2 1.5-1.6-1.5-1.6 1.5-2-1.5L6 20.5z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 21h4"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.5 20.5 6 17 9.5"/><path d="M3.5 11.5V10a4 4 0 0 1 4-4h13"/><path d="M7 21.5 3.5 18 7 14.5"/><path d="M20.5 12.5V14a4 4 0 0 1-4 4h-13"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.9-3.3 3.4-5 6.5-5s5.6 1.7 6.5 5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 15.3c1.4.8 2.4 2.4 3 4.7"/></g></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3.5V8h4.5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 20.5V16h-4.5"/></g></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M8.5 6.5h7v3h-7z"/></g><path d="M8.7 13.2h.01M12 13.2h.01M15.3 13.2h.01M8.7 16.8h.01M12 16.8h.01M15.3 16.8h.01" fill="none" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="6" height="6" rx="1"/><rect x="14.5" y="3.5" width="6" height="6" rx="1"/><rect x="3.5" y="14.5" width="6" height="6" rx="1"/><path d="M14.5 14.5h2.5v2.5M20.5 14.5v.01M14.5 20.5h.01M17.5 17.5h3v3h-3z"/></g></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11.5M7 10l5 5 5-5"/><path d="M4.5 20h15"/></g></symbol>
+    <symbol id="i-box-edit" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h4L19 9.5a2.8 2.8 0 0 0-4-4L4 16.5z"/><path d="M13.5 7 17 10.5"/></g></symbol>
+    <symbol id="i-tap" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V5a1.8 1.8 0 0 1 3.6 0v5.5"/><path d="M12.6 10V8.8a1.8 1.8 0 0 1 3.6 0v2"/><path d="M16.2 10.8a1.8 1.8 0 0 1 3.3 1V15a6.5 6.5 0 0 1-6.5 6.5h-.6a6.5 6.5 0 0 1-5.2-2.6L4 14.6a1.8 1.8 0 0 1 2.7-2.3L9 14.5"/></g></symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__in">
+      <a class="brand" href="./" aria-label="Cadu Vendas — página inicial">
+        <img src="favicon.svg" alt="" width="36" height="36">
+        <span>Cadu Vendas</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <svg class="i i-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="i i-close" aria-hidden="true"><use href="#ic-close"/></svg>
+      </button>
+      <nav class="nav" id="menu" aria-label="Principal" data-open="false">
+        <a href="#recursos">Recursos</a>
+        <a href="#pra-quem-e">Pra quem é</a>
+        <a href="#planos">Planos</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dhome" target="_blank" rel="noopener">Baixar grátis<span class="sr-only"> (abre em nova aba)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero bg-green" aria-labelledby="titulo">
+      <div class="blob" style="width:760px;height:760px;right:-220px;top:-120px;background:rgba(255,255,255,.05)"></div>
+      <div class="blob" style="width:900px;height:900px;left:-420px;bottom:-560px;background:rgba(255,255,255,.04)"></div>
+      <svg class="spark" style="top:38px;right:6%;color:#e8c547" width="34" height="34" aria-hidden="true"><use href="#star4"/></svg>
+      <svg class="spark" style="top:46%;right:2%;color:#d4823a;opacity:.9" width="22" height="22" aria-hidden="true"><use href="#star4"/></svg>
+      <svg class="spark" style="bottom:22%;left:3%;color:#e8c547" width="30" height="30" aria-hidden="true"><use href="#star4"/></svg>
+
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow"><img src="favicon.svg" alt="" width="24" height="24"> Caderninho de vendas digital</p>
+          <h1 id="titulo" class="h1">Suas vendas em ordem, sem complicação</h1>
+          <p class="lead">
+            <span class="hero__lead-strong">O caderninho digital de quem vende por conta própria.</span>
+            Anote vendas em dois toques, cobre no Pix com QR Code, controle o fiado e as encomendas e veja
+            quanto você lucra de verdade. Tudo no celular, mesmo sem internet.
+          </p>
+          <div class="cta-row">
+            <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dhome" target="_blank" rel="noopener">
+              <span class="btn-play__ic"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span>
+              <span class="btn-play__txt"><small>Baixe grátis na</small><b>Google Play</b></span>
+            <span class="sr-only"> (abre em nova aba)</span></a>
+            <a class="btn btn--ghost" href="#recursos">Ver recursos</a>
+          </div>
+          <ul class="trust">
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span>Grátis pra começar</li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span>Funciona sem internet</li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span>Sem cadastro obrigatório</li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__phones">
+            <!-- celular de trás: Relatórios -->
+            <div class="device device--back" role="img" aria-label="Tela Relatórios do Cadu Vendas com o faturamento da semana e o lucro estimado" data-nosnippet>
+              <div class="phone" aria-hidden="true"><div class="m-screen">
+                <span class="m-punch"></span>
+                <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+                <div class="m-pad" style="padding-top:12px">
+                  <div class="m-title" style="font-size:34px">Relatórios</div>
+                  <div class="m-sub">Veja como tá indo o caixa.</div>
+                </div>
+                <div class="m-pad m-chips" style="margin-top:14px">
+                  <span class="m-chip">Hoje</span><span class="m-chip is-sel">Semana</span><span class="m-chip">Mês</span>
+                </div>
+                <div class="m-pad" style="margin-top:16px">
+                  <div class="m-card" style="padding:20px">
+                    <div class="m-row m-between">
+                      <svg class="i c-text2" width="16" height="16"><use href="#ic-back"/></svg>
+                      <span style="font-size:14px;font-weight:700;color:var(--d-text2)">Esta semana</span>
+                      <svg class="i" width="16" height="16" style="color:#545955"><use href="#ic-fwd"/></svg>
+                    </div>
+                    <div class="m-money c-money" style="font-size:36px;margin-top:8px">R$ 2.348,00</div>
+                    <div class="m-row c-ok" style="gap:5px;margin-top:4px">
+                      <svg class="i" width="16" height="16"><use href="#ic-arrowup"/></svg>
+                      <span style="font-size:14px;font-weight:700">+12% vs semana passada</span>
+                    </div>
+                    <div class="m-bars">
+                      <div class="m-bars__avg"></div>
+                      <div class="m-bars__cols"><span style="height:52%"></span><span style="height:38%"></span><span style="height:64%"></span><span style="height:45%"></span><span style="height:78%"></span><span class="is-top" style="height:100%"></span><span class="is-off" style="height:30%"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-pad" style="margin-top:14px">
+                  <div class="m-card m-row" style="padding:16px">
+                    <div style="flex:1">
+                      <div class="m-cap c-muted">Lucro estimado</div>
+                      <div class="m-money c-money" style="font-size:32px">R$ 1.032,00</div>
+                    </div>
+                    <div style="background:#10331e;border-radius:16px;padding:10px 16px;text-align:center">
+                      <div style="font-size:18px;font-weight:700;color:var(--d-money)">44%</div>
+                      <div class="m-cap c-muted">margem</div>
+                    </div>
+                  </div>
+                </div>
+              </div></div>
+            </div>
+
+            <!-- celular da frente: Caixa -->
+            <div class="device device--front" role="img" aria-label="Tela Caixa do Cadu Vendas: faturamento do dia de R$ 486,50, aviso de pagamentos pendentes e a lista das últimas vendas" data-nosnippet>
+              <div class="phone" aria-hidden="true"><div class="m-screen">
+                <span class="m-punch"></span>
+                <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+                <div class="m-pad" style="padding-top:12px"><div class="m-title" style="font-size:34px">Caixa</div></div>
+                <div class="m-pad" style="margin-top:20px">
+                  <div class="m-hero-card">
+                    <div class="m-row m-between">
+                      <span class="m-cap" style="letter-spacing:1.2px">FATURAMENTO DO DIA</span>
+                      <svg class="i" width="20" height="20" style="opacity:.9"><use href="#ic-eye"/></svg>
+                    </div>
+                    <div class="m-money" style="font-size:54px;letter-spacing:-1.5px;margin-top:8px">R$ 486,50</div>
+                    <div class="m-row" style="gap:4px;margin-top:4px;color:var(--d-on-brand)">
+                      <svg class="i" width="15" height="15"><use href="#ic-arrowup"/></svg>
+                      <span style="font-size:14px;font-weight:700">+18% vs ontem</span>
+                    </div>
+                    <div class="m-row m-hero-card__foot">
+                      <div style="flex:1">
+                        <div class="m-cap">Vendas</div>
+                        <div class="m-row m-between" style="margin-top:4px">
+                          <span style="font-size:18px;font-weight:700">12</span>
+                          <span class="m-ring"><svg class="i" width="14" height="14"><use href="#ic-bag"/></svg></span>
+                        </div>
+                      </div>
+                      <div class="m-vr"></div>
+                      <div style="flex:1">
+                        <div class="m-cap">Ticket médio</div>
+                        <div class="m-row m-between" style="margin-top:4px">
+                          <span class="m-money" style="font-size:18px">R$ 40,54</span>
+                          <span class="m-ring"><svg class="i" width="14" height="14"><use href="#ic-cash"/></svg></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-pad" style="margin-top:18px">
+                  <div class="m-alert m-row">
+                    <span class="m-alert__ic"><svg class="i" width="22" height="22"><use href="#ic-fiado"/></svg></span>
+                    <div style="flex:1;margin-left:12px">
+                      <div style="font-size:16px;font-weight:700">Você tem pagamentos pendentes</div>
+                      <div class="m-sub">Toque pra ver quem deve</div>
+                    </div>
+                    <span class="m-money c-money" style="font-size:18px">R$ 187</span>
+                    <svg class="i c-muted" width="20" height="20" style="margin-left:6px"><use href="#ic-fwd"/></svg>
+                  </div>
+                </div>
+                <div class="m-pad" style="margin-top:22px">
+                  <div class="m-row m-between" style="padding:0 4px;margin-bottom:12px">
+                    <span class="m-sec">ÚLTIMAS VENDAS</span>
+                    <span class="m-row m-see" style="gap:2px">Ver histórico<svg class="i" width="15" height="15"><use href="#ic-fwd"/></svg></span>
+                  </div>
+                  <div class="m-card" style="padding:4px 0">
+                    <div class="m-sale">
+                      <span class="m-sale__ic m-bg-brand"><svg class="i" width="20" height="20"><use href="#ic-pix"/></svg></span>
+                      <div class="m-sale__mid"><div class="m-sale__title">2× Brigadeiro gourmet</div><div class="m-sale__sub">há 5 min</div></div>
+                      <span class="m-money m-sale__val">R$ 16,00</span>
+                    </div>
+                    <div class="m-div"></div>
+                    <div class="m-sale">
+                      <span class="m-sale__ic m-bg-ok"><svg class="i" width="20" height="20"><use href="#ic-cash"/></svg></span>
+                      <div class="m-sale__mid"><div class="m-sale__title">Bolo de pote +2 itens</div><div class="m-sale__sub">há 32 min</div></div>
+                      <span class="m-money m-sale__val">R$ 34,50</span>
+                    </div>
+                    <div class="m-div"></div>
+                    <div class="m-sale">
+                      <span class="m-sale__ic m-bg-brand"><svg class="i" width="20" height="20"><use href="#ic-card"/></svg></span>
+                      <div class="m-sale__mid"><div class="m-sale__title">1× Torta de limão</div><div class="m-sale__sub">há 1 h</div></div>
+                      <span class="m-money m-sale__val">R$ 45,00</span>
+                    </div>
+                    <div class="m-div"></div>
+                    <div class="m-sale">
+                      <span class="m-sale__ic m-bg-warn"><svg class="i" width="20" height="20"><use href="#ic-fiado"/></svg></span>
+                      <div class="m-sale__mid"><div class="m-sale__title">Marmita fit +1 item</div><div class="m-sale__sub">ontem</div></div>
+                      <span class="m-money m-sale__val">R$ 28,00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-fab"><span class="plus">+</span> Nova venda</div>
+                <div class="m-tabbar-wrap"><div class="m-tabbar">
+                  <div class="m-tab is-active"><svg class="i"><use href="#ic-home"/></svg><span>Caixa</span></div>
+                  <div class="m-tab"><svg class="i"><use href="#ic-orders"/></svg></div>
+                  <div class="m-tab"><svg class="i"><use href="#ic-catalog"/></svg></div>
+                  <div class="m-tab"><svg class="i"><use href="#ic-reports"/></svg></div>
+                  <div class="m-tab"><svg class="i"><use href="#ic-profile"/></svg></div>
+                </div></div>
+              </div></div>
+            </div>
+          </div>
+          <img class="hero__cadu" src="assets/img/cadu-verde.svg" alt="" width="170" height="194">
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ RECURSOS (resumo) ═══════════ -->
+    <section class="sec bg-paper" id="recursos" aria-labelledby="t-recursos">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Recursos</p>
+          <h2 id="t-recursos" class="h2">Um caderno que <span class="hl">faz as contas</span> por você</h2>
+          <p class="lead">Vendas, pedidos, fiado e lucro num lugar só — o caderninho digital de quem vende por conta própria.</p>
+        </div>
+        <ul class="benefits">
+          <li>
+            <a class="benefit" href="#venda-rapida">
+              <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-tap"/></svg></span>
+              <div><b>Vendas anotadas em dois toques</b><span>Toque no produto, confira o total e finalize.</span></div>
+            </a>
+          </li>
+          <li>
+            <a class="benefit" href="#pedidos">
+              <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#ic-orders"/></svg></span>
+              <div><b>Pedidos e encomendas sob controle</b><span>Atrasados, em andamento e entregues num olhar.</span></div>
+            </a>
+          </li>
+          <li>
+            <a class="benefit" href="#fiado">
+              <span class="ic-tile ic-tile--ocre"><svg class="i" aria-hidden="true"><use href="#ic-whats"/></svg></span>
+              <div><b>Fiado com cobrança pelo WhatsApp</b><span>Saiba quem ficou de pagar e cobre com um toque.</span></div>
+            </a>
+          </li>
+          <li>
+            <a class="benefit" href="#relatorios">
+              <span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#ic-reports"/></svg></span>
+              <div><b>Preço, lucro, metas e relatórios</b><span>Saiba quanto cobrar e quanto sobra de verdade.</span></div>
+            </a>
+          </li>
         </ul>
       </div>
+    </section>
 
-      <div class="links">
-        <a href="./privacy.html">Política de Privacidade</a>
-        <a href="./terms.html">Termos de Uso</a>
-        <a href="./delete-account.html">Excluir conta e dados</a>
+    <!-- ═══════════ PRA QUEM É ═══════════ -->
+    <section class="sec bg-paper-2" id="pra-quem-e" aria-labelledby="t-quem">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Pra quem é</p>
+          <h2 id="t-quem" class="h2">Feito pra quem vende <span class="hl">por conta própria</span></h2>
+          <p class="lead">Na feira, no delivery, na porta de casa ou no fim de semana. Escolha o seu ramo e o Cadu fala a sua língua.</p>
+        </div>
+        <ul class="segments">
+          <li class="segment">
+            <span class="ic-tile ic-tile--ocre"><svg class="i" aria-hidden="true"><use href="#i-cake"/></svg></span>
+            <h3>Comida e bebida</h3>
+            <p class="kinds">Doces, salgados, marmitas e bolos.</p>
+            <p>Cardápio pronto pro WhatsApp e encomendas de recebido a entregue.</p>
+          </li>
+          <li class="segment">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-scissors"/></svg></span>
+            <h3>Prestação de serviço</h3>
+            <p class="kinds">Cabelo, unha, estética, faxina e aulas.</p>
+            <p>Tabela de preços e atendimentos de agendado a concluído.</p>
+          </li>
+          <li class="segment">
+            <span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+            <h3>Assistência técnica</h3>
+            <p class="kinds">Informática, celular, eletro e conserto.</p>
+            <p>Tabela de serviços e aparelhos de recebido a devolvido.</p>
+          </li>
+          <li class="segment">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#ic-bag"/></svg></span>
+            <h3>Revenda e comércio</h3>
+            <p class="kinds">Roupas, cosméticos e acessórios.</p>
+            <p>Catálogo de preços e pedidos de separando a entregue.</p>
+          </li>
+        </ul>
+        <p class="segments-note">Trocar de ramo muda só as palavras do app — suas vendas e seus dados continuam os mesmos.</p>
       </div>
+    </section>
 
-      <footer>
-        Cadu Vendas · Contato:
-        <a href="mailto:patricksimoes25@gmail.com">patricksimoes25@gmail.com</a>
-      </footer>
+    <!-- ═══════════ VENDA RÁPIDA ═══════════ -->
+    <section class="sec bg-dark" id="venda-rapida" aria-labelledby="t-venda">
+      <div class="wrap split">
+        <div class="split__text">
+          <p class="eyebrow">Venda rápida</p>
+          <h2 id="t-venda" class="h2">Dois toques e a venda <span class="hl">tá anotada</span></h2>
+          <p class="lead">Toque no produto, confira o total e finalize. Pronto.</p>
+          <ul class="checks">
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Pix com QR Code na hora</b>, já no valor da venda — o cliente escaneia e paga.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Dinheiro com troco calculado</b> e cartão só pra registro — a maquininha continua sendo a sua.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Venda fiado</b> fica anotada pra receber depois.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Item avulso</b> e venda de outro dia, quando precisar.</span></li>
+          </ul>
+          <a class="link-arrow" href="pix/">Veja como funciona o Pix no Cadu <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="split__media">
+          <svg class="spark" style="top:30px;left:6%;color:#4fc57e;opacity:.9" width="34" height="34" aria-hidden="true"><use href="#star4"/></svg>
+          <svg class="spark" style="top:120px;right:6%;color:#fb923c;opacity:.9" width="24" height="24" aria-hidden="true"><use href="#star4"/></svg>
+          <div class="device" role="img" aria-label="Tela Nova venda do Cadu Vendas: produtos em grade, dois selecionados e o total de R$ 28,00 pronto para finalizar" data-nosnippet>
+            <div class="phone" aria-hidden="true"><div class="m-screen">
+              <span class="m-punch"></span>
+              <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+              <div class="m-pad m-row" style="padding-top:12px;gap:12px">
+                <svg class="i" width="20" height="20"><use href="#ic-close"/></svg>
+                <div class="m-title" style="font-size:24px">Nova venda</div>
+              </div>
+              <div class="m-pad m-chips" style="margin-top:16px">
+                <span class="m-chip is-sel">Tudo</span><span class="m-chip">Bolos</span><span class="m-chip">Doces</span><span class="m-chip">Salgados</span>
+              </div>
+              <div class="m-pad" style="margin-top:16px;display:flex;flex-direction:column;gap:12px">
+                <div class="m-row" style="gap:12px;align-items:stretch">
+                  <div class="m-prod is-sel"><span class="m-qty">2</span><div class="m-prod__name">Brigadeiro gourmet</div><div class="m-money">R$ 8,00</div><div class="m-steppers"><span>−</span><span>+</span></div></div>
+                  <div class="m-prod is-sel"><span class="m-qty">1</span><div class="m-prod__name">Bolo de pote</div><div class="m-money">R$ 12,00</div><div class="m-steppers"><span>−</span><span>+</span></div></div>
+                </div>
+                <div class="m-row" style="gap:12px;align-items:stretch">
+                  <div class="m-prod"><div class="m-prod__name">Beijinho</div><div class="m-money">R$ 7,00</div></div>
+                  <div class="m-prod"><div class="m-prod__name">Torta de limão</div><div class="m-money">R$ 45,00</div></div>
+                </div>
+                <div class="m-row" style="gap:12px;align-items:stretch">
+                  <div class="m-prod"><div class="m-prod__name">Pudim (fatia)</div><div class="m-money">R$ 10,00</div></div>
+                  <div class="m-prod"><div class="m-prod__name">Bolo caseiro (fatia)</div><div class="m-money">R$ 8,00</div></div>
+                </div>
+                <div class="m-row" style="height:56px;border:1.5px dashed var(--d-primary);border-radius:20px;justify-content:center;gap:8px;color:var(--d-primary)">
+                  <span style="font-size:20px;font-weight:600">＋</span><span style="font-size:16px;font-weight:700">Adicionar item avulso</span>
+                </div>
+              </div>
+              <div class="m-cartbar">
+                <div class="m-row" style="gap:12px">
+                  <span style="position:relative;width:44px;height:44px;display:flex;align-items:center;justify-content:center">
+                    <svg class="i" width="26" height="26"><use href="#ic-cart"/></svg>
+                    <span class="m-cartbar__count">3</span>
+                  </span>
+                  <div style="flex:1">
+                    <div class="m-cap">TOTAL · tocar pra ver</div>
+                    <div class="m-money" style="font-size:22px">R$ 28,00</div>
+                  </div>
+                  <div class="m-finalizar">Finalizar <svg class="i" width="18" height="18"><use href="#ic-fwd"/></svg></div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PEDIDOS ═══════════ -->
+    <section class="sec bg-paper" id="pedidos" aria-labelledby="t-pedidos">
+      <div class="wrap split split--rev">
+        <div class="split__text">
+          <p class="eyebrow">Encomendas</p>
+          <h2 id="t-pedidos" class="h2">Pedidos sob controle, <span class="hl">num olhar</span></h2>
+          <p class="lead">Atrasados, em andamento e entregues — sem caderno rasurado.</p>
+          <ul class="checks">
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Data e hora de entrega</b> de cada encomenda, com o que já foi pago e o que falta receber.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>O andamento de cada pedido</b>: recebido, em preparo, pronto, saiu pra entrega e entregue.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Entregou, virou venda:</b> o pedido entregue entra sozinho no caixa.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Lembretes no celular</b> pra não esquecer nenhuma entrega.</span></li>
+          </ul>
+          <a class="link-arrow" href="pedidos/">Tudo sobre o controle de pedidos <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="split__media">
+          <div class="blob" style="background:#f0e9d8"></div>
+          <svg class="spark" style="top:24px;left:4%;color:#d4823a;opacity:.8" width="32" height="32" aria-hidden="true"><use href="#star4"/></svg>
+          <svg class="spark" style="top:110px;right:6%;color:#e8c547" width="24" height="24" aria-hidden="true"><use href="#star4"/></svg>
+          <div class="device" role="img" aria-label="Tela Pedidos do Cadu Vendas: 1 atrasado, 3 em andamento e 6 entregues, com os últimos pedidos e o total pendente" data-nosnippet>
+            <div class="phone" aria-hidden="true"><div class="m-screen">
+              <span class="m-punch"></span>
+              <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+              <div class="m-pad" style="padding-top:12px">
+                <div class="m-title" style="font-size:28px">Pedidos</div>
+                <div class="m-sub">Acompanhe e gerencie seus pedidos.</div>
+              </div>
+              <div class="m-pad m-row" style="gap:8px;margin-top:16px">
+                <div class="m-stat m-stat--danger"><div class="m-title">1</div><b>Atrasados</b></div>
+                <div class="m-stat m-stat--warn"><div class="m-title">3</div><b>Em andamento</b></div>
+                <div class="m-stat m-stat--ok"><div class="m-title">6</div><b>Entregues</b></div>
+              </div>
+              <div class="m-pad m-chips" style="margin-top:16px">
+                <span class="m-chip is-sel">Todos</span>
+                <span class="m-chip">Atrasados <span class="m-badge m-badge--red">1</span></span>
+                <span class="m-chip">Pendentes <span class="m-badge">4</span></span>
+                <span class="m-chip">Entregues</span>
+              </div>
+              <div class="m-pad m-row" style="gap:12px;margin-top:16px">
+                <div class="m-box"><div class="m-cap c-text2">Total pendente</div><div class="m-money c-money" style="font-size:20px;margin-top:2px">R$ 312,00</div></div>
+                <div class="m-box"><div class="m-cap c-text2">Pedidos de hoje</div><div class="m-title" style="font-size:22px;margin-top:2px">5</div></div>
+              </div>
+              <div class="m-row m-between" style="margin-top:18px;padding:0 20px">
+                <span class="m-sec">ÚLTIMOS PEDIDOS</span>
+                <span class="m-row m-see" style="gap:2px">Ver histórico<svg class="i" width="15" height="15"><use href="#ic-fwd"/></svg></span>
+              </div>
+              <div class="m-pad" style="margin-top:12px">
+                <div class="m-card" style="padding:16px">
+                  <div class="m-row" style="gap:12px">
+                    <span class="m-avatar">M</span>
+                    <div style="flex:1">
+                      <div style="font-size:16px;font-weight:700">Maria Souza</div>
+                      <div class="m-row m-cap c-muted" style="gap:5px;margin-top:3px">
+                        <span>#42</span>
+                        <svg class="i" width="12" height="12"><use href="#ic-clock"/></svg><span>14:00</span>
+                        <svg class="i" width="12" height="12"><use href="#ic-bag"/></svg>
+                        <svg class="i c-ok" width="12" height="12"><use href="#ic-pix"/></svg><span class="c-ok">Pago</span>
+                      </div>
+                    </div>
+                    <span class="m-money c-money" style="font-size:18px">R$ 96,00</span>
+                  </div>
+                  <div class="m-row" style="gap:8px;margin-top:12px">
+                    <div class="m-progress"><span class="is-warn"></span><span class="is-warn"></span><span></span><span></span></div>
+                    <span class="m-cap c-warn">Em preparo</span>
+                  </div>
+                  <div class="m-btn" style="margin-top:12px">Marcar como pronto</div>
+                </div>
+              </div>
+              <div class="m-pad" style="margin-top:12px">
+                <div class="m-card" style="padding:16px">
+                  <div class="m-row" style="gap:12px">
+                    <span class="m-avatar m-avatar--danger">J</span>
+                    <div style="flex:1">
+                      <div style="font-size:16px;font-weight:700">João Pereira</div>
+                      <div class="m-row m-cap c-muted" style="gap:5px;margin-top:3px">
+                        <span>#41</span>
+                        <svg class="i c-danger" width="12" height="12"><use href="#ic-clock"/></svg><span class="c-danger">11:30</span>
+                        <svg class="i c-warn" width="12" height="12"><use href="#ic-cash"/></svg><span class="c-warn">Pendente</span>
+                      </div>
+                    </div>
+                    <span class="m-money c-money" style="font-size:18px">R$ 58,00</span>
+                  </div>
+                  <div class="m-row" style="gap:8px;margin-top:12px">
+                    <div class="m-progress"><span class="is-danger"></span><span></span><span></span><span></span></div>
+                    <span class="m-cap c-danger">Atrasado</span>
+                  </div>
+                </div>
+              </div>
+              <div class="m-fab"><span class="plus">+</span> Novo pedido</div>
+              <div class="m-tabbar-wrap"><div class="m-tabbar">
+                <div class="m-tab"><svg class="i"><use href="#ic-home"/></svg></div>
+                <div class="m-tab is-active"><svg class="i"><use href="#ic-orders"/></svg><span>Pedidos</span></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-catalog"/></svg></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-reports"/></svg></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-profile"/></svg></div>
+              </div></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FIADO ═══════════ -->
+    <section class="sec bg-ocre" id="fiado" aria-labelledby="t-fiado">
+      <div class="wrap split">
+        <div class="split__text">
+          <p class="eyebrow">Fiado</p>
+          <h2 id="t-fiado" class="h2">Fiado anotado, sem constrangimento</h2>
+          <p class="lead">Saiba quem ficou de pagar e cobre pelo WhatsApp com um toque.</p>
+          <ul class="checks">
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Quem deve, quanto e desde quando</b>, agrupado por cliente.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Cobrança pronta no WhatsApp</b>, já com a sua chave Pix na mensagem.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Recebeu?</b> Marque o valor inteiro ou só uma parte.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Venda parcelada</b> com cada parcela e o seu vencimento.</span></li>
+          </ul>
+          <a class="link-arrow" href="fiado/">Como controlar o fiado no celular <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="split__media">
+          <div class="blob" style="background:rgba(255,255,255,.5)"></div>
+          <svg class="spark" style="top:28px;left:6%;color:#c77423" width="34" height="34" aria-hidden="true"><use href="#star4"/></svg>
+          <svg class="spark" style="top:120px;right:6%;color:#2d5a3d;opacity:.7" width="24" height="24" aria-hidden="true"><use href="#star4"/></svg>
+          <div class="device" role="img" aria-label="Tela Pagamentos pendentes do Cadu Vendas: total de R$ 319,00 em fiado, clientes com botões de WhatsApp e Receber, e uma venda parcelada" data-nosnippet>
+            <div class="phone" aria-hidden="true"><div class="m-screen">
+              <span class="m-punch"></span>
+              <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+              <div class="m-pad m-row" style="padding-top:12px;gap:12px">
+                <svg class="i" width="22" height="22"><use href="#ic-back"/></svg>
+                <div class="m-title" style="font-size:24px">Pagamentos pendentes</div>
+              </div>
+              <div class="m-pad" style="margin-top:18px">
+                <div class="m-row" style="background:#3b2410;border:1px solid var(--d-accent);border-radius:20px;padding:16px;gap:12px">
+                  <span style="font-size:36px;line-height:1">📝</span>
+                  <div style="flex:1">
+                    <div class="m-cap c-muted" style="letter-spacing:1px">TOTAL PENDENTE</div>
+                    <div class="m-money c-money" style="font-size:32px">R$ 319,00</div>
+                    <div class="m-sub">R$ 139,00 pendente · R$ 180,00 parcelado</div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-pad" style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+                <div class="m-sec" style="padding:0 8px;margin-bottom:2px">PENDENTES</div>
+                <div class="m-card" style="padding:16px">
+                  <div class="m-row" style="gap:12px">
+                    <span class="m-avatar m-avatar--sm">C</span>
+                    <div style="flex:1"><div style="font-size:16px;font-weight:700">Carla Mendes</div><div class="m-cap c-muted">2 vendas · desde 5 ago</div></div>
+                    <span class="m-money c-money" style="font-size:18px">R$ 74,00</span>
+                  </div>
+                  <div class="m-row" style="gap:8px;margin-top:14px">
+                    <div class="m-btn m-btn--outline" style="flex:1"><svg class="i" width="18" height="18"><use href="#ic-whats"/></svg> WhatsApp</div>
+                    <div class="m-btn" style="flex:1">Receber</div>
+                  </div>
+                </div>
+                <div class="m-card" style="padding:16px">
+                  <div class="m-row" style="gap:12px">
+                    <span class="m-avatar m-avatar--sm">R</span>
+                    <div style="flex:1"><div style="font-size:16px;font-weight:700">Rafael Lima</div><div class="m-cap c-muted">1 venda · desde 12 ago</div></div>
+                    <span class="m-money c-money" style="font-size:18px">R$ 65,00</span>
+                  </div>
+                  <div class="m-row" style="gap:8px;margin-top:14px">
+                    <div class="m-btn m-btn--outline" style="flex:1"><svg class="i" width="18" height="18"><use href="#ic-whats"/></svg> WhatsApp</div>
+                    <div class="m-btn" style="flex:1">Receber</div>
+                  </div>
+                </div>
+                <div class="m-sec" style="padding:0 8px;margin-top:10px;margin-bottom:2px">PARCELADOS</div>
+                <div class="m-card" style="padding:16px">
+                  <div class="m-row" style="gap:12px">
+                    <span class="m-avatar m-avatar--sm">A</span>
+                    <div style="flex:1"><div style="font-size:16px;font-weight:700">Ana Beatriz</div><div class="m-cap c-muted">Bolo de casamento · 4×</div></div>
+                    <span class="m-money c-money" style="font-size:18px">R$ 180,00</span>
+                  </div>
+                  <div class="m-row m-between" style="margin-top:12px;background:var(--d-sunken);border-radius:12px;padding:10px 12px">
+                    <span style="font-size:14px;font-weight:700">Parcela 2 de 4</span>
+                    <span class="m-cap c-muted">vence 20 ago</span>
+                    <span class="m-money c-money" style="font-size:16px">R$ 45,00</span>
+                  </div>
+                  <div class="m-row" style="gap:8px;margin-top:12px">
+                    <div class="m-btn m-btn--outline" style="flex:1"><svg class="i" width="18" height="18"><use href="#ic-whats"/></svg> WhatsApp</div>
+                    <div class="m-btn" style="flex:1">Receber parcela</div>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CATÁLOGO ═══════════ -->
+    <section class="sec bg-paper" id="catalogo" aria-labelledby="t-catalogo">
+      <div class="wrap split split--rev">
+        <div class="split__text">
+          <p class="eyebrow">Catálogo</p>
+          <h2 id="t-catalogo" class="h2">Cadastre uma vez, venda em <span class="hl">dois toques</span></h2>
+          <p class="lead">E gere um cardápio bonito, pronto pra mandar no WhatsApp.</p>
+          <ul class="checks">
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Produtos por categoria</b>, com preço e custo.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>A margem de cada produto</b> à vista, pra saber o que vale a pena vender.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Cardápio ou tabela de preços</b> pra compartilhar com os clientes.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Disponível pra encomenda:</b> você escolhe o que aparece na hora de anotar um pedido.</span></li>
+          </ul>
+          <a class="link-arrow" href="precificacao/">Descubra quanto cobrar por produto <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="split__media">
+          <div class="blob" style="background:#deebe2"></div>
+          <svg class="spark" style="top:26px;right:6%;color:#e8c547" width="34" height="34" aria-hidden="true"><use href="#star4"/></svg>
+          <svg class="spark" style="top:130px;left:6%;color:#2d5a3d;opacity:.65" width="22" height="22" aria-hidden="true"><use href="#star4"/></svg>
+          <div class="device" role="img" aria-label="Tela Catálogo do Cadu Vendas: produtos por categoria com preço e selo de margem, e o botão Cardápio para compartilhar" data-nosnippet>
+            <div class="phone" aria-hidden="true"><div class="m-screen">
+              <span class="m-punch"></span>
+              <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+              <div class="m-pad m-row m-between" style="padding-top:12px;align-items:flex-start">
+                <div><div class="m-title" style="font-size:34px">Catálogo</div><div class="m-sub">9 produtos</div></div>
+                <div class="m-row" style="gap:6px;height:38px;padding:0 14px;border-radius:999px;background:var(--d-sunken)">
+                  <svg class="i" width="18" height="18"><use href="#ic-share"/></svg>
+                  <span style="font-size:14px;font-weight:700;color:var(--d-text2)">Cardápio</span>
+                </div>
+              </div>
+              <div class="m-pad m-chips" style="margin-top:16px">
+                <span class="m-chip is-sel">Tudo</span><span class="m-chip">Bolos</span><span class="m-chip">Doces</span><span class="m-chip">Salgados</span>
+              </div>
+              <div class="m-pad" style="margin-top:20px">
+                <div class="m-sec" style="padding:0 8px;margin-bottom:8px">BOLOS</div>
+                <div class="m-card" style="overflow:hidden">
+                  <div class="m-sale" style="padding:14px 16px">
+                    <div class="m-sale__mid"><div class="m-sale__title">Bolo de pote</div><span class="m-margin">65% margem</span></div>
+                    <span class="m-money m-sale__val">R$ 12,00</span>
+                    <svg class="i c-muted" width="18" height="18"><use href="#ic-fwd"/></svg>
+                  </div>
+                  <div class="m-div"></div>
+                  <div class="m-sale" style="padding:14px 16px">
+                    <div class="m-sale__mid"><div class="m-sale__title">Bolo caseiro (fatia)</div><span class="m-margin">58% margem</span></div>
+                    <span class="m-money m-sale__val">R$ 8,00</span>
+                    <svg class="i c-muted" width="18" height="18"><use href="#ic-fwd"/></svg>
+                  </div>
+                  <div class="m-div"></div>
+                  <div class="m-sale" style="padding:14px 16px">
+                    <div class="m-sale__mid"><div class="m-sale__title">Torta de limão</div><span class="m-margin m-margin--warn">18% margem</span></div>
+                    <span class="m-money m-sale__val">R$ 45,00</span>
+                    <svg class="i c-muted" width="18" height="18"><use href="#ic-fwd"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="m-pad" style="margin-top:20px">
+                <div class="m-sec" style="padding:0 8px;margin-bottom:8px">DOCES</div>
+                <div class="m-card" style="overflow:hidden">
+                  <div class="m-sale" style="padding:14px 16px">
+                    <div class="m-sale__mid"><div class="m-sale__title">Brigadeiro gourmet</div><span class="m-margin">72% margem</span></div>
+                    <span class="m-money m-sale__val">R$ 8,00</span>
+                    <svg class="i c-muted" width="18" height="18"><use href="#ic-fwd"/></svg>
+                  </div>
+                  <div class="m-div"></div>
+                  <div class="m-sale" style="padding:14px 16px">
+                    <div class="m-sale__mid"><div class="m-sale__title">Beijinho</div><span class="m-margin">70% margem</span></div>
+                    <span class="m-money m-sale__val">R$ 7,00</span>
+                    <svg class="i c-muted" width="18" height="18"><use href="#ic-fwd"/></svg>
+                  </div>
+                  <div class="m-div"></div>
+                  <div class="m-sale" style="padding:14px 16px">
+                    <div class="m-sale__mid"><div class="m-sale__title">Pudim (fatia)</div><span class="m-margin">61% margem</span></div>
+                    <span class="m-money m-sale__val">R$ 10,00</span>
+                    <svg class="i c-muted" width="18" height="18"><use href="#ic-fwd"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="m-fab m-fab--circle"><span class="plus">+</span></div>
+              <div class="m-tabbar-wrap"><div class="m-tabbar">
+                <div class="m-tab"><svg class="i"><use href="#ic-home"/></svg></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-orders"/></svg></div>
+                <div class="m-tab is-active"><svg class="i"><use href="#ic-catalog"/></svg><span>Catálogo</span></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-reports"/></svg></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-profile"/></svg></div>
+              </div></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRECIFICAÇÃO ═══════════ -->
+    <section class="sec bg-ocre" id="precificacao" aria-labelledby="t-preco">
+      <div class="wrap split">
+        <div class="split__text">
+          <p class="eyebrow">Precificação</p>
+          <h2 id="t-preco" class="h2">Quanto cobrar? <span class="hl">O Cadu calcula</span></h2>
+          <p class="lead">Diga o gasto e o rendimento — sai o preço com a margem certa.</p>
+          <ul class="checks">
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Três jeitos de pensar o preço:</b> margem, lucro por unidade ou markup.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Custo real pela receita</b><span class="tag-premium">Premium</span> — cadastre os ingredientes e o Cadu calcula quanto custa cada unidade.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Salve direto no catálogo</b> e veja a diferença pro preço de hoje.</span></li>
+          </ul>
+          <a class="link-arrow" href="precificacao/">Use a calculadora de preço grátis <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="split__media">
+          <div class="blob" style="background:rgba(255,255,255,.5)"></div>
+          <svg class="spark" style="top:28px;left:6%;color:#c77423" width="34" height="34" aria-hidden="true"><use href="#star4"/></svg>
+          <svg class="spark" style="top:130px;right:6%;color:#2d5a3d;opacity:.7" width="24" height="24" aria-hidden="true"><use href="#star4"/></svg>
+          <div class="device" role="img" aria-label="Tela Resultado da precificação no Cadu Vendas: preço sugerido de R$ 4,50 por unidade, com gasto de R$ 54,00, rendimento de 30 unidades e margem de 60%" data-nosnippet>
+            <div class="phone" aria-hidden="true"><div class="m-screen">
+              <span class="m-punch"></span>
+              <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+              <div class="m-pad m-row" style="padding-top:12px;gap:12px">
+                <svg class="i" width="22" height="22"><use href="#ic-back"/></svg>
+                <div class="m-title" style="font-size:24px">Resultado</div>
+              </div>
+              <div style="text-align:center;padding:28px 16px 12px">
+                <div class="m-cap c-muted" style="letter-spacing:1px">PREÇO SUGERIDO</div>
+                <div class="m-money c-money" style="font-size:56px;letter-spacing:-1.5px;margin-top:4px">R$ 4,50</div>
+                <div class="m-sub">por unidade</div>
+              </div>
+              <div class="m-pad" style="margin-top:12px">
+                <div class="m-card" style="padding:16px;font-size:14px">
+                  <div class="m-cap c-muted" style="margin-bottom:12px">RESUMO DA CONTA</div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Gasto total</span><b>R$ 54,00</b></div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Rendimento</span><b>30 unidades</b></div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Custo por unidade</span><b>R$ 1,80</b></div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Margem de lucro</span><b class="c-money">60%</b></div>
+                  <div class="m-row m-between"><span class="c-text2">Lucro por unidade</span><b class="c-money">R$ 2,70</b></div>
+                </div>
+              </div>
+              <div class="m-row" style="gap:8px;margin-top:14px;align-items:flex-start;padding:0 20px">
+                <span style="font-size:14px;line-height:16px">⚠️</span>
+                <span class="m-cap c-muted" style="flex:1">Conta feita com os valores que você informou. Se o gasto mudar, refaça.</span>
+              </div>
+              <div class="m-pad" style="margin-top:14px">
+                <div style="background:var(--d-sunken);border-radius:20px;padding:12px;font-size:14px;color:var(--d-text2)">Hoje esse produto está <b style="color:var(--d-text)">R$ 4,00</b>. Salvar troca para <b style="color:var(--d-text)">R$ 4,50</b>.</div>
+              </div>
+              <div style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--d-border);padding:12px 16px 16px;background:var(--d-bg)">
+                <div class="m-btn m-btn--lg"><svg class="i" width="18" height="18"><use href="#ic-check"/></svg> Salvar no catálogo</div>
+                <div class="m-row" style="height:48px;justify-content:center;font-size:16px;font-weight:700;color:var(--d-primary);margin-top:4px">Refazer cálculo</div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ RELATÓRIOS ═══════════ -->
+    <section class="sec bg-green" id="relatorios" aria-labelledby="t-relatorios">
+      <div class="blob" style="width:900px;height:900px;right:-300px;bottom:-240px;background:rgba(255,255,255,.05)"></div>
+      <div class="wrap split split--rev">
+        <div class="split__text">
+          <p class="eyebrow">Relatórios</p>
+          <h2 id="t-relatorios" class="h2">Veja o lucro <span class="hl">de verdade</span></h2>
+          <p class="lead">Faturamento, margem, metas e os produtos que mais dão dinheiro.</p>
+          <ul class="checks">
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Hoje, semana e mês</b>, com a comparação com o período anterior.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Lucro estimado e margem</b> — não só o quanto entrou.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Mais vendidos e mais lucrativos</b>, pra saber onde está o dinheiro.</span></li>
+            <li><span class="check-dot"><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg></span><span><b>Metas e resultado por evento</b><span class="tag-premium">Premium</span> pra acompanhar cada feira e cada mês.</span></li>
+          </ul>
+          <a class="link-arrow" href="relatorios/">Entenda os relatórios do Cadu <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="split__media">
+          <svg class="spark" style="top:26px;left:6%;color:#e8c547" width="34" height="34" aria-hidden="true"><use href="#star4"/></svg>
+          <svg class="spark" style="top:130px;right:6%;color:#a6e3b7;opacity:.9" width="24" height="24" aria-hidden="true"><use href="#star4"/></svg>
+          <div class="device" role="img" aria-label="Tela Relatórios do Cadu Vendas: faturamento da semana de R$ 2.348,00 com gráfico por dia, metas do mês e lucro estimado de R$ 1.032,00 com 44% de margem" data-nosnippet>
+            <div class="phone" aria-hidden="true"><div class="m-screen">
+              <span class="m-punch"></span>
+              <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+              <div class="m-pad" style="padding-top:12px">
+                <div class="m-title" style="font-size:34px">Relatórios</div>
+                <div class="m-sub">Veja como tá indo o caixa.</div>
+              </div>
+              <div class="m-pad m-chips" style="margin-top:14px">
+                <span class="m-chip">Hoje</span><span class="m-chip is-sel">Semana</span><span class="m-chip">Mês</span>
+                <span class="m-chip">Por evento <svg class="i" width="14" height="14" style="color:var(--d-warning)"><use href="#ic-lock"/></svg></span>
+              </div>
+              <div class="m-pad" style="margin-top:16px">
+                <div class="m-card" style="padding:20px">
+                  <div class="m-row m-between">
+                    <svg class="i c-text2" width="16" height="16"><use href="#ic-back"/></svg>
+                    <span style="font-size:14px;font-weight:700;color:var(--d-text2)">Esta semana</span>
+                    <svg class="i" width="16" height="16" style="color:#545955"><use href="#ic-fwd"/></svg>
+                  </div>
+                  <div class="m-money c-money" style="font-size:36px;margin-top:8px">R$ 2.348,00</div>
+                  <div class="m-row c-ok" style="gap:5px;margin-top:4px">
+                    <svg class="i" width="16" height="16"><use href="#ic-arrowup"/></svg>
+                    <span style="font-size:14px;font-weight:700">+12% vs semana passada</span>
+                  </div>
+                  <div class="m-bars">
+                    <div class="m-bars__avg"></div>
+                    <div class="m-bars__cols"><span style="height:52%"></span><span style="height:38%"></span><span style="height:64%"></span><span style="height:45%"></span><span style="height:78%"></span><span class="is-top" style="height:100%"></span><span class="is-off" style="height:30%"></span></div>
+                  </div>
+                  <div class="m-days"><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span><span>D</span></div>
+                </div>
+              </div>
+              <div class="m-pad" style="margin-top:14px">
+                <div class="m-card" style="padding:16px">
+                  <div class="m-row" style="gap:8px">
+                    <svg class="i" width="18" height="18" style="color:var(--gold)"><use href="#ic-trophy"/></svg>
+                    <span style="flex:1;font-size:14px;font-weight:700">Metas do mês</span>
+                    <span class="m-see">Ver todas</span>
+                  </div>
+                  <div style="margin-top:14px">
+                    <div class="m-row m-between"><span style="font-size:14px;font-weight:700">Faturamento</span><span class="m-cap c-muted">R$ 7.230 / R$ 9.000</span></div>
+                    <div class="m-meter"><span style="width:80%"></span></div>
+                  </div>
+                  <div style="margin-top:12px">
+                    <div class="m-row m-between"><span style="font-size:14px;font-weight:700">Pedidos entregues</span><span class="m-cap c-muted">23 / 25</span></div>
+                    <div class="m-meter"><span class="is-ok" style="width:92%"></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-pad" style="margin-top:14px">
+                <div class="m-card m-row" style="padding:16px">
+                  <div style="flex:1">
+                    <div class="m-cap c-muted">Lucro estimado</div>
+                    <div class="m-money c-money" style="font-size:32px">R$ 1.032,00</div>
+                  </div>
+                  <div style="background:#10331e;border-radius:16px;padding:10px 16px;text-align:center">
+                    <div style="font-size:18px;font-weight:700;color:var(--d-money)">44%</div>
+                    <div class="m-cap c-muted">margem</div>
+                  </div>
+                </div>
+              </div>
+              <div class="m-tabbar-wrap"><div class="m-tabbar">
+                <div class="m-tab"><svg class="i"><use href="#ic-home"/></svg></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-orders"/></svg></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-catalog"/></svg></div>
+                <div class="m-tab is-active"><svg class="i"><use href="#ic-reports"/></svg><span>Relatórios</span></div>
+                <div class="m-tab"><svg class="i"><use href="#ic-profile"/></svg></div>
+              </div></div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ E TEM MAIS ═══════════ -->
+    <section class="sec bg-paper" id="mais" aria-labelledby="t-mais">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">E tem mais</p>
+          <h2 id="t-mais" class="h2">O dia a dia de quem vende, <span class="hl">sem papel</span></h2>
+        </div>
+        <ul class="features">
+          <li class="feature">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span>
+            <div><h3>Resumo do dia</h3><p>Um card bonito com o fechamento, pronto pra postar no Instagram ou mandar no WhatsApp.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-receipt"/></svg></span>
+            <div><h3>Recibo da venda</h3><p>Comprovante em imagem pra enviar ao cliente em um toque.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-bell"/></svg></span>
+            <div><h3>Lembretes</h3><p>Avisos no celular pra não esquecer entrega nem cobrança.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></span>
+            <div><h3>Backup em arquivo</h3><p>Exporte o caderno quando quiser e guarde onde preferir.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#i-sync"/></svg></span>
+            <div><h3>Nuvem e sincronização <span class="tag-premium">Premium</span></h3><p>Troque de celular sem perder um pedido e use o mesmo caderno em mais de um aparelho.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#ic-trophy"/></svg></span>
+            <div><h3>Metas <span class="tag-premium">Premium</span></h3><p>Alvo diário, semanal, mensal ou anual, com o progresso nos relatórios.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <div><h3>Eventos <span class="tag-premium">Premium</span></h3><p>Feira, festa ou bazar com o resultado de cada um separado.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#i-repeat"/></svg></span>
+            <div><h3>Assinantes <span class="tag-premium">Premium</span></h3><p>Planos recorrentes — marmita por dia, cesta por semana — com entregas e cobrança por ciclo.</p></div>
+          </li>
+          <li class="feature">
+            <span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <div><h3>Clientes salvos <span class="tag-premium">Premium</span></h3><p>Telefone, endereço e observação de quem compra sempre, num toque no novo pedido.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRIVACIDADE ═══════════ -->
+    <section class="sec bg-dark" id="privacidade" aria-labelledby="t-privacidade">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Seus dados, seu celular</p>
+          <h2 id="t-privacidade" class="h2">Funciona offline. <span class="hl">E as vendas são só suas.</span></h2>
+          <p class="lead">O Cadu guarda o caderno no próprio aparelho. Criar conta é opcional — e, sem conta, suas vendas não vão pra nenhum servidor nosso.</p>
+        </div>
+        <ul class="privacy-grid">
+          <li class="privacy-item">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-offline"/></svg></span>
+            <h3>Funciona sem internet</h3>
+            <p>Vendas, produtos, clientes e fiado ficam gravados no celular. Sem sinal, o caderno continua funcionando.</p>
+          </li>
+          <li class="privacy-item">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#ic-profile"/></svg></span>
+            <h3>Conta é opcional</h3>
+            <p>As funções principais funcionam sem cadastro. A conta só é necessária pro backup e a sincronização na nuvem.</p>
+          </li>
+          <li class="privacy-item">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#ic-lock"/></svg></span>
+            <h3>Nuvem com cadeado</h3>
+            <p>Com o backup ligado, a cópia viaja por conexão criptografada e fica acessível só pela sua conta.</p>
+          </li>
+          <li class="privacy-item">
+            <span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3>Seus dados não estão à venda</h3>
+            <p>A gente não vende seus dados, não envia suas vendas pra ninguém e não mexe no seu Pix.</p>
+          </li>
+        </ul>
+        <p class="center" style="margin-top:32px"><a class="link-arrow" style="margin-top:0" href="privacy.html">Leia a Política de Privacidade <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- ═══════════ COMO COMEÇAR ═══════════ -->
+    <section class="sec bg-paper-2" id="como-comecar" aria-labelledby="t-comecar">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Como começar</p>
+          <h2 id="t-comecar" class="h2">Do caderno de papel pro Cadu <span class="hl">em minutos</span></h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <h3>Baixe grátis</h3>
+            <p>Instale pela Google Play. Não precisa criar conta pra começar.</p>
+          </li>
+          <li class="step">
+            <h3>Cadastre o que você vende</h3>
+            <p>Produtos ou serviços, com preço e custo. É uma vez só.</p>
+          </li>
+          <li class="step">
+            <h3>Venda em dois toques</h3>
+            <p>Toque, confira e finalize. O Cadu soma, calcula o troco e mostra o lucro.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════ PLANOS ═══════════ -->
+    <section class="sec bg-paper" id="planos" aria-labelledby="t-planos">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Planos</p>
+          <h2 id="t-planos" class="h2">Comece grátis. <span class="hl">Cresça quando quiser.</span></h2>
+          <p class="lead">O essencial pra vender e se organizar é grátis. Os extras ficam no Premium.</p>
+        </div>
+        <div class="plans">
+          <article class="plan" aria-labelledby="p-gratis">
+            <h3 class="plan__name" id="p-gratis">Grátis</h3>
+            <p class="plan__desc">Pra vender e se organizar desde o primeiro dia.</p>
+            <p class="plan__price"><span class="amount">R$ 0</span><span class="per">pra sempre</span></p>
+            <p class="plan__alt">Com anúncios em telas secundárias — nunca durante uma venda.</p>
+            <ul class="plan__list">
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Vendas com Pix, dinheiro, cartão e fiado</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Pedidos e encomendas com lembretes</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Fiado com cobrança pelo WhatsApp</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Catálogo, cardápio e calculadora de preço</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Relatórios de hoje, da semana e do mês</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Backup em arquivo</li>
+            </ul>
+            <div class="plan__cta"><a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dhome" target="_blank" rel="noopener">Baixar grátis<span class="sr-only"> (abre em nova aba)</span></a></div>
+          </article>
+
+          <article class="plan" aria-labelledby="p-semanuncios">
+            <h3 class="plan__name" id="p-semanuncios">Sem anúncios</h3>
+            <p class="plan__desc">Tudo do grátis, sem nenhum anúncio.</p>
+            <p class="plan__price"><span class="amount">R$ 9,99</span><span class="per">compra única</span></p>
+            <p class="plan__alt">Pagou uma vez, é seu — sem mensalidade.</p>
+            <ul class="plan__list">
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Tudo do plano grátis</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Nenhum anúncio, em nenhuma tela</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Vale pra sempre na sua conta da Google Play</li>
+            </ul>
+            <div class="plan__cta"><a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dhome" target="_blank" rel="noopener">Baixar o app<span class="sr-only"> (abre em nova aba)</span></a></div>
+          </article>
+
+          <article class="plan plan--premium" aria-labelledby="p-premium">
+            <span class="plan__badge">Mais completo</span>
+            <h3 class="plan__name" id="p-premium">Premium</h3>
+            <p class="plan__desc">Tudo liberado, sem anúncios.</p>
+            <p class="plan__price"><span class="amount">R$ 19,99</span><span class="per">por mês</span></p>
+            <p class="plan__alt">ou R$ 199,99 por ano — sai por R$ 16,67 ao mês.</p>
+            <ul class="plan__list">
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Tudo do grátis, sem anúncios</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Backup e restauração na nuvem</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Sincronização entre aparelhos</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Metas diárias, semanais, mensais ou anuais</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Custo real pela receita</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Clientes salvos e assinantes</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Desconto e taxa de entrega na venda</li>
+              <li><svg class="i" aria-hidden="true"><use href="#ic-check"/></svg>Eventos com resultado separado</li>
+            </ul>
+            <div class="plan__cta"><a class="btn btn--primary" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dhome" target="_blank" rel="noopener">Baixar e assinar no app<span class="sr-only"> (abre em nova aba)</span></a></div>
+          </article>
+        </div>
+        <p class="plans-note">Compras e assinaturas são feitas dentro do app e cobradas pela Google Play. Os valores podem variar: o que vale é o preço mostrado na loja. A assinatura se cancela direto na Google Play, quando você quiser.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════ DÚVIDAS ═══════════ -->
+    <section class="sec bg-paper-2" id="duvidas" aria-labelledby="t-duvidas">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Dúvidas</p>
+          <h2 id="t-duvidas" class="h2">Perguntas <span class="hl">frequentes</span></h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>O Cadu Vendas é grátis?</summary>
+            <div class="faq__a"><p>Sim. Baixar e usar é grátis, com anúncios em telas secundárias — nunca durante uma venda. Se preferir, dá pra remover os anúncios com uma compra única ou assinar o <a href="#planos">Premium</a>, que também libera recursos extras.</p></div>
+          </details>
+          <details>
+            <summary>Precisa de internet pra usar?</summary>
+            <div class="faq__a"><p>Não. O Cadu funciona sem internet: suas vendas, produtos e clientes ficam gravados no próprio celular. A internet só entra em recursos opcionais, como o backup e a sincronização na nuvem.</p></div>
+          </details>
+          <details>
+            <summary>O dinheiro do Pix passa pelo Cadu?</summary>
+            <div class="faq__a"><p>Não. O Cadu só monta o QR Code com a sua chave Pix e o valor da venda. O cliente paga direto pra conta dona da chave — o app não intermedeia o pagamento, não cobra taxa e não tem acesso ao seu dinheiro. <a href="pix/">Veja como funciona</a>.</p></div>
+          </details>
+          <details>
+            <summary>Serve pra quem vende serviço, e não produto?</summary>
+            <div class="faq__a"><p>Serve. Você escolhe o seu ramo — comida e bebida, prestação de serviço, assistência técnica ou revenda — e o Cadu ajusta as palavras: fala em “serviço” em vez de “produto” e em “agendado” e “concluído” em vez de “em preparo” e “entregue”.</p></div>
+          </details>
+          <details>
+            <summary>Troquei de celular. Perco minhas vendas?</summary>
+            <div class="faq__a"><p>Não precisa perder nada. Você pode exportar um arquivo de backup e importar no celular novo ou, no Premium, guardar o caderno na nuvem e trazer tudo de volta entrando na sua conta.</p></div>
+          </details>
+          <details>
+            <summary>Funciona no iPhone?</summary>
+            <div class="faq__a"><p>No momento, o Cadu Vendas está disponível para celulares Android, pela Google Play.</p></div>
+          </details>
+          <details>
+            <summary>O Cadu emite nota fiscal?</summary>
+            <div class="faq__a"><p>Não. O Cadu é um caderno de vendas: organiza vendas, pedidos e fiado, mas não emite nota fiscal nem substitui o contador.</p></div>
+          </details>
+          <details>
+            <summary>Alguém consegue ver as minhas vendas?</summary>
+            <div class="faq__a"><p>Não. Sem conta, suas vendas ficam só no seu aparelho e não vão pra nenhum servidor nosso. Se você usar o backup na nuvem, a cópia fica guardada no Google Firebase e é acessível somente pela sua conta. A gente não vende seus dados, nunca. Os detalhes estão na <a href="privacy.html">Política de Privacidade</a>.</p></div>
+          </details>
+          <details>
+            <summary>Como cancelo o Premium?</summary>
+            <div class="faq__a"><p>A assinatura é cobrada e gerenciada pela Google Play. Pra cancelar ou trocar de plano, abra a Google Play, toque na sua foto e vá em <strong>Pagamentos e assinaturas › Assinaturas</strong>.</p></div>
+          </details>
+          <details>
+            <summary>Como excluo minha conta e meus dados?</summary>
+            <div class="faq__a"><p>Dentro do app, em <strong>Perfil › Conta › Excluir conta e dados</strong>. Se você já desinstalou o app, dá pra pedir por e-mail — o passo a passo está na página <a href="delete-account.html">Excluir conta e dados</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CTA FINAL ═══════════ -->
+    <section class="sec bg-green cta-final" id="baixar" aria-labelledby="t-baixar" style="padding-bottom:0">
+      <div class="blob" style="width:1100px;height:1100px;left:50%;margin-left:-550px;top:55%;background:rgba(255,255,255,.06)"></div>
+      <svg class="spark" style="top:18%;left:12%;color:#e8c547" width="44" height="44" aria-hidden="true"><use href="#star4"/></svg>
+      <svg class="spark" style="top:12%;right:14%;color:#e8c547;opacity:.85" width="30" height="30" aria-hidden="true"><use href="#star4"/></svg>
+      <svg class="spark" style="top:58%;left:18%;color:#d4823a" width="26" height="26" aria-hidden="true"><use href="#star4"/></svg>
+      <svg class="spark" style="top:64%;right:19%;color:#a6e3b7" width="22" height="22" aria-hidden="true"><use href="#star4"/></svg>
+      <div class="wrap">
+        <h2 id="t-baixar" class="h2">Comece hoje.<br><span class="hl">É grátis!</span></h2>
+        <p class="lead">Baixe o Cadu Vendas e deixe o caderno de papel descansar.</p>
+        <div class="cta-row">
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dhome" target="_blank" rel="noopener">
+            <span class="btn-play__ic"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span>
+            <span class="btn-play__txt"><small>Baixe grátis na</small><b>Google Play</b></span>
+          <span class="sr-only"> (abre em nova aba)</span></a>
+        </div>
+        <img class="cta-final__cadu" src="assets/img/cadu-verde.svg" alt="Cadu, o mascote do app, comemorando de braços pra cima" width="250" height="286" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand" href="./"><img src="favicon.svg" alt="" width="36" height="36"><span>Cadu Vendas</span></a>
+          <p class="site-footer__tag">Seu caderninho de vendas digital</p>
+          <p class="site-footer__about">Vendas, pedidos, fiado e lucro — o caderninho digital de quem vende por conta própria.</p>
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dhome" target="_blank" rel="noopener">
+            <span class="btn-play__ic"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span>
+            <span class="btn-play__txt"><small>Baixe grátis na</small><b>Google Play</b></span>
+          <span class="sr-only"> (abre em nova aba)</span></a>
+        </div>
+        <nav aria-labelledby="f-recursos">
+          <h2 id="f-recursos">Recursos</h2>
+          <ul>
+            <li><a href="#venda-rapida">Venda rápida</a></li>
+            <li><a href="pix/">QR Code Pix</a></li>
+            <li><a href="fiado/">Controle de fiado</a></li>
+            <li><a href="pedidos/">Pedidos e encomendas</a></li>
+            <li><a href="precificacao/">Calculadora de preço</a></li>
+            <li><a href="relatorios/">Relatórios e lucro</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-cadu">
+          <h2 id="f-cadu">O Cadu</h2>
+          <ul>
+            <li><a href="#pra-quem-e">Pra quem é</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#duvidas">Dúvidas frequentes</a></li>
+            <li><a href="mailto:contato@caduvendas.com.br">Fale com a gente</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-legal">
+          <h2 id="f-legal">Legal</h2>
+          <ul>
+            <li><a href="privacy.html">Política de Privacidade</a></li>
+            <li><a href="terms.html">Termos de Uso</a></li>
+            <li><a href="delete-account.html">Excluir conta e dados</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Cadu Vendas · Feito no Brasil por Patrick Simões</p>
+        <p>Google Play é uma marca da Google LLC.</p>
+      </div>
     </div>
-  </body>
+  </footer>
+</body>
 </html>

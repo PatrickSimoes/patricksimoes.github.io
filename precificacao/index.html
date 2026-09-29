@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de preço de venda: margem e markup | Cadu Vendas</title>
+  <meta name="description" content="Descubra quanto cobrar: informe o gasto e o rendimento e calcule o preço de venda por margem, lucro por unidade ou markup. Calculadora grátis, direto no site.">
+  <link rel="canonical" href="https://caduvendas.com.br/precificacao/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#1f4029">
+  <meta name="color-scheme" content="light">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cadu Vendas">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://caduvendas.com.br/precificacao/">
+  <meta property="og:title" content="Calculadora de preço de venda — Cadu Vendas">
+  <meta property="og:description" content="Quanto cobrar? Diga o gasto e o rendimento e veja o preço com a margem certa. Grátis, direto no navegador.">
+  <meta property="og:image" content="https://caduvendas.com.br/assets/img/og/cadu-vendas.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="Cadu Vendas: vendas em dois toques, pedidos, fiado com cobrança pelo WhatsApp e relatórios de lucro">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de preço de venda — Cadu Vendas">
+  <meta name="twitter:description" content="Quanto cobrar? Diga o gasto e o rendimento e veja o preço com a margem certa.">
+  <meta name="twitter:image" content="https://caduvendas.com.br/assets/img/og/cadu-vendas.png">
+
+  <link rel="preload" href="../assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css?v=2">
+  <script src="../assets/js/site.js?v=1" defer></script>
+  <script src="../assets/js/calculadora.js?v=1" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://caduvendas.com.br/precificacao/#pagina",
+        "url": "https://caduvendas.com.br/precificacao/",
+        "name": "Calculadora de preço de venda: margem e markup",
+        "description": "Descubra quanto cobrar: informe o gasto e o rendimento e calcule o preço de venda por margem, lucro por unidade ou markup.",
+        "inLanguage": "pt-BR",
+        "isPartOf": { "@type": "WebSite", "@id": "https://caduvendas.com.br/#site", "name": "Cadu Vendas", "url": "https://caduvendas.com.br/" },
+        "about": { "@id": "https://caduvendas.com.br/#app" },
+        "breadcrumb": { "@id": "https://caduvendas.com.br/precificacao/#trilha" },
+        "mainEntity": { "@id": "https://caduvendas.com.br/precificacao/#calculadora" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://caduvendas.com.br/precificacao/#calculadora",
+        "name": "Calculadora de preço de venda do Cadu Vendas",
+        "url": "https://caduvendas.com.br/precificacao/#calculadora",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Qualquer navegador",
+        "inLanguage": "pt-BR",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://caduvendas.com.br/precificacao/#trilha",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://caduvendas.com.br/" },
+          { "@type": "ListItem", "position": 2, "name": "Calculadora de preço", "item": "https://caduvendas.com.br/precificacao/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://caduvendas.com.br/precificacao/#duvidas",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como calcular o preço de venda de doces por unidade?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Some tudo o que gastou na leva, divida pelo número de unidades que ela rendeu e aplique a margem. Exemplo: R$ 54 de gasto que rendem 30 unidades dão R$ 1,80 de custo por unidade; com margem de 60%, o preço sugerido é R$ 1,80 ÷ 0,40 = R$ 4,50." }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual a diferença entre margem e markup?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Margem é a fatia do preço que sobra como lucro; markup é quantas vezes o custo você cobra. Vender pelo dobro do custo é um markup de 2×, que dá margem de 50% — não de 100%." }
+          },
+          {
+            "@type": "Question",
+            "name": "Por que a margem vai só até 95%?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Porque margem é a parte do preço que vira lucro. Margem de 100% significaria custo zero, e acima disso a conta não existe. Quem pensa em 200% está pensando em markup." }
+          },
+          {
+            "@type": "Question",
+            "name": "A calculadora do site é igual à do app?",
+            "acceptedAnswer": { "@type": "Answer", "text": "É a mesma conta. No app Cadu Vendas, o preço calculado vai direto pro catálogo, e no Premium dá pra descobrir o custo real a partir dos ingredientes da receita." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ícones do site e dos mockups — o mesmo bloco em todas as páginas -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="ic-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 9.5V20h13V9.5" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20v-5.5h4V20" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-orders" viewBox="0 0 24 24"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5z" fill="none" stroke-width="1.9" stroke-linejoin="round"/><path d="M4 7.5 12 12l8-4.5M12 12v9" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-catalog" viewBox="0 0 24 24"><path d="M3.5 12.5 11 20a2 2 0 0 0 2.8 0l6.2-6.2a2 2 0 0 0 0-2.8L12.5 3.5H6a2.5 2.5 0 0 0-2.5 2.5z" fill="none" stroke-width="1.9" stroke-linejoin="round"/><circle cx="8.3" cy="8.3" r="1.4" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-reports" viewBox="0 0 24 24"><path d="M4 20h16" stroke-width="1.9" stroke-linecap="round"/><path d="M7 20v-6M12 20V9M17 20V4.5" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="ic-profile" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6" fill="none" stroke-width="1.9"/><path d="M5 20c1.2-3.4 3.9-5 7-5s5.8 1.6 7 5" fill="none" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="ic-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z" fill="none" stroke-width="1.8"/><circle cx="12" cy="12" r="2.8" fill="none" stroke-width="1.8"/></symbol>
+    <symbol id="ic-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12.5h-11z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10.5V6.5a3 3 0 0 1 6 0v4" fill="none" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2" fill="none" stroke-width="1.8"/><circle cx="12" cy="12" r="2.8" fill="none" stroke-width="1.8"/><path d="M6 12h.01M18 12h.01" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="ic-pix" viewBox="0 0 24 24"><path d="M12 2.8 21.2 12 12 21.2 2.8 12z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12 12 8.5l3.5 3.5L12 15.5z" fill="none" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-card" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2.2" fill="none" stroke-width="1.8"/><path d="M2.5 9.8h19" stroke-width="1.8"/><path d="M6 15h4" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-fiado" viewBox="0 0 24 24"><path d="M12 6.5v-3M8 5l1.2 1.8M16 5l-1.2 1.8" stroke-width="1.7" stroke-linecap="round"/><path d="M4 13.5c2.5-2 4.5-2 6.5-.5h3a1.4 1.4 0 0 1 0 2.8h-3.4" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 17.5h4.2c1.9-1 2.8-2.4 3.3-3.8" fill="none" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="M4.5 12.5 10 18 19.5 6.5" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-fwd" viewBox="0 0 24 24"><path d="M9 5.5 15.5 12 9 18.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-back" viewBox="0 0 24 24"><path d="M15 5.5 8.5 12 15 18.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="ic-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.6" fill="none" stroke-width="1.8"/><circle cx="17.5" cy="5.5" r="2.6" fill="none" stroke-width="1.8"/><circle cx="17.5" cy="18.5" r="2.6" fill="none" stroke-width="1.8"/><path d="m8.4 10.8 6.8-4M8.4 13.2l6.8 4" stroke-width="1.8"/></symbol>
+    <symbol id="ic-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 5.5H4.5v1A3.5 3.5 0 0 0 8 10M16 5.5h3.5v1A3.5 3.5 0 0 1 16 10" fill="none" stroke-width="1.8"/><path d="M12 13v3.5M8.5 20h7M12 16.5c-1.4 0-2 1.2-2.4 3.5h4.8c-.4-2.3-1-3.5-2.4-3.5z" fill="none" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-whats" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z" fill="none" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.8c-.4 2.5 3.7 6.6 6.2 6.2l.4-1.7-2-.9-.9.7c-1-.5-1.6-1.1-2-2l.7-.9-.9-2z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-arrowup" viewBox="0 0 24 24"><path d="M12 19V5.5M6.5 11 12 5.5 17.5 11" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="ic-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11.5h10.6L21 7.5H6" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="16.5" cy="19.5" r="1.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="ic-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke-width="2.1" stroke-linecap="round"/></symbol>
+    <symbol id="ic-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.2" fill="none" stroke-width="1.9"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" fill="none" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="sb" viewBox="0 0 42 15"><path d="M1 8.5h2v3H1zM4.5 6.5h2v5h-2zM8 4.5h2v7H8zM11.5 2.5h2v9h-2z" fill="currentColor" stroke="none"/><path d="M20.5 5.2a7.4 7.4 0 0 0-9 0l1.2 1.5a5.5 5.5 0 0 1 6.6 0zM19 7.6a4.4 4.4 0 0 0-6 0l1.2 1.5a2.5 2.5 0 0 1 3.6 0zM16 10.4l1-1.2a1.6 1.6 0 0 0-2 0z" fill="currentColor" stroke="none"/><rect x="24" y="3.5" width="16" height="8" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/><rect x="25.5" y="5" width="10" height="5" rx="1.2" fill="currentColor" stroke="none"/><path d="M41 6v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="star4" viewBox="0 0 40 40"><path d="M20 0l4.5 15.5L40 20l-15.5 4.5L20 40l-4.5-15.5L0 20l15.5-4.5z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.2 19.5 12 7 19.8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14.5M13.5 6.5 19 12l-5.5 5.5" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h16"/><path d="M5.5 20.5v-7a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v7"/><path d="M5.5 15.5c1.1.9 2.2.9 3.3 0s2.2-.9 3.2 0 2.2.9 3.2 0 2.2-.9 3.3 0"/><path d="M12 11.5V8"/><path d="M12 5.8c.9-.8 1.1-1.6 0-2.8-1.1 1.2-.9 2 0 2.8z"/></g></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6.5" r="2.8"/><circle cx="6" cy="17.5" r="2.8"/><path d="M20 4.5 8.2 15.8M14.3 13.7 20 19.5M8.2 8.2 11.5 11.5"/></g></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.8 6.2a4.4 4.4 0 0 0-5.9 5.5L3.8 16.8a2 2 0 0 0 2.8 2.8l5.1-5.1a4.4 4.4 0 0 0 5.5-5.9l-2.7 2.7-2.4-.4-.4-2.4z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M8.8 16.3a4.6 4.6 0 0 1 6.4 0"/><path d="M5.3 12.8a9.5 9.5 0 0 1 4.3-2.4"/><path d="M18.7 12.8a9.5 9.5 0 0 0-1.9-1.4"/><path d="M2 9.2a14.4 14.4 0 0 1 3.8-2.5"/><path d="M22 9.2A14.4 14.4 0 0 0 10.8 5.5"/></g><circle cx="12" cy="19.6" r="1.3" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H7.8a5.3 5.3 0 1 1 1.5-10.4A6.3 6.3 0 0 1 21 11.3 3.9 3.9 0 0 1 17.5 19z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.8-4.7-7.8-10.3A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.8 2.5C19.8 15.3 12 20 12 20z" fill="none" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="m20.5 16-4.5-4.5L6 19.5"/></g></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h12v17l-2.4-1.5-2 1.5-1.6-1.5-1.6 1.5-2-1.5L6 20.5z"/><path d="M9 8h6M9 11.5h6M9 15h3.5"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 21h4"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.5 20.5 6 17 9.5"/><path d="M3.5 11.5V10a4 4 0 0 1 4-4h13"/><path d="M7 21.5 3.5 18 7 14.5"/><path d="M20.5 12.5V14a4 4 0 0 1-4 4h-13"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.9-3.3 3.4-5 6.5-5s5.6 1.7 6.5 5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18.5 15.3c1.4.8 2.4 2.4 3 4.7"/></g></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3.5V8h4.5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 20.5V16h-4.5"/></g></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="2.5"/><path d="M8.5 6.5h7v3h-7z"/></g><path d="M8.7 13.2h.01M12 13.2h.01M15.3 13.2h.01M8.7 16.8h.01M12 16.8h.01M15.3 16.8h.01" fill="none" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="6" height="6" rx="1"/><rect x="14.5" y="3.5" width="6" height="6" rx="1"/><rect x="3.5" y="14.5" width="6" height="6" rx="1"/><path d="M14.5 14.5h2.5v2.5M20.5 14.5v.01M14.5 20.5h.01M17.5 17.5h3v3h-3z"/></g></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11.5M7 10l5 5 5-5"/><path d="M4.5 20h15"/></g></symbol>
+    <symbol id="i-box-edit" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20.5h4L19 9.5a2.8 2.8 0 0 0-4-4L4 16.5z"/><path d="M13.5 7 17 10.5"/></g></symbol>
+    <symbol id="i-tap" viewBox="0 0 24 24"><g fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5V5a1.8 1.8 0 0 1 3.6 0v5.5"/><path d="M12.6 10V8.8a1.8 1.8 0 0 1 3.6 0v2"/><path d="M16.2 10.8a1.8 1.8 0 0 1 3.3 1V15a6.5 6.5 0 0 1-6.5 6.5h-.6a6.5 6.5 0 0 1-5.2-2.6L4 14.6a1.8 1.8 0 0 1 2.7-2.3L9 14.5"/></g></symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__in">
+      <a class="brand" href="../" aria-label="Cadu Vendas — página inicial">
+        <img src="../favicon.svg" alt="" width="36" height="36">
+        <span>Cadu Vendas</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <svg class="i i-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="i i-close" aria-hidden="true"><use href="#ic-close"/></svg>
+      </button>
+      <nav class="nav" id="menu" aria-label="Principal" data-open="false">
+        <a href="../#recursos">Recursos</a>
+        <a href="../#pra-quem-e">Pra quem é</a>
+        <a href="../#planos">Planos</a>
+        <a href="../#duvidas">Dúvidas</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dprecificacao" target="_blank" rel="noopener">Baixar grátis<span class="sr-only"> (abre em nova aba)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="sec page-hero bg-ocre" aria-labelledby="titulo">
+      <div class="wrap split">
+        <div class="split__text">
+          <nav aria-label="Trilha de navegação">
+            <ol class="breadcrumb"><li><a href="../">Início</a></li><li><span aria-current="page">Calculadora de preço</span></li></ol>
+          </nav>
+          <p class="eyebrow">Precificação</p>
+          <h1 id="titulo" class="h1 h1--page">Calculadora de preço de venda: <span class="hl">quanto cobrar?</span></h1>
+          <p class="lead">Diga quanto gastou e quanto rendeu — a calculadora mostra o preço com a margem certa. É a mesma conta que o Cadu faz no app.</p>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#calculadora">Usar a calculadora</a>
+            <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dprecificacao" target="_blank" rel="noopener">Baixar o app grátis<span class="sr-only"> (abre em nova aba)</span></a>
+          </div>
+        </div>
+        <div class="split__media">
+          <div class="blob" style="background:rgba(255,255,255,.5)"></div>
+          <svg class="spark" style="top:28px;left:6%;color:#c77423" width="34" height="34" aria-hidden="true"><use href="#star4"/></svg>
+          <svg class="spark" style="top:130px;right:6%;color:#2d5a3d;opacity:.7" width="24" height="24" aria-hidden="true"><use href="#star4"/></svg>
+          <div class="device" role="img" aria-label="Tela Resultado da precificação no Cadu Vendas: preço sugerido de R$ 4,50 por unidade, com gasto de R$ 54,00, rendimento de 30 unidades e margem de 60%" data-nosnippet>
+            <div class="phone" aria-hidden="true"><div class="m-screen">
+              <span class="m-punch"></span>
+              <div class="m-sb"><span>9:41</span><svg><use href="#sb"/></svg></div>
+              <div class="m-pad m-row" style="padding-top:12px;gap:12px">
+                <svg class="i" width="22" height="22"><use href="#ic-back"/></svg>
+                <div class="m-title" style="font-size:24px">Resultado</div>
+              </div>
+              <div style="text-align:center;padding:28px 16px 12px">
+                <div class="m-cap c-muted" style="letter-spacing:1px">PREÇO SUGERIDO</div>
+                <div class="m-money c-money" style="font-size:56px;letter-spacing:-1.5px;margin-top:4px">R$ 4,50</div>
+                <div class="m-sub">por unidade</div>
+              </div>
+              <div class="m-pad" style="margin-top:12px">
+                <div class="m-card" style="padding:16px;font-size:14px">
+                  <div class="m-cap c-muted" style="margin-bottom:12px">RESUMO DA CONTA</div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Gasto total</span><b>R$ 54,00</b></div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Rendimento</span><b>30 unidades</b></div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Custo por unidade</span><b>R$ 1,80</b></div>
+                  <div class="m-row m-between" style="margin-bottom:8px"><span class="c-text2">Margem de lucro</span><b class="c-money">60%</b></div>
+                  <div class="m-row m-between"><span class="c-text2">Lucro por unidade</span><b class="c-money">R$ 2,70</b></div>
+                </div>
+              </div>
+              <div class="m-row" style="gap:8px;margin-top:14px;align-items:flex-start;padding:0 20px">
+                <span style="font-size:14px;line-height:16px">⚠️</span>
+                <span class="m-cap c-muted" style="flex:1">Conta feita com os valores que você informou. Se o gasto mudar, refaça.</span>
+              </div>
+              <div class="m-pad" style="margin-top:14px">
+                <div style="background:var(--d-sunken);border-radius:20px;padding:12px;font-size:14px;color:var(--d-text2)">Hoje esse produto está <b style="color:var(--d-text)">R$ 4,00</b>. Salvar troca para <b style="color:var(--d-text)">R$ 4,50</b>.</div>
+              </div>
+              <div style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--d-border);padding:12px 16px 16px;background:var(--d-bg)">
+                <div class="m-btn m-btn--lg"><svg class="i" width="18" height="18"><use href="#ic-check"/></svg> Salvar no catálogo</div>
+                <div class="m-row" style="height:48px;justify-content:center;font-size:16px;font-weight:700;color:var(--d-primary);margin-top:4px">Refazer cálculo</div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec bg-paper" id="calculadora" aria-labelledby="t-calc">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Calculadora grátis</p>
+          <h2 id="t-calc" class="h2">Faça a conta <span class="hl">aqui mesmo</span></h2>
+          <p class="lead">Mude os números e veja o preço na hora. Nada é enviado: a conta acontece no seu próprio navegador.</p>
+        </div>
+
+        <form class="calc" id="calc" novalidate>
+          <div class="calc__form">
+            <label class="field" for="c-custo">
+              <span class="field__label">Quanto você gastou pra produzir?</span>
+              <span class="field__box"><span class="field__affix">R$</span><input id="c-custo" name="custo" inputmode="decimal" autocomplete="off" value="54,00" aria-describedby="c-custo-hint"></span>
+              <span class="field__hint" id="c-custo-hint">Ingredientes, embalagem, gás… tudo o que saiu do bolso nessa leva.</span>
+            </label>
+            <label class="field" for="c-rend">
+              <span class="field__label">Quanto rendeu?</span>
+              <span class="field__box"><input id="c-rend" name="rendimento" inputmode="decimal" autocomplete="off" value="30" aria-describedby="c-rend-hint"><span class="field__affix field__affix--end">unidades</span></span>
+              <span class="field__hint" id="c-rend-hint">Unidades, fatias, porções ou potes que saíram dessa leva.</span>
+            </label>
+
+            <fieldset>
+              <legend>Como você quer calcular?</legend>
+              <div class="modes">
+                <label><input type="radio" name="modo" value="margem" checked><span>Margem<small>“60% do preço é lucro”</small></span></label>
+                <label><input type="radio" name="modo" value="lucro"><span>Lucro por unidade<small>“quero R$ 3 em cada”</small></span></label>
+                <label><input type="radio" name="modo" value="markup"><span>Markup<small>“vendo pelo dobro”</small></span></label>
+              </div>
+            </fieldset>
+
+            <label class="field" for="c-valor" style="margin-top:18px">
+              <span class="field__label" id="c-valor-label">Margem de lucro</span>
+              <span class="field__box"><span class="field__affix" id="c-valor-pre" hidden>R$</span><input id="c-valor" name="valor" inputmode="decimal" autocomplete="off" value="60" aria-describedby="c-valor-hint"><span class="field__affix field__affix--end" id="c-valor-suf">%</span></span>
+              <span class="field__hint" id="c-valor-hint">A fatia do preço que sobra como lucro. Vai até 95%.</span>
+            </label>
+          </div>
+
+          <div class="calc__result">
+            <div class="calc__eyebrow">Preço sugerido</div>
+            <div class="calc__price" id="r-preco">R$ 4,50</div>
+            <div class="calc__unit">por unidade</div>
+            <dl class="calc__rows">
+              <div><dt>Custo por unidade</dt><dd id="r-custo">R$ 1,80</dd></div>
+              <div><dt>Lucro por unidade</dt><dd id="r-lucro" class="is-money">R$ 2,70</dd></div>
+              <div><dt>Margem real</dt><dd id="r-margem" class="is-money">60%</dd></div>
+              <div><dt>Markup equivalente</dt><dd id="r-markup">2,5×</dd></div>
+            </dl>
+            <p class="calc__warn" id="r-aviso" hidden></p>
+            <p class="calc__note">Conta feita com os valores que você informou. Se o gasto mudar, refaça.</p>
+            <p class="sr-only" id="r-leitura" aria-live="polite" aria-atomic="true"></p>
+          </div>
+        </form>
+        <noscript><p class="plans-note">A calculadora precisa de JavaScript pra fazer a conta ao vivo. Os valores acima são o exemplo de R$ 54,00 de gasto, 30 unidades e 60% de margem.</p></noscript>
+      </div>
+    </section>
+
+    <section class="sec bg-paper-2" aria-label="Como calcular o preço de venda">
+      <div class="wrap prose">
+        <h2>Margem e markup não são a mesma coisa</h2>
+        <p>Esse é o erro mais comum de quem vende. <strong>Margem</strong> é a fatia do preço que sobra como lucro. <strong>Markup</strong> é quantas vezes o custo você cobra. Quem vende pelo dobro do custo às vezes acha que está lucrando 100% — mas sobra metade do preço, ou seja, uma margem de 50%.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Custo por unidade</th><th scope="col">Jeito de pensar</th><th scope="col">Preço</th><th scope="col">Lucro</th><th scope="col">Margem real</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>R$ 10,00</td><td>Margem de 50%</td><td>R$ 20,00</td><td>R$ 10,00</td><td>50%</td></tr>
+              <tr><td>R$ 10,00</td><td>Markup de 2×</td><td>R$ 20,00</td><td>R$ 10,00</td><td>50%</td></tr>
+              <tr><td>R$ 10,00</td><td>Margem de 60%</td><td>R$ 25,00</td><td>R$ 15,00</td><td>60%</td></tr>
+              <tr><td>R$ 10,00</td><td>Markup de 3×</td><td>R$ 30,00</td><td>R$ 20,00</td><td>67%</td></tr>
+              <tr><td>R$ 10,00</td><td>Lucro de R$ 5 por unidade</td><td>R$ 15,00</td><td>R$ 5,00</td><td>33%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>As fórmulas, uma por uma</h2>
+        <p>Primeiro, o custo de cada unidade: <span class="formula">custo por unidade = gasto total ÷ rendimento</span>. No exemplo, R$ 54,00 ÷ 30 = R$ 1,80.</p>
+        <ul>
+          <li><strong>Margem:</strong> <span class="formula">preço = custo ÷ (1 − margem)</span>. Com 60%: R$ 1,80 ÷ 0,40 = R$ 4,50.</li>
+          <li><strong>Lucro por unidade:</strong> <span class="formula">preço = custo + lucro</span>. Querendo R$ 3,00 em cada: R$ 1,80 + R$ 3,00 = R$ 4,80.</li>
+          <li><strong>Markup:</strong> <span class="formula">preço = custo × markup</span>. Pelo dobro: R$ 1,80 × 2 = R$ 3,60.</li>
+        </ul>
+        <p>A margem vai até 95%: ela é a parte do preço que vira lucro, então 100% significaria custo zero. Se você está pensando em “200%”, o que você quer é markup.</p>
+
+        <h2>O custo que quase ninguém calcula</h2>
+        <p>Pra saber o custo de verdade, conte só o que foi usado de cada ingrediente. Se o pacote de 1 kg custou R$ 12,00 e a receita usou 200 g, o gasto foi R$ 2,40 — não R$ 12,00. Errar essa conta é o motivo mais comum de vender no prejuízo achando que está lucrando.</p>
+        <div class="callout callout--ocre">
+          <p><strong>No Premium, o Cadu faz essa conta pra você.</strong> Cadastre os ingredientes com o preço do pacote e a quantidade usada, e ele calcula o custo de cada unidade — e refaz a conta quando um preço sobe.</p>
+        </div>
+
+        <h2>Não esqueça do que não aparece na receita</h2>
+        <p>Embalagem, gás, energia, a taxa da maquininha e a entrega também custam. Some esses gastos no total da leva, ou use uma margem que dê conta deles. Depois, compare o preço sugerido com o que a sua clientela costuma pagar — a calculadora mostra quanto sobra em cada cenário.</p>
+      </div>
+    </section>
+
+    <section class="sec bg-paper" aria-labelledby="t-duvidas">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Dúvidas</p>
+          <h2 id="t-duvidas" class="h2">Perguntas sobre <span class="hl">preço de venda</span></h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Como calcular o preço de venda de doces por unidade?</summary>
+            <div class="faq__a"><p>Some tudo o que gastou na leva, divida pelo número de unidades que ela rendeu e aplique a margem. Exemplo: R$ 54 de gasto que rendem 30 unidades dão R$ 1,80 de custo por unidade; com margem de 60%, o preço sugerido é R$ 1,80 ÷ 0,40 = R$ 4,50.</p></div>
+          </details>
+          <details>
+            <summary>Qual a diferença entre margem e markup?</summary>
+            <div class="faq__a"><p>Margem é a fatia do preço que sobra como lucro; markup é quantas vezes o custo você cobra. Vender pelo dobro do custo é um markup de 2×, que dá margem de 50% — não de 100%.</p></div>
+          </details>
+          <details>
+            <summary>Por que a margem vai só até 95%?</summary>
+            <div class="faq__a"><p>Porque margem é a parte do preço que vira lucro. Margem de 100% significaria custo zero, e acima disso a conta não existe. Quem pensa em “200%” está pensando em markup.</p></div>
+          </details>
+          <details>
+            <summary>A calculadora do site é igual à do app?</summary>
+            <div class="faq__a"><p>É a mesma conta. No app Cadu Vendas, o preço calculado vai direto pro catálogo, e no <a href="../#planos">Premium</a> dá pra descobrir o custo real a partir dos ingredientes da receita.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec bg-green cta-final" aria-labelledby="t-baixar">
+      <svg class="spark" style="top:22%;left:12%;color:#e8c547" width="36" height="36" aria-hidden="true"><use href="#star4"/></svg>
+      <svg class="spark" style="bottom:24%;right:13%;color:#a6e3b7" width="24" height="24" aria-hidden="true"><use href="#star4"/></svg>
+      <div class="wrap">
+        <h2 id="t-baixar" class="h2">Preço certo <span class="hl">no catálogo</span></h2>
+        <p class="lead">No app, o preço calculado vai direto pro produto — e as vendas já saem com o lucro certo.</p>
+        <div class="cta-row">
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dprecificacao" target="_blank" rel="noopener">
+            <span class="btn-play__ic"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span>
+            <span class="btn-play__txt"><small>Baixe grátis na</small><b>Google Play</b></span>
+          <span class="sr-only"> (abre em nova aba)</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec bg-paper" aria-labelledby="t-mais">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="t-mais" class="h2">Veja também</h2>
+        </div>
+        <ul class="related">
+          <li><a href="../relatorios/"><span class="ic-tile ic-tile--gold"><svg class="i" aria-hidden="true"><use href="#ic-reports"/></svg></span><b>Relatórios e lucro</b><span>Veja quanto sobra de verdade no fim do mês.</span></a></li>
+          <li><a href="../pix/"><span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#ic-pix"/></svg></span><b>QR Code Pix na hora</b><span>Cobre no valor exato da venda, sem maquininha.</span></a></li>
+          <li><a href="../fiado/"><span class="ic-tile ic-tile--ocre"><svg class="i" aria-hidden="true"><use href="#ic-whats"/></svg></span><b>Controle de fiado</b><span>Saiba quem deve e cobre pelo WhatsApp.</span></a></li>
+          <li><a href="../pedidos/"><span class="ic-tile"><svg class="i" aria-hidden="true"><use href="#ic-orders"/></svg></span><b>Pedidos e encomendas</b><span>Atrasados, em andamento e entregues num olhar.</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand" href="../"><img src="../favicon.svg" alt="" width="36" height="36"><span>Cadu Vendas</span></a>
+          <p class="site-footer__tag">Seu caderninho de vendas digital</p>
+          <p class="site-footer__about">Vendas, pedidos, fiado e lucro — o caderninho digital de quem vende por conta própria.</p>
+          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3Dprecificacao" target="_blank" rel="noopener">
+            <span class="btn-play__ic"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span>
+            <span class="btn-play__txt"><small>Baixe grátis na</small><b>Google Play</b></span>
+          <span class="sr-only"> (abre em nova aba)</span></a>
+        </div>
+        <nav aria-labelledby="f-recursos">
+          <h2 id="f-recursos">Recursos</h2>
+          <ul>
+            <li><a href="../#venda-rapida">Venda rápida</a></li>
+            <li><a href="../pix/">QR Code Pix</a></li>
+            <li><a href="../fiado/">Controle de fiado</a></li>
+            <li><a href="../pedidos/">Pedidos e encomendas</a></li>
+            <li><a href="../precificacao/" aria-current="page">Calculadora de preço</a></li>
+            <li><a href="../relatorios/">Relatórios e lucro</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-cadu">
+          <h2 id="f-cadu">O Cadu</h2>
+          <ul>
+            <li><a href="../#pra-quem-e">Pra quem é</a></li>
+            <li><a href="../#planos">Planos</a></li>
+            <li><a href="../#duvidas">Dúvidas frequentes</a></li>
+            <li><a href="mailto:contato@caduvendas.com.br">Fale com a gente</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-legal">
+          <h2 id="f-legal">Legal</h2>
+          <ul>
+            <li><a href="../privacy.html">Política de Privacidade</a></li>
+            <li><a href="../terms.html">Termos de Uso</a></li>
+            <li><a href="../delete-account.html">Excluir conta e dados</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Cadu Vendas · Feito no Brasil por Patrick Simões</p>
+        <p>Google Play é uma marca da Google LLC.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

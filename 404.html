@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    A 404 é devolvida em qualquer URL que não existe (/qualquer/coisa), então todo caminho
+    daqui parte da raiz do site (<base href="/">). No teste local — arquivo aberto direto ou
+    Live Server na pasta do repositório — a raiz passa a ser a pasta da própria 404.
+    Por causa do base, esta página não usa o sprite de ícones: os dois ícones do menu vão
+    desenhados direto no botão.
+  -->
+  <base href="/">
+  <script>
+    (function () {
+      var local = location.protocol === 'file:' || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+      if (local && /\/404\.html$/.test(location.pathname)) {
+        document.querySelector('base').href = location.href.replace(/404\.html([?#].*)?$/, '');
+      }
+    })();
+  </script>
+  <title>Página não encontrada | Cadu Vendas</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#1f4029">
+  <meta name="color-scheme" content="light">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css?v=2">
+  <script src="assets/js/site.js?v=1" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header__in">
+      <a class="brand" href="./" aria-label="Cadu Vendas — página inicial">
+        <img src="favicon.svg" alt="" width="36" height="36">
+        <span>Cadu Vendas</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <svg class="i i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="i i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke-width="2.1" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav" id="menu" aria-label="Principal" data-open="false">
+        <a href="./#recursos">Recursos</a>
+        <a href="./#pra-quem-e">Pra quem é</a>
+        <a href="./#planos">Planos</a>
+        <a href="./#duvidas">Dúvidas</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.cadernodevendas&amp;referrer=utm_source%3Dcaduvendas.com.br%26utm_medium%3Dsite%26utm_campaign%3D404" target="_blank" rel="noopener">Baixar grátis<span class="sr-only"> (abre em nova aba)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="sec bg-paper notfound">
+    <div class="wrap">
+      <img src="assets/img/cadu.svg" alt="" width="170" height="194">
+      <p class="eyebrow">Erro 404</p>
+      <h1 class="h2">Essa página não está <span class="hl">no caderno</span></h1>
+      <p class="lead">O endereço pode ter mudado ou sido digitado errado. Que tal começar pelo início?</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="./">Ir para o início</a>
+        <a class="btn btn--ghost" href="./#duvidas">Ver as dúvidas frequentes</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand" href="./"><img src="favicon.svg" alt="" width="36" height="36"><span>Cadu Vendas</span></a>
+          <p class="site-footer__tag">Seu caderninho de vendas digital</p>
+        </div>
+        <nav aria-labelledby="f-recursos">
+          <h2 id="f-recursos">Recursos</h2>
+          <ul>
+            <li><a href="./#venda-rapida">Venda rápida</a></li>
+            <li><a href="pix/">QR Code Pix</a></li>
+            <li><a href="fiado/">Controle de fiado</a></li>
+            <li><a href="pedidos/">Pedidos e encomendas</a></li>
+            <li><a href="precificacao/">Calculadora de preço</a></li>
+            <li><a href="relatorios/">Relatórios e lucro</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-cadu">
+          <h2 id="f-cadu">O Cadu</h2>
+          <ul>
+            <li><a href="./#pra-quem-e">Pra quem é</a></li>
+            <li><a href="./#planos">Planos</a></li>
+            <li><a href="./#duvidas">Dúvidas frequentes</a></li>
+            <li><a href="mailto:contato@caduvendas.com.br">Fale com a gente</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-legal">
+          <h2 id="f-legal">Legal</h2>
+          <ul>
+            <li><a href="privacy.html">Política de Privacidade</a></li>
+            <li><a href="terms.html">Termos de Uso</a></li>
+            <li><a href="delete-account.html">Excluir conta e dados</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 Cadu Vendas · Feito no Brasil por Patrick Simões</p>
+        <p>Google Play é uma marca da Google LLC.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

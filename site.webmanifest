@@ -1,0 +1,23 @@
+{
+  "name": "Cadu Vendas",
+  "short_name": "Cadu Vendas",
+  "description": "O caderninho de vendas digital de quem vende por conta própria.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#faf6ec",
+  "theme_color": "#1f4029",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/assets/img/cadu-vendas-icone.png", "type": "image/png", "sizes": "1024x1024" }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.cadernodevendas",
+      "id": "com.cadernodevendas"
+    }
+  ],
+  "prefer_related_applications": true
+}
